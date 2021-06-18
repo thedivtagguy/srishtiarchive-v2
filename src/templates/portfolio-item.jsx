@@ -1,8 +1,9 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import SiteMetadata from "../components/SiteMetadata"
 import Cards from "../components/Cards"
 import Layout from "../layouts/Layout"
+import kebabCase from "lodash/kebabCase"
 
 export default props => {
   const {
@@ -14,7 +15,7 @@ export default props => {
     year,
     tools,
     files,
-    contact,
+    contact
   } = props.data.item
 
   function handleCopy() {
@@ -111,10 +112,12 @@ export default props => {
                               </div>
                               <div class="flex lg:flex-row lg:gap-4 lg:items-center lg:justify-start lg:col-span-4 flex-wrap gap-2 flex-row">
                               {tools.map((tag, i) => [
+                                <Link to={`/tools/${kebabCase(tag)}/`}>
                                   <span class="px-2 py-1  text-base rounded text-white  bg-red-600 font-medium" key={i}>
                                     {tag}
                                     {i < tools.length - 1 ? ' ' : ''}
                                   </span>
+                                  </Link>
                                 ])}
                               
                                 

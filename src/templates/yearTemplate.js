@@ -21,8 +21,8 @@ const Tags = ({ data }) => {
 export default Tags;
 
 export const query = graphql`
-query Tags($tag: String!) {
-  portfolio: allContentfulPortfolio(filter: {tools: { in: [$tag]}}) {
+query Years($year: String!) {
+  portfolio: allContentfulPortfolio(filter: {year: { in: [$year]}}) {
     nodes {
       ...PortfolioCard
     }

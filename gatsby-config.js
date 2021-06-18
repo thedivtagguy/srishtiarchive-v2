@@ -13,6 +13,7 @@ module.exports = {
     menu: [
       { name: "Home", to: "/" },
       { name: "About", to: "/about" },
+      { name: "Submission", to:"https://submission-form.herokuapp.com"}
     ],
     links: {
       facebook: "https://www.facebook.com/",

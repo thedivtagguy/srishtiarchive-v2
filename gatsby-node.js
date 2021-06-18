@@ -1,5 +1,6 @@
 const path = require(`path`)
 const _ = require('lodash');
+const { Z_UNKNOWN } = require('zlib');
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
@@ -44,6 +45,8 @@ exports.createPages = ({ graphql, actions }) => {
           nodes {
             slug
             tools
+            year
+            major
           }
         }
       }
@@ -63,28 +66,69 @@ exports.createPages = ({ graphql, actions }) => {
         })
       }
        
-      const tools = data.portfolio.nodes.tools;
-      console.log(tools)
+      const toolNodes = data.portfolio.nodes;
+
       const tagTemplate = path.resolve(`src/templates/tagsTemplate.js`);
+      const yearTemplate = path.resolve(`src/templates/yearTemplate.js`);
       let tags = [];
+      let tools = [];
+      let year = [];
+      let major = [];
+
+      let years =[];
+      let majors =[];
       // Iterate through each post, putting all found tags into `tags`
+      toolNodes.map(toolNode => tags.push(...toolNode.tools));  
+      toolNodes.map(toolNode => years.push(toolNode.year));  
+      toolNodes.map(toolNode => majors.push(toolNode.major));  
+
       tags = tags.concat(tools);
+      years = years.concat(year);
+      majors = majors.concat(major);
        // Eliminate duplicate tags
       tags = _.uniq(tags);
-      
-       // Make tag pages
+      years = _.uniq(years);
+      majors = _.uniq(majors);
+
+       // Make tools pages
        tags.forEach(tag => {
         createPage({
-          path: `/tags/${_.kebabCase(tag)}/`,
+          path: `/tools/${_.kebabCase(tag)}/`,
           component: tagTemplate,
           context: {
-            tag,
+            tag
           },
         });
       });
       
-       
+      console.log("Created Pages For " + tags)
+
+      // Make year pages
+      years.forEach(y => {
+        createPage({
+          path: `/year/${_.kebabCase(y)}/`,
+          component: yearTemplate,
+          context: {
+            y
+          },
+        });
+      });
+      console.log("Created Pages For " + years)
+
+      // Make major pages
+      majors.forEach(m => {
+        createPage({
+          path: `/major/${_.kebabCase(m)}/`,
+          component: tagTemplate,
+          context: {
+            m
+          },
+        });
+      });
+      console.log("Created Pages For " + majors)
+
       resolve()
     })
   })
 }
+
