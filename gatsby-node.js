@@ -70,6 +70,8 @@ exports.createPages = ({ graphql, actions }) => {
 
       const tagTemplate = path.resolve(`src/templates/tagsTemplate.js`);
       const yearTemplate = path.resolve(`src/templates/yearTemplate.js`);
+      const majorTemplate = path.resolve(`src/templates/majorTemplate.js`);
+
       let tags = [];
       let tools = [];
       let year = [];
@@ -119,7 +121,7 @@ exports.createPages = ({ graphql, actions }) => {
       majors.forEach(m => {
         createPage({
           path: `/major/${_.kebabCase(m)}/`,
-          component: tagTemplate,
+          component: majorTemplate,
           context: {
             m
           },

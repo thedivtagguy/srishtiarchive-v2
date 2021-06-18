@@ -20,10 +20,10 @@ const Header = () => {
   `)
 
   return (
-    <div className="container pt-2  md:pt-4 bg-gray-900">
-      <div className="flex justify-between items-center">
+    <div className="container bg-gray-900">
+      <div className="flex justify-between py-8 items-center">
         <Link to="/">
-          <img alt="Logo" className="w-16 md:w-24 pt-4" src="/white-logo.png" />
+          <img alt="Logo" className="w-16 md:w-24" src="/white-logo.png" />
         </Link>
 
         <button
