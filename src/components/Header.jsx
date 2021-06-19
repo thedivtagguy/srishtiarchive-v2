@@ -31,7 +31,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen(true)}
           aria-label="Open Menu"
         >
-          <FaBars className="h-6 w-auto text-gray-900 fill-current -mt-1" />
+          <FaBars className="h-6 w-auto text-lime fill-current -mt-1" />
         </button>
 
         <div className="hidden sm:block">

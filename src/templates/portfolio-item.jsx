@@ -36,7 +36,7 @@ export default props => {
     
       />
       
-          <div className="bg-gray-900 pattern h-1/2 py-8 mx-4 lg:py-8">
+          <div className="bg-gray-900 pattern h-1/2 mx-4 lg:py-8">
             <div className="container">
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-2/3 pb-8">
@@ -52,7 +52,7 @@ export default props => {
                         </h3>
                       </div>
                       {description && (
-                      <div className="my-4 text-base w-5/6 lg:text-base text-justify leading-snug text-gray-500 whitespace-pre-line">
+                      <div className="my-4 text-base lg:w-5/6 lg:text-base text-justify leading-snug text-gray-500 whitespace-pre-line">
                         {description.description} 
       
                       </div>
@@ -61,7 +61,7 @@ export default props => {
                   </div>
                   <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12 h-36 overflow-y-auto ">
                       <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 bg-gray-800 dark:bg-gray-800 rounded-sm shadow-shadow-yellow">
-                        <div class="pb-4 border-b border-lime w-full">
+                        <div class="pb-4 px-3 border-b border-lime w-full">
                             <h3 class="text-lg leading-6 font-extrabold text-blaze-orange dark:text-white">
                               Explore Further
                             </h3>
@@ -69,14 +69,14 @@ export default props => {
                               Project Files & Output
                             </div>
                         </div>
-                        <ul class="flex flex-col ">
+                        <ul class="flex flex-col">
                         {files.map(file => {
                                 return (
                                 
                           <a  href={file.localFile.url}>
                                   <li class="flex flex-row hover:text-blue-purple text-high-yellow ">
                                   <div class="select-none cursor-pointer flex flex-1 items-center p-4">
-                                      <div class="flex-1  mr-20">
+                                      <div class="flex-1">
                                         <div class="font-semibold hover:text-blue-purple text-high-yellow dark:text-white">
                                             {file.title}
                                         </div>
