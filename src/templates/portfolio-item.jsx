@@ -132,7 +132,7 @@ export default props => {
                     </div>
                     <div class="lg:col-span-3 lg:pl-12"> 
                     <div className="lg:mt-8 mt-2">
-                        <div class="lg:mt-8 zpx-4 space-x-4 grid grid-cols-2 justify-center items-center bg-gray-900 border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 sm:py-4 sm:shadow ">
+                        <div class="lg:mt-8 px-4 space-x-4 grid grid-cols-2 justify-center items-center bg-gray-900 border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 py-4 sm:shadow ">
                             <div class="mx-auto">
                               <p class="text-sm text-center text-mint-cream pb-2 font-bold">Author Contact</p>
                               
@@ -144,7 +144,7 @@ export default props => {
                                 value={contact}
                                 id="mail" disabled="" class=" rounded-sm mx-auto border-transparent text-xs flex-1 ml-4 appearance-none border border-black w-4/5 py-1 px-4 bg-mint-cream text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
                               />
-                              <button onClick={handleCopy} type="button" class="py-1 ml-2 px-4 mt-2 flex justify-start items-center  bg-gray-800 shadow-orange hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center text-xs font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-sm ">
+                              <button onClick={handleCopy} type="button" class="py-1 ml-2 px-4 mt-2 flex justify-start items-center  bg-gray-800 shadow-orange hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center lg:text-xs text-mxs font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-sm ">
                               Click to Copy Email
                               </button>
                             </div>
@@ -164,7 +164,7 @@ export default props => {
           {related && (
           <div className="bg-gray-900 pattern ">
             <div className="container">
-                <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-white mb-8">
+                <h2 className="text-3xl sm:text-4xl px-8 py-4 leading-tight font-extrabold tracking-tight text-white">
                   Related Projects
                 </h2>
             </div>

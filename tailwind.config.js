@@ -4,6 +4,8 @@ module.exports = {
     extend: {
      fontSize: {
        'xxs' : '.50rem',
+       '9xl': '8rem',
+       'mxs': '.60rem'
      },
      boxShadow: {
       'offset-black': '2px 2px black',
