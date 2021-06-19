@@ -24,16 +24,14 @@ const Footer = () => {
   return (
     <div>
 
-    <footer class="bg-gray-100 text-gray-600 px-6 lg:px-12 py-12 sm:px-0">
+    <footer class="bg-gray-900 text-gray-600 px-6 lg:px-12 py-12 sm:px-0">
       <div class="mx-auto ">
       <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4">
 
         <nav class="flex flex-wrap mx-auto justify-center space-x-6"> 
           <div class="max-w-screen-xl mx-auto lg:mb-12 ">
-            <img class="h-24 mx-auto" src="https://gist.githubusercontent.com/thedivtagguy/2c01b35a5e135a3672e3dc7960c9ff1f/raw/1af366d31a33bac0bdce64493c32fc752cef096d/logo.svg" alt="UptimeMate logo">
-          </img>
+          <img alt="Logo" className="w-16 md:w-20" src="/white-logo.png" />
           </div>
-          <a href="#" class="font-bold text-black mt-6 text-3xl hover:text-gray-600 mb-2">Srishti  Archive</a>
          
         </nav>
        

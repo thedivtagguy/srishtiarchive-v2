@@ -11,9 +11,9 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 module.exports = {
   siteMetadata: {
     menu: [
-      { name: "Home", to: "/" },
-      { name: "About", to: "/about" },
-      { name: "Submission", to:"https://submission-form.herokuapp.com"}
+      { name: "📦 Home", to: "/" },
+      { name: "📇 About", to: "/about" },
+      { name: "📨 Submission", to:"https://submission-form.herokuapp.com"}
     ],
     links: {
       facebook: "https://www.facebook.com/",

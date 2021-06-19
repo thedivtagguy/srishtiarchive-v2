@@ -36,11 +36,11 @@ export default props => {
     
       />
       
-          <div className="bg-gray-900 h-1/2 py-8 mx-4 lg:py-8">
+          <div className="bg-gray-900 pattern h-1/2 py-8 mx-4 lg:py-8">
             <div className="container">
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-2/3 pb-8">
-                      <h1 className="text-6xl leading-tight font-extrabold tracking-tight text-white sm:text-6xl mb-1">
+                      <h1 className="text-6xl leading-tight font-extrabold tracking-tight text-lime sm:text-6xl mb-1">
                         {name}
                       </h1>
                       <div className="flex lg:flex-row flex-col justify-start lg:space-x-6 lg:items-center items-start">
@@ -60,29 +60,29 @@ export default props => {
                        
                   </div>
                   <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12 h-36 overflow-y-auto ">
-                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 bg-white dark:bg-gray-800 rounded-lg shadow">
-                        <div class="pb-4 border-b w-full">
-                            <h3 class="text-lg leading-6 font-extrabold text-gray-900 dark:text-white">
+                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 bg-gray-800 dark:bg-gray-800 rounded-sm shadow-shadow-yellow">
+                        <div class="pb-4 border-b border-lime w-full">
+                            <h3 class="text-lg leading-6 font-extrabold text-blaze-orange dark:text-white">
                               Explore Further
                             </h3>
-                            <div class="text-gray-600 dark:text-gray-200 text-sm">
+                            <div class="text-mint-cream dark:text-gray-200 text-sm">
                               Project Files & Output
                             </div>
                         </div>
-                        <ul class="flex flex-col divide divide-y">
+                        <ul class="flex flex-col ">
                         {files.map(file => {
                                 return (
                                 
                           <a  href={file.localFile.url}>
-                                  <li class="flex flex-row">
+                                  <li class="flex flex-row hover:text-blue-purple text-high-yellow ">
                                   <div class="select-none cursor-pointer flex flex-1 items-center p-4">
                                       <div class="flex-1  mr-20">
-                                        <div class="font-medium dark:text-white">
+                                        <div class="font-semibold hover:text-blue-purple text-high-yellow dark:text-white">
                                             {file.title}
                                         </div>
                                       </div>
                                       <button class="w-24 text-right flex justify-end">
-                                        <svg width="20" fill="currentColor" height="20" class="hover:text-gray-800 dark:hover:text-white dark:text-gray-200 text-gray-500" viewBox="0 0 1792 1792" >
+                                        <svg width="20" fill="currentColor" height="20" class="hover:text-blue-purple dark:hover:text-white dark:text-gray-200 text-high-yellow" viewBox="0 0 1792 1792" >
                                             <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
                                             </path>
                                         </svg>
@@ -134,7 +134,7 @@ export default props => {
                     <div className="lg:mt-8 mt-2">
                         <div class="lg:mt-8 zpx-4 space-x-4 grid grid-cols-2 justify-center items-center bg-gray-900 border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 sm:py-4 sm:shadow ">
                             <div class="mx-auto">
-                              <p class="text-sm text-center text-gray-600 pb-2 font-bold">Author Contact</p>
+                              <p class="text-sm text-center text-mint-cream pb-2 font-bold">Author Contact</p>
                               
 
 
@@ -142,9 +142,9 @@ export default props => {
                                 readOnly
                                 type="text"
                                 value={contact}
-                                id="mail" disabled="" class=" rounded-md mx-auto border-transparent text-xs flex-1 ml-4 appearance-none border border-gray-300 w-4/5 py-1 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
+                                id="mail" disabled="" class=" rounded-sm mx-auto border-transparent text-xs flex-1 ml-4 appearance-none border border-black w-4/5 py-1 px-4 bg-mint-cream text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
                               />
-                              <button onClick={handleCopy} type="button" class="py-1 ml-2 px-4 mt-2 flex justify-start items-center  bg-gray-800 hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center text-xs font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                              <button onClick={handleCopy} type="button" class="py-1 ml-2 px-4 mt-2 flex justify-start items-center  bg-gray-800 shadow-orange hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center text-xs font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-sm ">
                               Click to Copy Email
                               </button>
                             </div>
@@ -162,9 +162,9 @@ export default props => {
 
          
           {related && (
-          <div className="bg-gray-100 py-12 lg:py-16">
+          <div className="bg-gray-900 pattern ">
             <div className="container">
-                <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-gray-900 mb-8">
+                <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-white mb-8">
                   Related Projects
                 </h2>
             </div>

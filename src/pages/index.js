@@ -11,14 +11,14 @@ const IndexPage = ({ data }) => {
       <SiteMetadata title="Home" description="Srishti Archives" />
 
       <Hero />
-
-      <div className="bg-gray-100 py-12 lg:py-16">
+      <div className="bg-gray-900 pattern">
         {data.portfolio && data.portfolio.nodes.length > 0 ? (
           <Cards items={data.portfolio.nodes} />
         ) : (
           <div className="container">No projects found.</div>
         )}
       </div>
+      
     </Layout>
   )
 }

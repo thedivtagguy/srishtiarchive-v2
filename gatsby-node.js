@@ -65,6 +65,18 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
       }
+      if (process.env.gatsby_executing_command.includes('develop')) {
+        if (data && data.portfolio) {
+          const component = path.resolve("./src/templates/thumbnail.js")
+          data.portfolio.nodes.map(({ slug }) => {
+            createPage({
+              path: `/${slug}/thumbnail`,
+              component,
+              context: { slug },
+            })
+          })
+        }
+      }
        
       const toolNodes = data.portfolio.nodes;
 
@@ -129,6 +141,9 @@ exports.createPages = ({ graphql, actions }) => {
       });
       console.log("Created Pages For " + majors)
 
+      console.log("Generating Project Thumbnails...")
+
+ 
       resolve()
     })
   })
