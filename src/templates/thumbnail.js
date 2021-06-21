@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
 
 export default props => {
@@ -30,10 +30,10 @@ export default props => {
                                   {name}
                                 </h1>
                                 <div className="flex flex-wrap space-x-4 flex-row justify-start items-start">
-                                  <h3 className="lg:text-2xl border-t-4 pt-1 border-gray-900  border-gray-600 leading-tight font-extrabold tracking-tight text-gray-900 sm:text-xl ">
+                                  <h3 className="lg:text-2xl border-t-4 pt-1 border-gray-900  leading-tight font-extrabold tracking-tight text-gray-900 sm:text-xl ">
                                       {major}
                                   </h3>
-                                  <h3 className="lg:text-2xl border-t-4 pt-1 border-gray-900  border-gray-600 leading-tight font-extrabold tracking-tight text-gray-900 sm:text-xl ">
+                                  <h3 className="lg:text-2xl border-t-4 pt-1 border-gray-900 leading-tight font-extrabold tracking-tight text-gray-900 sm:text-xl ">
                                       {year}
                                   </h3>
                                 </div>

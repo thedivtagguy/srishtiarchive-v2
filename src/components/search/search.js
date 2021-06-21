@@ -83,7 +83,7 @@ const SearchGrid = () => {
             </div>
             <div
               id="power"
-              class="px-4 flex-grow-0	 bg-mint-cream shadow-orange"
+              class="px-4 flex-grow-0	lg:block md:block hidden bg-mint-cream shadow-orange"
             >
               <PoweredBy />
             </div>
@@ -92,10 +92,17 @@ const SearchGrid = () => {
           <Results>
             <div class="py-8">
               <Hits hitComponent={Hit} />
+              <div id="mobile-alg" class="lg:hidden md:hidden mx-auto flex justify-center items-center">
+              <PoweredBy />
             </div>
+            </div>
+       
+
           </Results>
       </div>
+      
     </div>
+    
       </div>
     </div>
     </InstantSearch>

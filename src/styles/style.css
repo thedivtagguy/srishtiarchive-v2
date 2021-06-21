@@ -74,8 +74,21 @@ input[type="checkbox"] {
   @apply text-gray-500 text-xxs font-semibold text-right mx-auto;
 }
 .ais-PoweredBy-logo {
-  opacity:25%;
+  opacity:50%;
   width:70px;
+}
+
+#mobile-alg > div > a > svg {
+  opacity: 100%;
+  width:70px;
+}
+
+#mobile-alg > div > span {
+  padding-left:20px;
+}
+
+#mobile-alg > div > a > svg > path:nth-child(4) {
+  fill: #ffffff;
 }
 
 #power {

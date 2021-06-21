@@ -1,8 +1,6 @@
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import React from "react"
 import Layout from "../layouts/Layout"
-import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
 
 const trial = ({ data }) => (
