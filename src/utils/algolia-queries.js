@@ -9,7 +9,6 @@ const pageQuery = `{
             name
             course
             contact
-            thumbnail
             author
             year
             slug
@@ -22,7 +21,7 @@ const pageQuery = `{
       }
 }`
 
-function pageToAlgoliaRecord({ node: { id, major, name, slug, thumbnail, course, contact, author, year, tools, description, ...rest } }) {
+function pageToAlgoliaRecord({ node: { id, major, name, slug, course, contact, author, year, tools, description, ...rest } }) {
   return {
     objectID: id,
     major,
@@ -31,7 +30,6 @@ function pageToAlgoliaRecord({ node: { id, major, name, slug, thumbnail, course,
     course,
     contact,
     author,
-    thumbnail,
     year,
     tools,
     description,
