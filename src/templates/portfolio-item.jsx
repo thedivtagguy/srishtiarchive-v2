@@ -57,7 +57,9 @@ export default props => {
       
                       </div>
                       )}
-                       
+                       <div>
+                      
+                       </div>
                   </div>
                   <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12 h-36 overflow-y-auto ">
                       <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 bg-gray-800 dark:bg-gray-800 rounded-sm shadow-shadow-yellow">

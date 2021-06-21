@@ -46,6 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
             slug
             tools
             year
+            name
             major
           }
         }
@@ -54,7 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
       if (errors) {
         reject(errors)
       }
-
+     
       if (data && data.portfolio) {
         const component = path.resolve("./src/templates/portfolio-item.jsx")
         data.portfolio.nodes.map(({ slug }) => {
@@ -79,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
        
       const toolNodes = data.portfolio.nodes;
-
+     
       const tagTemplate = path.resolve(`src/templates/tagsTemplate.js`);
       const yearTemplate = path.resolve(`src/templates/yearTemplate.js`);
       const majorTemplate = path.resolve(`src/templates/majorTemplate.js`);
@@ -148,3 +149,4 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
+
