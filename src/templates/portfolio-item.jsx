@@ -167,8 +167,10 @@ export default props => {
                 <h2 className="text-3xl sm:text-4xl px-8 py-4 leading-tight font-extrabold tracking-tight text-white">
                   Related Projects
                 </h2>
+                <Cards items={related} hideLastItemOnMobile={true} />
+
             </div>
-            <Cards items={related} hideLastItemOnMobile={true} />
+          
           </div>
           )}
     </Layout>

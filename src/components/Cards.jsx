@@ -5,20 +5,22 @@ import Card from "./Card"
 
 const Cards = ({ items, hideLastItemOnMobile = false }) => {
   return (
-    <div className="container">
-      <div className="grid grid-flow-row xl:grid-cols-4 px-8 gap-5 py-4 mb-8">
-        {items.map(item => (
-          <div
-            className={classNames("w-full", {
-              "last:hidden lg:last:block": hideLastItemOnMobile,
-            })}
-            key={item.id}
-          >
-            <Card {...item} />
-          </div>
-        ))}
-      </div>
-    </div>
+    <div>
+  
+        <div className="grid grid-flow-row xl:grid-cols-4 px-8 gap-5 mb-8">
+            {items.map(item => (
+              <div
+                className={classNames("w-full", {
+                  "last:hidden lg:last:block": hideLastItemOnMobile,
+                })}
+                key={item.id}
+              >
+                <Card {...item} />
+              </div>
+            ))}
+          </div>{" "}     
+     </div>
+
   )
 }
 

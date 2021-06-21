@@ -1,9 +1,9 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Cards from "../components/Cards"
 import Hero from "../components/Hero"
 import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
+import SearchGrid from "../components/search/search"
 
 const IndexPage = ({ data }) => {
   return (
@@ -11,14 +11,7 @@ const IndexPage = ({ data }) => {
       <SiteMetadata title="Home" description="Srishti Archives" />
 
       <Hero />
-      <div className="bg-gray-900 pattern">
-        {data.portfolio && data.portfolio.nodes.length > 0 ? (
-          <Cards items={data.portfolio.nodes} />
-        ) : (
-          <div className="container">No projects found.</div>
-        )}
-      </div>
-      
+     <SearchGrid></SearchGrid>
     </Layout>
   )
 }
