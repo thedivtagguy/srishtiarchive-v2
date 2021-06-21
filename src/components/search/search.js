@@ -96,11 +96,11 @@ function Hit(props) {
   const items = props.hit.tools.slice(0, 2)
 
   return (
-    <div class="">
+    <div class="h">
       <Link to={`/${props.hit.slug}`}>
         <div className="bg-gray-800 h-full rounded-sm overflow-hidden group">
           <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
-          <div className="p-4 sm:p-5">
+          <div className="p-4 h-48 sm:p-5">
             <p class="uppercase tracking-wide text-sm font-bold text-lime"></p>
             <h1 className="text-xl text-mint-cream font-bold">
               {" "}
