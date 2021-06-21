@@ -6,6 +6,7 @@ import SiteMetadata from "../components/SiteMetadata"
 import SearchGrid from "../components/search/search"
 
 const IndexPage = ({ data }) => {
+
   return (
     <Layout>
       <SiteMetadata title="Home" description="Srishti Archives" />

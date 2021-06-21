@@ -10,12 +10,11 @@ import {
 } from "react-instantsearch-dom"
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
-
 //Error Handling
 const Results = connectStateResults(
   ({ searchState, searchResults, children }) =>
@@ -57,14 +56,16 @@ const SearchGrid = () => {
         </div>
         <div class="mb-8">
           <div class="px-4 mb-2 text-white flex justify-between items-center">
-          <RefinementList attribute="major" />
+          <RefinementList attribute="major" className="majorlist"/>
+         
           </div>
-          <div class="bg-teal-dark py-1 px-4 text-white"><RefinementList attribute="year" />
+          <div class="bg-teal-dark py-1 px-4 text-white"><RefinementList attribute="year" className="yearlist"/>
 </div>
         </div>
         <div>
-          <div class="px-4 mb-2 text-white flex justify-between items-center">
-            <div class="opacity-75">Majors</div>
+          <div class="mb-2 text-white flex justify-between items-center">
+            <div class="bg-teal-dark py-1 px-4 text-white"><RefinementList attribute="tools" className="yearlist"/>
+</div>
           </div>
         </div>
       </div>
@@ -106,11 +107,17 @@ const SearchGrid = () => {
 }
 
 function Hit(props) {
+ const items = props.hit.tools.slice(0, 2)
+
   return (
     <div clas="flex flex-row ">
       <Link to={`/${props.hit.slug}`}>
+        
         <div className="bg-gray-800 h-full rounded-sm overflow-hidden group">
-          <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
+          <div className="group-hover:opacity-75 transition duration-150 ease-in-out">
+         
+
+          </div>
           <div className="p-4 sm:p-5">
             <p class="uppercase tracking-wide text-sm font-bold text-lime"></p>
             <h1 className="text-xl text-mint-cream font-bold">
@@ -144,40 +151,22 @@ function Hit(props) {
                   fill="rgba(0, 0, 0, 0)"
                 />
               </svg>
-              <p class="text-xs text-lime font-semi-bold pr-1">
-                {" "}
+              <p class="text-xs text-lime font-semibold pr-1">
                 <Highlight attribute="year" hit={props.hit} />
               </p>
             </div>
             <div class="flex-1 inline-flex items-center">
-              <svg
-                class="h-5 w-5 mr-2 text-gray-200"
-                fill="#F1FFFA"
-                aria-hidden="true"
-                focusable="false"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 32 32"
-              >
-                <path
-                  stroke-width="1"
-                  d="M29.415 21.666l-6.335-6.335l6.334-6.334a2 2 0 0 0 .001-2.829l-.001-.002l-3.58-3.58a2 2 0 0 0-2.829-.001l-.001.001L16.67 8.92l-6.335-6.335a2.004 2.004 0 0 0-2.828 0L2.585 7.506a2.001 2.001 0 0 0 0 2.829l6.334 6.334L2 23.59V30h6.41l6.92-6.92l6.335 6.337a2.008 2.008 0 0 0 2.83 0l4.92-4.922a2.001 2.001 0 0 0 0-2.829zm-5.002-17.67l3.59 3.59l-6.333 6.334l-3.59-3.59zM8 28H4v-3.591l6.33-6.329l3.676 3.678zm15.08.004L4 8.92L8.922 4l3.788 3.787l-2.252 2.253l1.415 1.414l2.251-2.252l4.13 4.13L16 15.582l1.416 1.414l2.252-2.252l4.13 4.13l-2.252 2.251l1.414 1.415l2.252-2.251l2.79 2.791z"
-                />
-                <rect
-                  stroke-width="1"
-                  x="0"
-                  y="0"
-                  width="32"
-                  height="32"
-                  fill="rgba(0, 0, 0, 0)"
-                />
-              </svg>
-
-              <p class="text-xs whitespace-normal pl-1">
-                <span class="text-lime font-semibold">
-                  <Highlight attribute="tools" hit={props.hit} />
-                </span>
-              </p>
-            </div>
+                            <svg class="h-5 w-5 mr-2 text-gray-200" fill="#F1FFFA" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path stroke-width="1" d="M29.415 21.666l-6.335-6.335l6.334-6.334a2 2 0 0 0 .001-2.829l-.001-.002l-3.58-3.58a2 2 0 0 0-2.829-.001l-.001.001L16.67 8.92l-6.335-6.335a2.004 2.004 0 0 0-2.828 0L2.585 7.506a2.001 2.001 0 0 0 0 2.829l6.334 6.334L2 23.59V30h6.41l6.92-6.92l6.335 6.337a2.008 2.008 0 0 0 2.83 0l4.92-4.922a2.001 2.001 0 0 0 0-2.829zm-5.002-17.67l3.59 3.59l-6.333 6.334l-3.59-3.59zM8 28H4v-3.591l6.33-6.329l3.676 3.678zm15.08.004L4 8.92L8.922 4l3.788 3.787l-2.252 2.253l1.415 1.414l2.251-2.252l4.13 4.13L16 15.582l1.416 1.414l2.252-2.252l4.13 4.13l-2.252 2.251l1.414 1.415l2.252-2.251l2.79 2.791z"/><rect stroke-width="1" x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)"/></svg>
+                            {items.map((tag, i) => [
+                                  <p class="text-xs whitespace-normal pl-1" key={i}>
+                                    <span class="text-lime font-semibold">
+                                  {tag} 
+                                </span>
+                                    {i < items.length - 1 ? ', ' : ''}
+                                  </p>
+                                ])}
+                          
+                        </div>
           </div>
           <div class="px-4 pt-3 pb-4 border-t border-gray-900 bg-gray-700">
             <div class="text-xs uppercase font-bold text-gray-500 tracking-wide">

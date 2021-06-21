@@ -4,40 +4,46 @@ import React from "react"
 export default props => {
   const {
     name,
+    min = 1,
+    max = 50,
+    no = Math.floor(Math.random() * (max - min + 1)) + min,
     major,
     year,
-    item = "bg-red-700",
-    color = ["bg-red-600", "bg-purple-600", "bg-blue-600"],
+    image= "/backgrounds/",
+    divstyle = {backgroundImage: 'url("'+ image + no + '.jpg")'}
   } = props.data.item
-
+  console.log(divstyle)
+  
   return (
 
       
-          <body id="image" class={`${item}`}>
-            <div className={`border-4 border-black flex h-full justify-start px-8 items-center`} >
-                <div class="">
-                  <div className={`bg-transparent py-2 mx-4`}>
-                  <img alt="Logo" className="w-16 md:w-16" src="/white-logo.png" />
-                    <div className="flex justify-start items-center">
-                        <div className="flex justify-center items-center">
-                          <div className="w-full pb-8">
-                              <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-white sm:text-5xl mb-1">
-                                {name}
-                              </h1>
-                              <div className="flex flex-wrap  flex-col justify-start items-start">
-                                <h3 className="text-2xl leading-tight font-extrabold tracking-tight text-white sm:text-2xl mb-1">
-                                   Aman Bhargava
-                                </h3>
-                                <h3 className="lg:text-xl border-gray-600 leading-tight font-extrabold tracking-tight text-gray-700 sm:text-xl ">
-                                    {year}, {major}
-                                </h3>
-                              </div>
+          <body id="image" style={{ backgroundImage: `url("/backgrounds/${no}.jpg")`, backgroundSize: 'cover' }}>
+            <div class="p-4 h-full">
+              <div className={`border-4  border-black flex h-full justify-start px-8 items-center`} >
+                  <div class="">
+                    <div className={`bg-transparent py-2 mx-4`}>
+                    <img alt="Logo" className="w-12 md:w-12" src="/black-logo.png" />
+                      <div className="flex justify-start items-start">
+                          <div className="flex justify-start items-start">
+                            <div className="w-full">
+                                <h1 className="text-5xl py-2 leading-tight font-extrabold w-30 break-words tracking-tight text-gray-900 sm:text-2xl mb-1">
+                                  {name}
+                                </h1>
+                                <div className="flex flex-wrap space-x-4 flex-row justify-start items-start">
+                                  <h3 className="lg:text-2xl border-t-4 pt-1 border-gray-900  border-gray-600 leading-tight font-extrabold tracking-tight text-gray-900 sm:text-xl ">
+                                      {major}
+                                  </h3>
+                                  <h3 className="lg:text-2xl border-t-4 pt-1 border-gray-900  border-gray-600 leading-tight font-extrabold tracking-tight text-gray-900 sm:text-xl ">
+                                      {year}
+                                  </h3>
+                                </div>
+                            </div>
+              
                           </div>
-            
-                        </div>
+                         </div>
                        </div>
-                     </div>
-                </div>
+                  </div>
+              </div>
             </div>
           </body>
 
