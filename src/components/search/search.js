@@ -4,17 +4,23 @@ import {
   Hits,
   Highlight,
   connectStateResults,
-  SearchBox,
+    SearchBox,
   RefinementList,
   PoweredBy,
+  ClearRefinements,
+  MenuSelect
 } from "react-instantsearch-dom"
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
+
+
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
+
+
 
 //Search Grid
 
@@ -25,35 +31,54 @@ const SearchGrid = () => {
         <InstantSearch searchClient={searchClient} indexName="archives">
           <div class="flex sticky top-0">
             <div class="bg-gray-800  border-r-4 border-saffron  sticky top-0 pl-4 w-64 pb-6 hidden md:block">
-              <div class="sticky top-0 pt-12">
+              
+              <div class="sticky top-0 pt-8">
+              <div class="py-2 mb-4 w-1/2 flex justify-start items-center mx-4">
+                  <ClearRefinements />
+                </div>
                 <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
+                  
                   <div class="flex-auto">
-                    <h1 class="font-semibold text-lime text-xl leading-tight mb-1 truncate">
-                      Filters
+                    <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                      Major
                     </h1>
                   </div>
                 </div>
-                <div class="mb-8">
+                <div class="mb-2">
+                  
                   <div class="px-4 mb-2 text-white flex justify-between items-center">
                     <RefinementList attribute="major" className="majorlist" />
+                  </div>
+                  <div class="px-4 pt-2">
+                    <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                      Year
+                    </h1>
                   </div>
                   <div class="bg-teal-dark py-1 px-4 text-white">
                     <RefinementList attribute="year" className="yearlist" />
                   </div>
                 </div>
+                <div class="px-4 pt-2">
+                    <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                      Tools
+                    </h1>
+                  </div>
                 <div>
                   <div class="mb-2 text-white flex justify-between items-center">
-                    <div class="bg-teal-dark py-1 px-4 text-white">
-                      <RefinementList attribute="tools" className="yearlist" />
+                    <div class="bg-teal-dark py-1 px-4  overflow-auto text-white">
+                      <RefinementList placeholder="Tools" limit={5} showMore attribute="tools" className="yearlist" />
+
                     </div>
                   </div>
                 </div>
+                
+
               </div>
             </div>
             <div class="">
               <div class="h-full">
-                <div className="container">
-                  <div class="flex-row flex  sticky top-0 mt-3">
+                <div className="container w-full">
+                  <div class="flex-row flex  sticky top-0 py-2">
                     <div class="flex-1 ">
                       <SearchBox
                         className="search"
@@ -69,7 +94,7 @@ const SearchGrid = () => {
                       <PoweredBy />
                     </div>
                   </div>
-                  <div class="flex">
+                  <div class="flex ">
                     <Results>
                       <div class="py-8">
                         <Hits hitComponent={Hit} />
@@ -100,7 +125,7 @@ function Hit(props) {
       <Link to={`/${props.hit.slug}`}>
         <div className="bg-gray-800 h-full rounded-sm overflow-hidden group">
           <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
-          <div className="p-4 h-48 sm:p-5">
+          <div className="p-4 h-54 sm:p-5">
             <p class="uppercase tracking-wide text-sm font-bold text-lime"></p>
             <h1 className="text-xl text-mint-cream font-bold">
               {" "}

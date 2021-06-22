@@ -74,7 +74,7 @@ module.exports = {
         settings: {
           attributesForFaceting: [
             `major`,
-            `tools`,
+            'searchable(`tools`)',
             `year`,
           ]
         }

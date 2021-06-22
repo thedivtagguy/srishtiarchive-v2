@@ -2,6 +2,7 @@ const path = require(`path`)
 const _ = require('lodash');
 const { Z_UNKNOWN } = require('zlib');
 
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
@@ -144,9 +145,10 @@ exports.createPages = ({ graphql, actions }) => {
 
       console.log("Generating Project Thumbnails...")
 
- 
+    
       resolve()
     })
   })
 }
+
 

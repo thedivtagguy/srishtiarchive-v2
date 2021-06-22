@@ -2,6 +2,9 @@ module.exports = {
   purge: ["./src/**/*.jsx", "./src/**/*.js"],
   theme: {
     extend: {
+      spacing: {
+        '54': ' 13rem',
+      },
      fontSize: {
        'xxs' : '.50rem',
        '9xl': '8rem',

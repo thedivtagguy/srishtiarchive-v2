@@ -119,3 +119,15 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #000;
   display: inline;
 }
+
+.ais-ClearRefinements-button {
+  @apply py-1 px-1 mt-2 flex justify-center items-center uppercase bg-lime shadow-orange  text-black transition ease-in duration-200 text-center  text-mxs font-bold   rounded-sm;
+}
+
+.ais-RefinementList-showMore {
+  @apply py-1 px-4 mt-4 flex justify-center items-center uppercase bg-gray-900 shadow-orange  text-white transition ease-in duration-200 text-center  text-mxs font-bold   rounded-sm;
+
+}
+.ais-RefinementList-count {
+  @apply px-1  text-sm rounded text-white  bg-gray-600 font-medium;
+}
