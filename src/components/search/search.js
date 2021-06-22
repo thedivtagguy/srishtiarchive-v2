@@ -214,7 +214,7 @@ Hit.propTypes = {
   hit: PropTypes.object.isRequired,
 }
 
-//Error Handling
+//Error Handling Piece
 const Results = connectStateResults(
   ({ searchState, searchResults, children }) =>
     searchResults && searchResults.nbHits !== 0 ? (
