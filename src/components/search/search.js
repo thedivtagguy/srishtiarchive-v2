@@ -123,20 +123,21 @@ function Hit(props) {
   return (
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
-        <div className="bg-gray-800 h-full rounded-sm overflow-hidden group">
+        <div className="bg-gray-800 h-full rounded-lg border-b-2 border-high-yellow overflow-hidden group">
           <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
           <div className="p-4 h-54 sm:p-5">
-            <p class="uppercase tracking-wide text-sm font-bold text-lime"></p>
-            <h1 className="text-xl text-mint-cream font-bold">
+            <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} />
+</p>
+            <h1 className="text-xl px-4 text-mint-cream font-bold">
               {" "}
               <Highlight attribute="name" hit={props.hit} />
             </h1>
-            <p className="text-mint-cream h-20 line-clamp-4 text-sm">
+            <p className="text-mint-cream px-4 py-4 h-24 line-clamp-4 text-sm">
               {<Highlight attribute="description.description" hit={props.hit} />}
             </p>
           </div>
-          <div class="flex p-4 border-t border-gray-900 text-gray-600">
-            <div class="flex-1 inline-flex items-center">
+          <div class="flex p-4 px-4 border-t mt-2 border-gray-900 text-gray-600">
+            <div class="flex-1 pl-4 inline-flex items-center">
               <svg
                 class="h-5 w-5 mr-3 text-gray-200"
                 fill="#F1FFFA"
@@ -162,7 +163,7 @@ function Hit(props) {
                 <Highlight attribute="year" hit={props.hit} />
               </p>
             </div>
-            <div class="flex-1 inline-flex items-center">
+            <div class="flex-1 pr-4 inline-flex items-center">
               <svg
                 class="h-5 w-5 mr-2 text-gray-200"
                 fill="#F1FFFA"
@@ -193,12 +194,10 @@ function Hit(props) {
             </div>
           </div>
           <div class="px-4 pt-3 pb-4 border-t border-gray-900 bg-gray-700">
-            <div class="text-xs uppercase font-bold text-gray-500 tracking-wide">
-              Made By
-            </div>
+          
             <div class="flex items-center">
               <div>
-                <p class="font-bold text-md text-gray-300">
+                <p class="font-bold px-4 text-md text-gray-300">
                   {" "}
                   <Highlight attribute="author" hit={props.hit} />
                 </p>

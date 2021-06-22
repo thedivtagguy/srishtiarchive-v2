@@ -19,14 +19,10 @@ export default props => {
   } = props.data.item
 
   function handleCopy() {
-    // get the input Element ID. Save the reference into copyText
     var copyText = document.getElementById("mail")
-    // select() will select all data from this input field filled  
     copyText.select()
     copyText.setSelectionRange(0, 99999)
-    // execCommand() works just fine except IE 8. as w3schools mention
     document.execCommand("copy")
-    // alert the copied value from text input
   }
   return (
     <Layout>

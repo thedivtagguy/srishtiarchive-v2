@@ -54,7 +54,7 @@ input[type="search"] .focus\:outline-none:focus {
 }
 
 input[type="checkbox"] {
-  @apply  rounded-md h-5 w-5 text-sm text-gray-600;
+  @apply  rounded-sm h-3 w-3 text-sm text-gray-600;
 
 }
 
@@ -71,8 +71,8 @@ input[type="checkbox"] {
 }
 
 .ais-Hits-item {
-  flex-basis: 25%;
-  padding: 7px;
+  flex-basis: 33.33%;
+  padding: 16px;
 }
 .ais-PoweredBy-text {
   @apply text-gray-500 text-xxs font-semibold text-right mx-auto;
