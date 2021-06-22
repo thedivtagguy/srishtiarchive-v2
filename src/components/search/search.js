@@ -33,7 +33,7 @@ const SearchGrid = () => {
             <div class="bg-gray-800  border-r-4 border-saffron  sticky top-0 pl-4 w-64 pb-6 hidden md:block">
               
               <div class="sticky top-0 pt-8">
-              <div class="py-2 mb-4 w-1/2 flex justify-start items-center mx-4">
+              <div class="py-2 mt-4 w-1/2 flex justify-start items-center mx-4">
                   <ClearRefinements />
                 </div>
                 <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
@@ -78,7 +78,7 @@ const SearchGrid = () => {
             <div class="">
               <div class="h-full">
                 <div className="container w-full">
-                  <div class="flex-row flex  sticky top-0 py-2">
+                  <div class="flex-row flex py-2 sticky top-0 mt-3">
                     <div class="flex-1 ">
                       <SearchBox
                         className="search"

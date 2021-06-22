@@ -45,8 +45,8 @@ const queries = [
     settings: { attributesToSnippet: [`excerpt:20`],
                 attributesForFaceting: [
                   `major`,
-                 'searchable(`tools`)',
-                  `year`,
+                  `tools`,
+                   `year`,
                 ]
   },
   },
