@@ -78,7 +78,6 @@ input[type="checkbox"] {
   @apply text-gray-500 text-xxs font-semibold text-right mx-auto;
 }
 .ais-PoweredBy-logo {
-  opacity:50%;
   width:70px;
 }
 
