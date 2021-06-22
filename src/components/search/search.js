@@ -45,9 +45,9 @@ const SearchGrid = () => {
                   </div>
                 </div>
                 <div class="mb-2">
-                  
-                  <div class="px-4 mb-2 text-white flex justify-between items-center">
-                    <RefinementList attribute="major" className="majorlist" />
+
+                  <div class="px-4 mb-2 text-black text-sm font-semibold flex justify-between items-center">
+                  <MenuSelect attribute="major"></MenuSelect>
                   </div>
                   <div class="px-4 pt-2">
                     <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">

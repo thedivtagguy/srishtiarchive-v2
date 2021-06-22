@@ -54,12 +54,12 @@ input[type="search"] .focus\:outline-none:focus {
 }
 
 input[type="checkbox"] {
-  @apply  rounded-md h-5 w-5 text-gray-600;
+  @apply  rounded-md h-5 w-5 text-sm text-gray-600;
 
 }
 
 .ais-RefinementList-labelText {
-  @apply px-2 py-1 font-semibold rounded;
+  @apply px-2 py-1 font-semibold text-sm rounded;
 }
 .ais-SearchBox-submit, .ais-SearchBox-reset {
   display: none;
