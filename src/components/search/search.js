@@ -26,12 +26,12 @@ const searchClient = algoliasearch(
 
 const SearchGrid = () => {
   return (
-    <div id="search-box" className="bg-gray-900 pattern ">
+    <div id="search-box" className="bg-transparent pattern ">
       <div class="search-box-contents">
         <div class="sticky top-0 ">
           <InstantSearch searchClient={searchClient} indexName="archives">
             <div class="flex sticky top-0">
-              <div class="bg-gray-800  border-r-4 border-saffron  sticky top-0 pl-4 w-64 pb-6 hidden md:block">
+              <div class="bg-accent-gray h-screen rounded-tr-xl rounded-br-xl shadow-inner-xl  sticky top-0 pl-4 w-64 pb-6 hidden md:block">
         
                 <div class="sticky top-0 pt-8">
                 <div class="py-2 mt-4 w-1/2 flex justify-start items-center mx-4">
@@ -73,7 +73,7 @@ const SearchGrid = () => {
         
                 </div>
               </div>
-              <div class="">
+              <div class="w-full">
                 <div class="h-full">
                   <div className="container w-full">
                     <div class="flex-row flex py-2 z-10 sticky top-0 mt-3">
@@ -87,7 +87,7 @@ const SearchGrid = () => {
                       </div>
                       <div
                         id="power"
-                        class="px-4 flex-grow-0	lg:block md:block hidden bg-mint-cream shadow-orange"
+                        class="px-4 flex-grow-0	lg:block md:block hidden bg-light-gray shadow-orange"
                       >
                         <PoweredBy />
                       </div>
@@ -122,16 +122,16 @@ function Hit(props) {
   return (
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
-        <div className="bg-gray-800 transition duration-500 ease-in-out h-full transform hover:-translate-y-1 hover:scale-105 rounded-lg border-b-4 border-opacity-0 hover:border-opacity-100 border-high-yellow overflow-hidden group">
+        <div className="bg-accent-gray pt-4  transition duration-500 ease-in-out h-full transform hover:-translate-y-1 hover:scale-105 rounded-lg border-b-4 border-opacity-0 hover:border-opacity-100 border-high-yellow overflow-hidden group">
           <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
           <div className="p-4 h-54 sm:p-5">
             <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} />
 </p>
-            <h1 className="text-xl px-4 text-mint-cream font-bold">
+            <h1 className="text-xl px-4 text-light-gray font-bold">
               {" "}
               <Highlight attribute="name" hit={props.hit} />
             </h1>
-            <p className="text-mint-cream px-4 py-4 h-24 line-clamp-4 text-sm">
+            <p className="text-light-gray px-4 py-4 h-24 line-clamp-4 text-sm">
               {<Highlight attribute="description.description" hit={props.hit} />}
             </p>
           </div>
@@ -192,11 +192,11 @@ function Hit(props) {
               ])}
             </div>
           </div>
-          <div class="px-4 pt-3 pb-4 border-t border-gray-900 bg-gray-700">
+          <div class="px-4 pt-3 pb-4 border-t border-gray-900 bg-accent-gray">
           
             <div class="flex items-center">
               <div>
-                <p class="font-bold px-4 text-md text-gray-300">
+                <p class="font-bold px-4 text-md text-light-gray">
                   {" "}
                   <Highlight attribute="author" hit={props.hit} />
                 </p>

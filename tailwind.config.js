@@ -25,7 +25,9 @@ module.exports = {
        'sienna': '#230903',
        'blue-purple': '#BDADEA',
        'high-yellow': '#FFDE00',
-
+        'dark-gray': '#111827',
+        'accent-gray':'#1F2937',
+        'light-gray':'#D1D5DB',
      }
     },
 

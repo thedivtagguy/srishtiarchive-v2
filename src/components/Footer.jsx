@@ -25,7 +25,7 @@ const width = 70
   return (
     <div>
 
-    <footer class="bg-gray-900 text-gray-600 px-6 lg:px-12 py-12 sm:px-0">
+    <footer class="bg-dark-gray text-gray-600 px-6 lg:px-12 py-12 sm:px-0">
       <div class="mx-auto ">
       <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4">
 
@@ -86,15 +86,16 @@ const width = 70
       </div>
       <div>
         <p>&copy; 2021 A <strong><a href="https://theyellipages.in">The Yelli Pages</a></strong> Project</p>
-        <p class="pt-4 text-xs text-center">Developed and Maintained by Aman Bhargava</p>
+        <p class="pt-4 text-xs text-center">Designed and Developed by Aman Bhargava</p>
 
         <a href="https://github.com/thedivtagguy/srishtiarchivev2/">
-        <button class="text-xs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 px-4 rounded-full mx-auto bg-gray-800 hover:bg-gray-700">
+        <button class="text-xs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 px-4 rounded-sm shadow-shadow-yellow mx-auto bg-gray-800 hover:bg-gray-700">
           Improve this site on Github</button>
         </a>
       </div>
     </div>
-    
+    <p class="pt-4 mx-auto text-xs text-center">With 99.99% better uptime than any other Srishti website ✌️</p>
+
 </div>
   </footer>
 
