@@ -52,7 +52,7 @@ module.exports = {
        'mint-cream': '#F1FFFA',
        'charcoal': '#264653',
        'turquoise': '#55DDE0',
-       'lime': '#31c465',
+       'lime': '#25b859',
        'blaze-orange': '#FE5F00',
        'saffron': '#F9A03F',
        'sienna': '#230903',

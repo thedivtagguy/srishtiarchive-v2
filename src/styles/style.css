@@ -72,10 +72,13 @@ input[type="checkbox"] {
  flex-wrap: wrap;
 }
 
-.ais-Hits-item {
+.ais-Hits-item{
   flex-basis: 33.33%;
   padding: 16px;
 }
+
+
+
 .ais-PoweredBy-text {
   @apply text-black text-xxs font-semibold text-right mx-auto;
 }
@@ -125,14 +128,22 @@ input[type="search"]::-webkit-search-cancel-button {
   
 }
 
-.ais-ClearRefinements-button {
-  @apply py-1 px-2 mt-2 flex justify-center items-center uppercase bg-lime shadow-orange  text-black transition ease-in duration-200 text-center  text-mxs font-bold   rounded-sm;
+.ais-RefinementList-showMore {
+  @apply py-1 px-2 mt-2 flex justify-center items-center uppercase bg-lime  text-white transition ease-in duration-200 text-center  text-mxs font-extrabold tracking-wide  rounded-sm;
 }
 
-.ais-RefinementList-showMore {
+.ais-ClearRefinements-button {
   @apply py-1 px-4 mt-4 flex justify-center tracking-wide	 items-center uppercase bg-light-gray border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1  text-light-gray text-center text-mxs font-extrabold   rounded-sm;
 
 }
 .ais-RefinementList-count {
   @apply px-1  text-sm rounded text-light-gray  bg-gray-800 font-medium;
+}
+
+.highlight-border {
+  @apply border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1;
+}
+
+.highlight-text {
+  @apply  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500;
 }

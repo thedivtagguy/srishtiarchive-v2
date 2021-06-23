@@ -36,7 +36,7 @@ export default props => {
             <div className="container">
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-2/3 pb-8">
-                      <h1 className="text-6xl leading-tight font-extrabold tracking-tight text-lime sm:text-6xl mb-1">
+                      <h1 className="text-4xl pb-4 leading-tight font-extrabold tracking-tight text-lime sm:text-6xl mb-1">
                         {name}
                       </h1>
                       <div className="flex lg:flex-row flex-col justify-start lg:space-x-6 lg:items-center items-start">
@@ -48,7 +48,7 @@ export default props => {
                         </h3>
                       </div>
                       {description && (
-                      <div className="my-4 text-base lg:w-5/6 lg:text-base text-justify leading-snug text-gray-500 whitespace-pre-line">
+                      <div className="my-4 text-base lg:w-5/6 lg:text-base text-left leading-snug text-gray-500 whitespace-pre-line">
                         {description.description} 
       
                       </div>
@@ -58,9 +58,9 @@ export default props => {
                        </div>
                   </div>
                   <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12 h-36 overflow-y-auto ">
-                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 border-b-2 border-high-yellow bg-accent-gray dark:bg-gray-800 rounded-xl">
+                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1   bg-accent-gray dark:bg-gray-800 rounded-xl">
                         <div class="pb-4 px-3 border-b border-lime w-full">
-                            <h3 class="text-lg leading-6 font-extrabold text-blaze-orange dark:text-white">
+                            <h3 class="text-lg leading-6 font-extrabold text-light-gray dark:text-white">
                               Explore Further
                             </h3>
                             <div class="text-mint-cream dark:text-gray-200 text-sm">
@@ -72,9 +72,9 @@ export default props => {
                                 return (
                                 
                           <a  href={file.localFile.url}>
-                                  <li class="flex flex-row hover:text-blue-purple text-high-yellow ">
-                                  <div class="select-none cursor-pointer flex flex-1 items-center p-4">
-                                      <div class="flex-1">
+                                  <li class="flex flex-row justify-start items-center hover:text-blue-purple text-high-yellow ">
+                                  <div class="select-none cursor-pointer flex flex-grow-1 items-center p-4">
+                                      <div class="">
                                         <div class="font-semibold hover:text-blue-purple text-high-yellow dark:text-white">
                                             {file.title}
                                         </div>
@@ -142,7 +142,7 @@ export default props => {
                                 value={contact}
                                 id="mail" disabled="" class=" rounded-sm mx-auto border-transparent text-xs flex-1 ml-4 appearance-none border border-black w-4/5 py-1 px-4 bg-mint-cream text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
                               />
-                              <button onClick={handleCopy} type="button" class="py-1 ml-2 px-4 mt-2 flex justify-start items-center  bg-gray-800 shadow-orange hover:bg-gray-700 focus:ring-gray-500 focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center lg:text-xs text-mxs font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-sm ">
+                              <button onClick={handleCopy} type="button" class="py-1 ml-2 px-4 mt-2 flex justify-start items-center  highlight-border focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center lg:text-xs text-mxs font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-sm ">
                               Click to Copy Email
                               </button>
                             </div>
