@@ -1,5 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Footer = () => {
   const {
@@ -20,7 +21,7 @@ const Footer = () => {
       }
     }
   `)
-
+const width = 70
   return (
     <div>
 
@@ -30,7 +31,7 @@ const Footer = () => {
 
         <nav class="flex flex-wrap mx-auto justify-center space-x-6"> 
           <div class="max-w-screen-xl mx-auto lg:mb-12 ">
-          <img alt="Logo" className="w-16 md:w-20" src="/white-logo.png" />
+          <StaticImage src="../images/white-logo.png" alt="Hero Header" width={width} quality="100" layout="fixed" placeholder="blurred"/>
           </div>
          
         </nav>
@@ -43,13 +44,13 @@ const Footer = () => {
         <nav class="mt-4">
           <ul class="space-y-2">
             <li>
-              <a href="/major" class="font-normal text-base hover:text-gray-400">Majors</a>
+            <Link to="/majors"><span class="font-normal text-base hover:text-gray-400">Majors</span></Link>
             </li>
             <li>
-              <a href="/year" class="font-normal text-base hover:text-gray-400">Years</a>
+            <Link to="/years"><span class="font-normal text-base hover:text-gray-400">Years</span></Link>
             </li>
             <li>
-              <a href="/tools" class="font-normal text-base hover:text-gray-400">Tools</a>
+            <Link to="/tools"><span class="font-normal text-base hover:text-gray-400">Tools</span></Link>
             </li>
           </ul>
         </nav>
@@ -59,26 +60,26 @@ const Footer = () => {
         <nav class="mt-4">
           <ul class="space-y-2">
             <li>
-              <a href="#" class="font-normal text-base hover:text-gray-400">Submission Guidelines</a>
+            <Link to="/guidelines"><span class="font-normal text-base hover:text-gray-400">Submission Guidelines</span></Link>
             </li>
             <li>
-              <a href="#" class="font-normal text-base hover:text-gray-400">Submission Form</a>
+              <a href="https://submission-form.heroku.app" class="font-normal text-base hover:text-gray-400">Submission Form</a>
             </li>
            
           </ul>
         </nav>
       </div>
       <div class="text-center">
-        <h5 class="text-xl font-semibold text-gray-700"></h5>
+        <h5 class="text-xl font-semibold text-gray-700">Other</h5>
 
         <nav class="mt-4">
           <ul class="space-y-2">
           
             <li>
-              <a href="#" class="font-normal text-base hover:text-gray-400">Anti-Plagiarism Note</a>
+            <Link to="/philosophy"><span class="font-normal text-base hover:text-gray-400">Philosophy</span></Link>
             </li>
             <li>
-              <a href="#" class="font-normal text-base hover:text-gray-400">Terms and Conditions</a>
+            <Link to="/legal"><span class="font-normal text-base hover:text-gray-400">License and Legal</span></Link>
             </li>
           </ul>
         </nav>
@@ -87,9 +88,9 @@ const Footer = () => {
         <p>&copy; 2021 A <strong><a href="https://theyellipages.in">The Yelli Pages</a></strong> Project</p>
         <p class="pt-4 text-xs text-center">Developed and Maintained by Aman Bhargava</p>
 
-        <a href="https://github.com/thedivtagguy/srishtiarchive/">
+        <a href="https://github.com/thedivtagguy/srishtiarchivev2/">
         <button class="text-xs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 px-4 rounded-full mx-auto bg-gray-800 hover:bg-gray-700">
-          Edit this Page on Github</button>
+          Improve this site on Github</button>
         </a>
       </div>
     </div>

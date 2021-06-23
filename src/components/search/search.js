@@ -26,92 +26,91 @@ const searchClient = algoliasearch(
 
 const SearchGrid = () => {
   return (
-    <div className="bg-gray-900 pattern ">
-      <div class="sticky top-0 ">
-        <InstantSearch searchClient={searchClient} indexName="archives">
-          <div class="flex sticky top-0">
-            <div class="bg-gray-800  border-r-4 border-saffron  sticky top-0 pl-4 w-64 pb-6 hidden md:block">
-              
-              <div class="sticky top-0 pt-8">
-              <div class="py-2 mt-4 w-1/2 flex justify-start items-center mx-4">
-                  <ClearRefinements />
-                </div>
-                <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
-                  
-                  <div class="flex-auto">
-                    <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
-                      Major
-                    </h1>
+    <div id="search-box" className="bg-gray-900 pattern ">
+      <div class="search-box-contents">
+        <div class="sticky top-0 ">
+          <InstantSearch searchClient={searchClient} indexName="archives">
+            <div class="flex sticky top-0">
+              <div class="bg-gray-800  border-r-4 border-saffron  sticky top-0 pl-4 w-64 pb-6 hidden md:block">
+        
+                <div class="sticky top-0 pt-8">
+                <div class="py-2 mt-4 w-1/2 flex justify-start items-center mx-4">
+                    <ClearRefinements />
                   </div>
-                </div>
-                <div class="mb-2">
-
-                  <div class="px-4 mb-2 text-black text-sm font-semibold flex justify-between items-center">
-                  <MenuSelect attribute="major"></MenuSelect>
+                  <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
+        
+                    <div class="flex-auto">
+                      <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                        Major
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="mb-2">
+                    <div class="px-4 mb-2 text-black text-sm font-semibold flex justify-between items-center">
+                    <MenuSelect attribute="major"></MenuSelect>
+                    </div>
+                    <div class="px-4 pt-2">
+                      <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                        Year
+                      </h1>
+                    </div>
+                    <div class="bg-teal-dark py-1 px-4 text-white">
+                      <RefinementList attribute="year" className="yearlist" />
+                    </div>
                   </div>
                   <div class="px-4 pt-2">
-                    <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
-                      Year
-                    </h1>
-                  </div>
-                  <div class="bg-teal-dark py-1 px-4 text-white">
-                    <RefinementList attribute="year" className="yearlist" />
-                  </div>
-                </div>
-                <div class="px-4 pt-2">
-                    <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
-                      Tools
-                    </h1>
-                  </div>
-                <div>
-                  <div class="mb-2 text-white flex justify-between items-center">
-                    <div class="bg-teal-dark py-1 px-4  overflow-auto text-white">
-                      <RefinementList placeholder="Tools" limit={5} showMore attribute="tools" className="yearlist" />
-
+                      <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                        Tools
+                      </h1>
                     </div>
-                  </div>
-                </div>
-                
-
-              </div>
-            </div>
-            <div class="">
-              <div class="h-full">
-                <div className="container w-full">
-                  <div class="flex-row flex py-2 sticky top-0 mt-3">
-                    <div class="flex-1 ">
-                      <SearchBox
-                        className="search"
-                        translations={{
-                          placeholder: "Start Typing...",
-                        }}
-                      />
-                    </div>
-                    <div
-                      id="power"
-                      class="px-4 flex-grow-0	lg:block md:block hidden bg-mint-cream shadow-orange"
-                    >
-                      <PoweredBy />
-                    </div>
-                  </div>
-                  <div class="flex ">
-                    <Results>
-                      <div class="py-8">
-                        <Hits hitComponent={Hit} />
-                        <div
-                          id="mobile-alg"
-                          class="lg:hidden md:hidden mx-auto flex justify-center items-center"
-                        >
-                          <PoweredBy />
-                        </div>
+                  <div>
+                    <div class="mb-2 text-white flex justify-between items-center">
+                      <div class="bg-teal-dark py-1 px-4  overflow-auto text-white">
+                        <RefinementList placeholder="Tools" limit={5} showMore attribute="tools" className="yearlist" />
                       </div>
-                    </Results>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+              <div class="">
+                <div class="h-full">
+                  <div className="container w-full">
+                    <div class="flex-row flex py-2 z-10 sticky top-0 mt-3">
+                      <div class="flex-1 ">
+                        <SearchBox
+                          className="search"
+                          translations={{
+                            placeholder: "Type to Search Projects...",
+                          }}
+                        />
+                      </div>
+                      <div
+                        id="power"
+                        class="px-4 flex-grow-0	lg:block md:block hidden bg-mint-cream shadow-orange"
+                      >
+                        <PoweredBy />
+                      </div>
+                    </div>
+                    <div class="flex ">
+                      <Results>
+                        <div class="py-8">
+                          <Hits hitComponent={Hit} />
+                          <div
+                            id="mobile-alg"
+                            class="lg:hidden md:hidden mx-auto flex justify-center items-center"
+                          >
+                            <PoweredBy />
+                          </div>
+                        </div>
+                      </Results>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </InstantSearch>
+          </InstantSearch>
+        </div>
       </div>
     </div>
   )
@@ -123,7 +122,7 @@ function Hit(props) {
   return (
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
-        <div className="bg-gray-800 h-full rounded-lg border-b-2 border-high-yellow overflow-hidden group">
+        <div className="bg-gray-800 transition duration-500 ease-in-out h-full transform hover:-translate-y-1 hover:scale-105 rounded-lg border-b-4 border-opacity-0 hover:border-opacity-100 border-high-yellow overflow-hidden group">
           <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
           <div className="p-4 h-54 sm:p-5">
             <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} />

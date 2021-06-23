@@ -58,6 +58,8 @@ input[type="checkbox"] {
 
 }
 
+
+
 .ais-RefinementList-labelText {
   @apply px-2 py-1 font-semibold text-sm rounded;
 }

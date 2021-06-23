@@ -1,9 +1,12 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Hero = () => (
+const Hero = () => {
+  const width = 420
+  return (
   <div className="container lg:py-4  bg-transparent">
-   <div class="flex justify-start items-center">
-       <img src="/header.svg" class="mx-auto lg:w-2/5 w-full px-2" alt="header image"></img>
+   <div class="flex justify-center items-center">
+       <StaticImage src="../images/header.svg" alt="Hero Header" width={width} quality="100" layout="fixed" placeholder="tracedSVG"/>
     </div>
     <div class="mx-auto py-4 flex flex-col justify-center items-center">
      
@@ -11,7 +14,10 @@ const Hero = () => (
         
       </div>
     </div>
+
+
   </div>
-)
+  )
+  }
 
 export default Hero

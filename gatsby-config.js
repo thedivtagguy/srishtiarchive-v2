@@ -23,8 +23,8 @@ module.exports = {
     },
     locale: "en",
     title: `Srishti Archives`,
-    description: `Photography portfolio of John Doe`,
-    author: `@johndoe`,
+    description: `Crowdsourced repository of Srishti projects`,
+    author: `@thedivtagguy`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -46,6 +46,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-plugin-mailchimp",
