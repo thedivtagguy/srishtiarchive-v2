@@ -42,7 +42,7 @@ body {
 }
 
 input[type="search"] {
-  @apply text-xl  appearance-none shadow-orange py-4 px-16 text-center bg-light-gray text-gray-900  ;
+  @apply text-xl  appearance-none shadow-orange py-4 px-16 text-center bg-light-gray text-black ;
   width: 100%!important;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -77,7 +77,7 @@ input[type="checkbox"] {
   padding: 16px;
 }
 .ais-PoweredBy-text {
-  @apply text-gray-500 text-xxs font-semibold text-right mx-auto;
+  @apply text-black text-xxs font-semibold text-right mx-auto;
 }
 .ais-PoweredBy-logo {
   width:70px;

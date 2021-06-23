@@ -32,7 +32,7 @@ export default props => {
     
       />
       
-          <div className="bg-gray-900 pattern h-1/2 mx-4 lg:py-8">
+          <div className="bg-transparent h-1/2 mx-4 lg:py-8">
             <div className="container">
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-2/3 pb-8">
@@ -40,7 +40,7 @@ export default props => {
                         {name}
                       </h1>
                       <div className="flex lg:flex-row flex-col justify-start lg:space-x-6 lg:items-center items-start">
-                        <h3 className="text-2xl leading-tight font-extrabold tracking-tight text-white sm:text-3xl mb-1">
+                        <h3 className="text-2xl leading-tight font-extrabold tracking-tight text-light-gray sm:text-3xl mb-1">
                             {author}
                         </h3>
                         <h3 className="lg:text-2xl lg:border-l-2 lg:px-4 border-gray-600 leading-tight font-extrabold tracking-tight text-gray-700 sm:text-3xl mb-1">
@@ -58,7 +58,7 @@ export default props => {
                        </div>
                   </div>
                   <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12 h-36 overflow-y-auto ">
-                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 bg-gray-800 dark:bg-gray-800 rounded-sm shadow-shadow-yellow">
+                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 border-b-2 border-high-yellow bg-accent-gray dark:bg-gray-800 rounded-xl">
                         <div class="pb-4 px-3 border-b border-lime w-full">
                             <h3 class="text-lg leading-6 font-extrabold text-blaze-orange dark:text-white">
                               Explore Further
@@ -95,7 +95,7 @@ export default props => {
                   </div>
                   <div class="grid lg:grid-cols-9 grid-cols-1">
             <div class="lg:col-span-6">
-              <div class="mt-8 px-4 bg-gray-900 border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-8 py-5 sm:shadow ">
+              <div class="mt-8 px-4 bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-8 py-5 sm:shadow ">
                           <p class="text-base text-purple-500 font-bold">METADATA <span class="text-xs text-purple-700">(Click to Explore More)</span></p>
                           <div class="grid grid-cols-2 md:grid-cols-6 ">
                               <div class="flex flex-col py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">
@@ -130,7 +130,7 @@ export default props => {
                     </div>
                     <div class="lg:col-span-3 lg:pl-12"> 
                     <div className="lg:mt-8 mt-2">
-                        <div class="lg:mt-8 px-4 space-x-4 grid grid-cols-2 justify-center items-center bg-gray-900 border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 py-4 sm:shadow ">
+                        <div class="lg:mt-8 px-4 space-x-4 grid grid-cols-2 justify-center items-center bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 py-4 sm:shadow ">
                             <div class="mx-auto">
                               <p class="text-sm text-center text-mint-cream pb-2 font-bold">Author Contact</p>
                               

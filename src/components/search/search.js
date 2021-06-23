@@ -81,7 +81,7 @@ const SearchGrid = () => {
                         <SearchBox
                           className="search"
                           translations={{
-                            placeholder: "Type to Search Projects...",
+                            placeholder: "Type keywords to search...",
                           }}
                         />
                       </div>
