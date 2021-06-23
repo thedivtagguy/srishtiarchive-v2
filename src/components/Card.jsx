@@ -1,10 +1,9 @@
-import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 const Card = props => {
-  const { major, tools, items = tools.slice(0, 2), name, author, year, slug, description, thumbnail } = props
+  const { major, tools, items = tools.slice(0, 2), name, author, year, slug, description } = props
   return (
     <div class="h">
     <Link to={`/${slug}`}>

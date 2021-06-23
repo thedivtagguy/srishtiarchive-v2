@@ -1,8 +1,6 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
-  const width = 420
   return (
     <div className="container lg:py-4  bg-transparent">
       <div class="flex justify-center flex-col items-center">
@@ -13,7 +11,7 @@ const Hero = () => {
           _______________
         </h1>
         <p class="text-light-gray px-4 text-center py-4  lg:text-base text-sm">
-          A crowdsourced structured and searchable <br></br> library of projects by students at Srishti.
+          A crowdsourced structured and searchable <br></br> library of projects by students at Srishti
         </p>
       </div>
       

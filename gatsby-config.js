@@ -12,18 +12,14 @@ module.exports = {
   siteMetadata: {
     menu: [
       { name: "📦 Home", to: "/" },
-      { name: "📇 About", to: "/about" },
-      { name: "📨 Submission", to:"https://submission-form.herokuapp.com"}
+      { name: "📟 Why?", to: "/why" },
+      { name: "✨Submit Your Own ✨", to:"https://submission-form.herokuapp.com"},
+
     ],
-    links: {
-      facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      pinterest: "https://pinterest.com/",
-      twitter: "https://twitter.com/",
-    },
+
     locale: "en",
     title: `Srishti Archives`,
-    description: `Crowdsourced repository of Srishti projects`,
+    description: `Crowdsourced library of Srishti projects`,
     author: `@thedivtagguy`,
   },
   plugins: [

@@ -24,6 +24,10 @@ export default props => {
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy")
   }
+  
+
+ 
+
   return (
     <Layout>
       <SiteMetadata
@@ -92,10 +96,14 @@ export default props => {
                               })}
                         </ul>
                       </div>
-                  </div>
+               </div>
+
                   <div class="grid lg:grid-cols-9 grid-cols-1">
             <div class="lg:col-span-6">
               <div class="mt-8 px-4 bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-8 py-5 sm:shadow ">
+                
+
+
                           <p class="text-base text-purple-500 font-bold">METADATA <span class="text-xs text-purple-700">(Click to Explore More)</span></p>
                           <div class="grid grid-cols-2 md:grid-cols-6 ">
                               <div class="flex flex-col py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">

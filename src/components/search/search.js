@@ -12,7 +12,7 @@ import {
 } from "react-instantsearch-dom"
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 
 
 const searchClient = algoliasearch(
@@ -25,13 +25,14 @@ const searchClient = algoliasearch(
 //Search Grid
 
 const SearchGrid = () => {
+  
   return (
     <div id="search-box" className="bg-transparent pattern ">
       <div class="search-box-contents">
         <div class="sticky top-0 ">
           <InstantSearch searchClient={searchClient} indexName="archives">
             <div class="flex sticky top-0">
-              <div class="bg-accent-gray h-screen  rounded-xl sticky top-0 pl-4 w-64 pb-6 hidden md:block">
+              <div class="bg-accent-gray h-screen  rounded-tr-xl rounded-br-xl sticky top-0 pl-4 w-64 pb-6 hidden md:block">
         
                 <div class="sticky top-0 pt-8">
                 <div class="py-2 mt-4 w-2/3 flex justify-start items-center mx-4">
@@ -219,15 +220,10 @@ const Results = connectStateResults(
       children
     ) : (
       <div class="mx-auto flex justify-center items-center flex-col">
-        {" "}
-        <h1 class="text-4xl py-8 font-bold uppercase w-1/2 text-lime text-center">
-          I literally don't know what you mean by {searchState.query}. <br></br>{" "}
-          <span class="text-xs">you good my dude?</span>
+        <h1 class="text-4xl py-24 font-bold uppercase w-1/2 text-lime text-center">
+          Okay, no idea about what {searchState.query} could be. <br></br>{" "}
+          <span class="text-xs">Maybe try something else? (⊙_☉) </span>
         </h1>
-        <img
-          src="https://media.giphy.com/media/ghuvaCOI6GOoTX0RmH/giphy.gif"
-          alt="Not Found"
-        ></img>
       </div>
     )
 )
