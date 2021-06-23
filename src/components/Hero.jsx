@@ -4,20 +4,21 @@ import { StaticImage } from "gatsby-plugin-image"
 const Hero = () => {
   const width = 420
   return (
-  <div className="container lg:py-4  bg-transparent">
-   <div class="flex justify-center items-center">
-       <StaticImage src="../images/header.svg" alt="Hero Header" width={width} quality="100" layout="fixed" placeholder="tracedSVG"/>
-    </div>
-    <div class="mx-auto py-4 flex flex-col justify-center items-center">
-     
-      <div class="flex flex-col justify-center space-y-4 py-4 items-center">
-        
+    <div className="container lg:py-4  bg-transparent">
+      <div class="flex justify-center flex-col items-center">
+        <h1 className="text-6xl leading-tight font-extrabold tracking-tight  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500  sm:text-6xl mb-1">
+          Srishti Archive
+        </h1>
+        <h1 className="text-sm leading-tight font-extrabold tracking-tight  bg-clip-text text-transparent bg-gradient-to-tl from-pink-500 via-red-500 to-yellow-500  sm:text-sm mb-1">
+          _______________
+        </h1>
+        <p class="text-light-gray px-4 text-center py-4 h-24 text-base">
+          A crowdsourced structured and searchable <br></br> library of projects by students at Srishti.
+        </p>
       </div>
+      
     </div>
-
-
-  </div>
   )
-  }
+}
 
 export default Hero

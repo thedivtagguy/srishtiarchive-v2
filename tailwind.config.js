@@ -1,7 +1,40 @@
 module.exports = {
   purge: ["./src/**/*.jsx", "./src/**/*.js"],
   theme: {
+    linearBorderGradients: {
+      directions: { // defaults to these values
+        't': 'to top',
+        'tr': 'to top right',
+        'r': 'to right',
+        'br': 'to bottom right',
+        'b': 'to bottom',
+        'bl': 'to bottom left',
+        'l': 'to left',
+        'tl': 'to top left',
+      },
+      colors: { // defaults to {}
+        'red': '#f00',
+        'red-blue': ['#f00', '#00f'],
+        'blue-green': ['#0000ff', '#00FF00'],
+        'red-green-blue': ['#f00', '#0f0', '#00f'],
+        'black-white-with-stops': ['#000', '#000 45%', '#fff 55%', '#fff'],
+        'pink-red-yellow': ['#EC4899', '#EF4444', '#F59E0B'],
+      },
+      background: {
+        'gray-50': '#F9FAFB',
+        'gray-900':'#111827',
+        'accent-gray':'#1F2937',
+      },
+      border: { // defaults to these values (optional)
+        '1': '1px',
+        '2': '2px',
+        '4': '4px',
+      },
+    },
     extend: {
+      borderWidth: {
+        '1': '1px',
+      },
       spacing: {
         '54': ' 13rem',
       },
@@ -13,7 +46,7 @@ module.exports = {
      boxShadow: {
       'offset-black': '2px 2px black',
       'shadow-yellow': '3px 3px #FFDE00',
-      'orange':'3px 3px #F9A03F'
+      'orange':'3px 3px #F9A03F',
      },
      colors: {
        'mint-cream': '#F1FFFA',
@@ -42,10 +75,13 @@ module.exports = {
   variants: {
     opacity: ["responsive", "hover", "focus", "group-hover"],
     display: ["responsive", "hover", "focus", "last"],
+    linearBorderGradients: ['responsive'], 
+    linearBorderGradients: ['responsive', 'hover'], // defaults to ['responsive']
   },
   plugins: [
     // ...
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/forms'),
+    require('tailwindcss-border-gradient-radius'),
   ],
 }

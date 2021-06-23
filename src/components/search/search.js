@@ -31,16 +31,16 @@ const SearchGrid = () => {
         <div class="sticky top-0 ">
           <InstantSearch searchClient={searchClient} indexName="archives">
             <div class="flex sticky top-0">
-              <div class="bg-accent-gray h-screen rounded-tr-xl rounded-br-xl shadow-inner-xl  sticky top-0 pl-4 w-64 pb-6 hidden md:block">
+              <div class="bg-accent-gray h-screen  rounded-xl sticky top-0 pl-4 w-64 pb-6 hidden md:block">
         
                 <div class="sticky top-0 pt-8">
-                <div class="py-2 mt-4 w-1/2 flex justify-start items-center mx-4">
+                <div class="py-2 mt-4 w-2/3 flex justify-start items-center mx-4">
                     <ClearRefinements />
                   </div>
                   <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
         
                     <div class="flex-auto">
-                      <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-tl from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
                         Major
                       </h1>
                     </div>
@@ -50,7 +50,7 @@ const SearchGrid = () => {
                     <MenuSelect attribute="major"></MenuSelect>
                     </div>
                     <div class="px-4 pt-2">
-                      <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
                         Year
                       </h1>
                     </div>
@@ -59,7 +59,7 @@ const SearchGrid = () => {
                     </div>
                   </div>
                   <div class="px-4 pt-2">
-                      <h1 class="font-semibold text-lime text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
                         Tools
                       </h1>
                     </div>
@@ -122,12 +122,12 @@ function Hit(props) {
   return (
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
-        <div className="bg-accent-gray pt-4  transition duration-500 ease-in-out h-full transform hover:-translate-y-1 hover:scale-105 rounded-lg border-b-4 border-opacity-0 hover:border-opacity-100 border-high-yellow overflow-hidden group">
+        <div className="bg-accent-gray pt-4 transition duration-300 ease-in-out h-full lg:transform md:transform hover:-translate-y-1 hover:scale-105 transform-none rounded-lg overflow-hidden group">
           <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
           <div className="p-4 h-54 sm:p-5">
             <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} />
 </p>
-            <h1 className="text-xl px-4 text-light-gray font-bold">
+            <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
               {" "}
               <Highlight attribute="name" hit={props.hit} />
             </h1>

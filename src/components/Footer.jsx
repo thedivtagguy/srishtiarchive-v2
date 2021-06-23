@@ -89,7 +89,7 @@ const width = 70
         <p class="pt-4 text-xs text-center">Designed and Developed by Aman Bhargava</p>
 
         <a href="https://github.com/thedivtagguy/srishtiarchivev2/">
-        <button class="text-xs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 px-4 rounded-sm shadow-shadow-yellow mx-auto bg-gray-800 hover:bg-gray-700">
+        <button class="text-xs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 px-4 rounded-sm  mx-auto border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1 duration-500 lg:transform md:transform hover:-translate-y-1 hover:scale-20 transform-none">
           Improve this site on Github</button>
         </a>
       </div>

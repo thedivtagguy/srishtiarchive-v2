@@ -126,11 +126,11 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .ais-ClearRefinements-button {
-  @apply py-1 px-1 mt-2 flex justify-center items-center uppercase bg-lime shadow-orange  text-black transition ease-in duration-200 text-center  text-mxs font-bold   rounded-sm;
+  @apply py-1 px-2 mt-2 flex justify-center items-center uppercase bg-lime shadow-orange  text-black transition ease-in duration-200 text-center  text-mxs font-bold   rounded-sm;
 }
 
 .ais-RefinementList-showMore {
-  @apply py-1 px-4 mt-4 flex justify-center items-center uppercase bg-gray-900 shadow-orange  text-light-gray transition ease-in duration-200 text-center  text-mxs font-bold   rounded-sm;
+  @apply py-1 px-4 mt-4 flex justify-center tracking-wide	 items-center uppercase bg-light-gray border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1  text-light-gray text-center text-mxs font-extrabold   rounded-sm;
 
 }
 .ais-RefinementList-count {
