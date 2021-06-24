@@ -69,11 +69,7 @@ class DropdownRefinementList extends Component {
 </span>
           <span className="ais-DropdownRefinementList-title font-bold w-full text-gray-600">
             {title}{' '}
-            {currentRefinement.length > 0 ? (
-              <p className={cx('active-facets')}>{currentRefinement.length}</p>
-            ) : (
-              <i className={cx('caret-down')} />
-            )}
+           
           </span>
         </div>
         {active && (

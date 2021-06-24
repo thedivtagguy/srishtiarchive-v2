@@ -39,9 +39,8 @@
     display: none;
   }
   .ais-DropdownRefinementList-active-facets {
-    background: #00f;
-    width: 23px;
-    height: 23px;
+    @apply absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75;
+    @apply relative inline-flex rounded-full h-3 w-3 bg-purple-500;
     color: #fff;
     border-radius: 50%;
     text-align: center;

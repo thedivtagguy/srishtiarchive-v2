@@ -1,4 +1,4 @@
-import DropdownRefinementList from "./Dropdown"
+import DropdownRefinementList from "./dropdown"
 import "./dropdownstyles.css"
 import React from "react"
 function Mobilebar() {
