@@ -46,7 +46,7 @@ const width = 70
             <Link to="/guidelines"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Guidelines</span></Link>
             </li>
             <li>
-              <a href="https://submit.srishtiarchive.com" class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Form</a>
+              <a href="http://submit.srishtiarchive.com" class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Form</a>
             </li>
            
           </ul>
@@ -71,7 +71,7 @@ const width = 70
         <p class="text-xs lg:text-base">&copy; 2021 A <strong><a href="https://theyellipages.in">The Yelli Pages</a></strong> Project</p>
         <p class="pt-4 text-mxs lg:text-xs text-center">Designed and Developed by Aman Bhargava</p>
 
-        <a href="https://github.com/thedivtagguy/srishtiarchivev2/">
+        <a href="https://github.com/thedivtagguy/srishtiarchive-v2/">
         <button class="text-mxs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 px-4 rounded-sm  mx-auto border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1 duration-500 lg:transform md:transform hover:-translate-y-1 hover:scale-20 transform-none">
           Improve this site on Github</button>
         </a>

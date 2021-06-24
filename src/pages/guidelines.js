@@ -67,14 +67,11 @@ const AboutPage = ({ data }) => (
         </div>
     </div>
     <div class=" flex flex-col justify-center md:flex-row p-8 md:space-x-4">
-            <a href="https://submit.srishtiarchive.com" class="font-bold text-center text-sm lg:text-3xl border-2 border-black rounded-sm shadow-shadow-yellow py-4 px-4  hover:bg-yellow focus:outline-none hover:bg-blue-purple bg-yellow-400">
+            <a href="http://submit.srishtiarchive.com" class="font-bold text-center text-sm lg:text-3xl border-2 border-black rounded-sm shadow-shadow-yellow py-4 px-4  hover:bg-yellow focus:outline-none hover:bg-blue-purple bg-yellow-400">
                 Cool cool cool, I'm ready to submit.
             </a>
         </div>
 </section>
-
-
-
 
   </Layout>
 )
