@@ -46,7 +46,7 @@ const width = 70
             <Link to="/guidelines"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Guidelines</span></Link>
             </li>
             <li>
-              <a href="https://submission-form.heroku.app" class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Form</a>
+              <a href="https://submit.srishtiarchive.com" class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Form</a>
             </li>
            
           </ul>
@@ -62,7 +62,7 @@ const width = 70
             <Link to="/why"><span class="font-normal text-base hover:text-gray-400">Philosophy</span></Link>
             </li>
             <li>
-            <Link to="/legal"><span class="font-normal text-base hover:text-gray-400">License and Legal</span></Link>
+            <Link to="/faq"><span class="font-normal text-base hover:text-gray-400">License and Legal</span></Link>
             </li>
           </ul>
         </nav>
@@ -77,7 +77,8 @@ const width = 70
         </a>
       </div>
     </div>
-    <p class="pt-4 mx-auto text-xs text-center">With 99.99% better uptime than any other Srishti website <span role="img" aria-label="Peace Sign">✌️</span></p>
+    <p class="pt-4 mx-auto text-xs text-center">99.99% better uptime than any other Srishti website <span role="img" aria-label="Peace Sign">✌️</span></p>
+    <p class="pt-4 mx-auto text-mxs text-center"> By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice" target="_blank" class="highlight-text font-bold">Srishti Manipal's Policy on Ethical Conduct and Practice</a></p>
 
 </div>
   </footer>

@@ -9,18 +9,20 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
  
-    <div className="bg-gray-900 pattern mx-auto">
+    <div className="bg-gray-900 pattern mx-auto overflow-hidden">
     <div class="flex flex-col justify-start items-start w-full px-16 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
 
 <h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">Projects by {m} Students</h1>
 <p class="text-lg font-medium text-gray-500 sm:text-2xl">{totalCount} Projects</p>
 </div>
-       
+<div class="px-24">
+ 
       {data.portfolio && data.portfolio.nodes.length > 0 ? (
         <Cards items={data.portfolio.nodes} />
       ) : (
         <div className="container">No projects found.</div>
       )}
+    </div>
     </div>
   </Layout>
   );

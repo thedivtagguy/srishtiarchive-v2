@@ -12,8 +12,9 @@ module.exports = {
   siteMetadata: {
     menu: [
       { name: "📦 Home", to: "/" },
-      { name: "📟 Why?", to: "/why" },
-      { name: "✨Submit Your Own ✨", to:"https://submission-form.herokuapp.com"},
+      { name: "💬 Why?", to: "/why" },
+      { name: "❓ FAQ", to: "/faq" },
+      { name: "✨Submit Your Own ✨", to:"/guidelines"},
 
     ],
 

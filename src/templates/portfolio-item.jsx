@@ -1,7 +1,6 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import SiteMetadata from "../components/SiteMetadata"
-import Cards from "../components/Cards"
 import Layout from "../layouts/Layout"
 import kebabCase from "lodash/kebabCase"
 
@@ -9,7 +8,6 @@ export default props => {
   const {
     description,
     name,
-    related,
     author,
     major,
     year,
@@ -165,20 +163,6 @@ export default props => {
               </div>
             </div>
           </div>
-
-         
-          {related && (
-          <div className="bg-gray-900 pattern ">
-            <div className="container">
-                <h2 className="text-3xl sm:text-4xl px-8 py-4 leading-tight font-extrabold tracking-tight text-white">
-                  Related Projects
-                </h2>
-                <Cards items={related} hideLastItemOnMobile={true} />
-
-            </div>
-          
-          </div>
-          )}
     </Layout>
   )
 }

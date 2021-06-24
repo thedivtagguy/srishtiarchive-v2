@@ -38,7 +38,7 @@ const Header = () => {
           {site.data.menu.map((link, key) => (
             <Link
               key={`menu_desktop_link${key}`}
-              className="ml-6 sm:ml-8 text-sm sm:text-base font-medium px-px border-b-5 pb-2 border-transparent text-black hover:text-gray-800 hover:border-gray-600 transition duration-150 ease-in-out"
+              className="ml-6 sm:ml-8 text-sm sm:text-base font-medium border-b-5 pb-2 border-transparent text-black hover:text-gray-800 hover:border-gray-600 transition duration-150 ease-in-out"
               activeClassName="border-blue-600 text-sienna hover:border-blue-600"
               to={link.to}
             >

@@ -77,7 +77,7 @@ const SearchGrid = () => {
               <div class="w-full">
                 <div class="h-full">
                   <div className="container w-full">
-                    <div class="flex-row flex z-10 sticky top-0 mt-3">
+                    <div class="flex-row flex z-10 py-2 sticky top-0 mt-3">
                       <div class="flex-1 ">
                         <SearchBox
                           className="search"
