@@ -63,7 +63,6 @@ const AboutPage = ({ data }) => (
             <p class="pt-4 pb-8 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
                 Once you have these things read, <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">head over to the form</span> and submit it! You'll get an <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">email confirmation</span> once we get it. Once it is reviewed and approved, it'll be <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">published on the website within 2-3 days</span>. 
             </p>
-            
         </div>
     </div>
     <div class=" flex flex-col justify-center md:flex-row p-8 md:space-x-4">
