@@ -13,8 +13,7 @@ import {
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-
-
+import Mobilebar from "./mobilefilter"
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
@@ -31,9 +30,12 @@ const SearchGrid = () => {
       <div class="search-box-contents">
         <div class="sticky top-0 ">
           <InstantSearch searchClient={searchClient} indexName="archives">
+
+            <Mobilebar/>
             <div class="flex sticky top-0">
+          
               <div class="bg-accent-gray h-screen  rounded-tr-xl rounded-br-xl sticky top-0 pl-4 w-64 pb-6 hidden md:block">
-        
+
                 <div class="sticky top-0 pt-8">
                 <div class="py-2 mt-4 w-2/3 flex justify-start items-center mx-4">
                     <ClearRefinements />
@@ -48,6 +50,7 @@ const SearchGrid = () => {
                   </div>
                   <div class="mb-2">
                     <div class="px-4 mb-2 text-black text-sm font-semibold flex justify-between items-center">
+                      
                     <MenuSelect attribute="major"></MenuSelect>
                     </div>
                     <div class="px-4 pt-2">
@@ -96,6 +99,7 @@ const SearchGrid = () => {
                     <div class="flex ">
                       <Results>
                         <div class="py-8">
+                          
                           <Hits hitComponent={Hit} />
                           <div
                             id="mobile-alg"
@@ -219,6 +223,7 @@ const Results = connectStateResults(
     searchResults && searchResults.nbHits !== 0 ? (
       children
     ) : (
+      
       <div class="mx-auto flex justify-center items-center flex-col">
         <h1 class="text-4xl py-24 font-bold uppercase w-1/2 text-lime text-center">
           Okay, no idea about what {searchState.query} could be. <br></br>{" "}

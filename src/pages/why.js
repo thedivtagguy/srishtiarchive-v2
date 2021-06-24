@@ -5,7 +5,7 @@ import SiteMetadata from "../components/SiteMetadata"
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SiteMetadata title="About" description="Sample description" />
+    <SiteMetadata title="Why?" description="Why build an archive at all?" />
 
 
 

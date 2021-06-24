@@ -17,7 +17,7 @@ export default props => {
 
   return (
     <Layout>
-    <SiteMetadata title="Majors" description="List of Majors" />
+    <SiteMetadata title="Years" description="List of Years" />
     <body class="lg:px-40">
     <div class="flex justify-center flex-col items-center">
         <h1 className="text-4xl leading-tight font-extrabold tracking-tight  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500  sm:text-6xl mb-1">

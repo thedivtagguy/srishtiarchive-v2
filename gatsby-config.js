@@ -14,7 +14,7 @@ module.exports = {
       { name: "📦 Browse Projects", to: "/" },
       { name: "💬 Why?", to: "/why" },
       { name: "❓ FAQ", to: "/faq" },
-      { name: "✨Submit Your Own ✨", to:"/guidelines"},
+      { name: "✨Submit Your Own ✨", to:"http://submit.srishtiarchive.com"},
 
     ],
 

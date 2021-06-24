@@ -99,9 +99,6 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
-  thumbnail: PropTypes.shape({
-    localFile: PropTypes.object,
-  }),
 }
 
 export default Card
@@ -117,15 +114,6 @@ export const query = graphql`
     tools
     description {
       description
-    }
-    thumbnail {
-      localFile {
-        childImageSharp {
-          fluid(maxWidth: 444, maxHeight: 342, quality: 85) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
     }
     summary
   }
