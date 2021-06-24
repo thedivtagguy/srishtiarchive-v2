@@ -1,21 +1,15 @@
 import DropdownRefinementList from "./dropdown"
 import "./dropdownstyles.css"
 import React from "react"
+import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
+
 function Mobilebar() {
-    let myID = document.getElementById("bar");
-    let height = document.documentElement.scrollHeight;
-    let myScrollFunc = function() {
-      let y = window.scrollY;
-      if (y >= 200 && y <= (height-574*2)) {
-        myID.className = "block"
-      } else {
-        myID.className = "hidden"
-      }
-    };
-    
-    window.addEventListener("scroll", myScrollFunc);
   return (
     <div class="lg:hidden md:hidden  block w-full">
+          <Helmet>
+        <script src={withPrefix('hideshow.js')} type="text/javascript" defer />
+    </Helmet>
       <section
         id="bar"
         class="md:hidden block w-full fixed inset-x-0 bottom-0 z-10 bg-accent-gray shadow">
@@ -35,7 +29,7 @@ function Mobilebar() {
 
             <span id="tools" class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
               <span class="tab tab-kategori block text-xs text-light-gray">
-                <DropdownRefinementList attribute={"tools"} icon={"🧰"} />
+                <DropdownRefinementList attribute={"tools"} icon={"✒️"} />
               </span>
             </span>
           </div>

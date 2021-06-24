@@ -18,7 +18,7 @@
   }
   .ais-DropdownRefinementList-container:hover .ais-DropdownRefinementList-List {
     display: inline-block;
- 
+    transition-duration: 500ms;
   }
   .ais-DropdownRefinementList-title span {
     color: gray;
@@ -55,5 +55,17 @@
   }
 
   #tools > span > div > div.ais-DropdownRefinementList-List {
-    margin-left: -120px;
+    margin-left: -50px;
+    bottom: 70px;
+  }
+
+  #tabs > span:nth-child(2) > span > div > div.ais-DropdownRefinementList-List {
+    margin-left: 0px;
+    bottom: 70px;
+
+  }
+
+  #tabs > span:nth-child(1) > span > div > div.ais-DropdownRefinementList-List {
+    margin-left: 12px;
+    bottom: 70px;
   }
