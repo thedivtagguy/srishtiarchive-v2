@@ -11,7 +11,7 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 module.exports = {
   siteMetadata: {
     menu: [
-      { name: "📦 Home", to: "/" },
+      { name: "📦 Browse Projects", to: "/" },
       { name: "💬 Why?", to: "/why" },
       { name: "❓ FAQ", to: "/faq" },
       { name: "✨Submit Your Own ✨", to:"/guidelines"},
