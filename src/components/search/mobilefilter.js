@@ -1,15 +1,14 @@
 import DropdownRefinementList from "./dropdown"
 import "./dropdownstyles.css"
 import React from "react"
-import Helmet from "react-helmet"
-import { withPrefix } from "gatsby"
+
 
 function Mobilebar() {
+
+
   return (
     <div class="lg:hidden md:hidden  block w-full">
-          <Helmet>
-        <script src={withPrefix('hideshow.js')} type="text/javascript" defer />
-    </Helmet>
+        
       <section
         id="bar"
         class="md:hidden block w-full fixed inset-x-0 bottom-0 z-10 bg-accent-gray shadow">

@@ -46,7 +46,7 @@ const width = 70
             <Link to="/guidelines"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Guidelines</span></Link>
             </li>
             <li>
-              <a href="http://submit.srishtiarchive.com" class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Form</a>
+              <a href="https://submit.srishtiarchive.com" class="font-normal text-sm lg:text-base hover:text-gray-400">Submission Form</a>
             </li>
            
           </ul>
