@@ -105,14 +105,14 @@ export default props => {
                           <p class="text-base text-purple-500 font-bold">METADATA <span class="text-xs text-purple-700">(Click to Explore More)</span></p>
                           <div class="grid grid-cols-2 md:grid-cols-6 ">
                               <div class="flex flex-col py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">
-                              <Link to={`/year/${kebabCase(year)}/`}>
+                              <Link to={`/years/${kebabCase(year)}/`}>
                                 <span class="px-2 py-1 text-base rounded text-white  bg-purple-600 font-medium">
                                 { year}
                                 </span>
                                 </Link>
                               </div>
                               <div class="flex flex-col items-start justify-center col-span-1 md:col-span-2 lg:col-span-1">
-                              <Link to={`/major/${kebabCase(major)}/`}>
+                              <Link to={`/majors/${kebabCase(major)}/`}>
 
                                 <span class="px-2 py-1  text-base rounded text-white  bg-yellow-600 font-medium">
                                 { major }
