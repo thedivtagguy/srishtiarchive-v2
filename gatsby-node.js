@@ -122,7 +122,7 @@ exports.createPages = ({ graphql, actions }) => {
       // Make year pages
       years.forEach(y => {
         createPage({
-          path: `/year/${_.kebabCase(y)}/`,
+          path: `/years/${_.kebabCase(y)}/`,
           component: yearTemplate,
           context: {
             y
@@ -134,7 +134,7 @@ exports.createPages = ({ graphql, actions }) => {
       // Make major pages
       majors.forEach(m => {
         createPage({
-          path: `/major/${_.kebabCase(m)}/`,
+          path: `/majors/${_.kebabCase(m)}/`,
           component: majorTemplate,
           context: {
             m
