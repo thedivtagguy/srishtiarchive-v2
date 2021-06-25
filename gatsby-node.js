@@ -16,18 +16,14 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type ContentfulPortfolio implements Node {
       description: contentfulPortfolioDescriptionTextNode
-      gallery: [ContentfulAsset]
       id: ID!
       name: String!
-      related: [ContentfulPortfolio]
       slug: String!
       major: String!
       files: [ContentfulAsset]
       author: String!
       tools: [String]!
       year: String!
-      thumbnail: ContentfulAsset
-      url: String
       contact: String
     }
   `
