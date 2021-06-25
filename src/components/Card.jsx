@@ -98,7 +98,6 @@ const Card = props => {
 Card.propTypes = {
   name: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
 }
 
 export default Card
@@ -115,6 +114,5 @@ export const query = graphql`
     description {
       description
     }
-    summary
   }
 `

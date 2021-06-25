@@ -185,10 +185,6 @@ export const query = graphql`
       }
       name
       year
-      related {
-        ...PortfolioCard
-      }
-      url
       contact
     }
   }
