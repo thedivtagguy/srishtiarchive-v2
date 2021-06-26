@@ -40,7 +40,7 @@ const SearchGrid = () => {
           
               <div class="bg-accent-gray h-screen  rounded-tr-xl rounded-br-xl sticky top-0 pl-4 w-64 pb-6 hidden md:block">
 
-                <div class="sticky top-0 pt-8">
+                <div class="sticky top-0 pt-2">
                 <div class="py-2 mt-4 w-2/3 flex justify-start items-center mx-4">
                     <ClearRefinements />
                   </div>
@@ -64,8 +64,8 @@ const SearchGrid = () => {
                           Category
                         </h1>
                       </div>
-                      <div class="bg-teal-dark py-1 px-4 text-white">
-                        <RefinementList attribute="year" className="yearlist" />
+                      <div class="bg-teal-dark py-1 px-4 text-xs text-white">
+                        <RefinementList attribute="category" className="categoryList" />
                       </div>
                     </div>
                   <div class="mb-2">
