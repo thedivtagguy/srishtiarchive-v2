@@ -55,17 +55,21 @@
   }
 
   #tools > span > div > div.ais-DropdownRefinementList-List {
-    margin-left: -50px;
+    margin-left: -140px;
     bottom: 70px;
+    font-size: 14px;
   }
 
   #tabs > span:nth-child(2) > span > div > div.ais-DropdownRefinementList-List {
-    margin-left: 0px;
+    margin-left: -5px;
     bottom: 70px;
+    font-size: 14px;
 
   }
 
   #tabs > span:nth-child(1) > span > div > div.ais-DropdownRefinementList-List {
     margin-left: 12px;
     bottom: 70px;
+    font-size: 14px;
+
   }

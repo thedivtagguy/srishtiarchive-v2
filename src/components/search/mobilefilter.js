@@ -16,19 +16,21 @@ function Mobilebar() {
           <div id="tabs" class="flex justify-between">
             <span class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
               <span class="tab tab-kategori block text-xs text-light-gray">
-                <DropdownRefinementList attribute={"major"} icon={"📓"} />
+                <DropdownRefinementList attribute={"major"} icon={"📓"}  
+                setActive={() => this.setActive(1)} />
               </span>
             </span>
 
             <span class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
               <span class="tab tab-kategori block text-xs text-light-gray">
-                <DropdownRefinementList attribute={"year"} icon={"📅"} />
+                <DropdownRefinementList attribute={"year"} icon={"📅"}  
+                setActive={() => this.setActive(2)} />
               </span>
             </span>
 
             <span id="tools" class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
               <span class="tab tab-kategori block text-xs text-light-gray">
-                <DropdownRefinementList attribute={"tools"} icon={"✒️"} />
+                <DropdownRefinementList attribute={"category"} icon={"✒️"} />
               </span>
             </span>
           </div>

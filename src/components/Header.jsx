@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <div className="container bg-transparent pattern">
-      <div className="flex justify-between py-8 items-center">
+      <div className="flex justify-between py-8 px-2 items-center">
         <Link to="/">
           <img alt="Logo" className="w-16 md:w-16" width="64px" src="/white-logo.png" />
         </Link>

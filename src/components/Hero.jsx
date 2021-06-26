@@ -11,7 +11,7 @@ const Hero = () => {
           _______________
         </h1>
         <p class="text-light-gray px-4 text-center py-4  lg:text-base text-sm">
-          A crowdsourced structured and searchable <br></br> library of projects by students at Srishti
+          A crowdsourced structured and searchable <br></br> open-source library of projects by students at Srishti
         </p>
 
       </div>

@@ -175,7 +175,7 @@ function Hit(props) {
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
         <div className="bg-accent-gray lg:pt-4 md:pt-4 transition duration-300 ease-in-out h-full lg:transform md:transform hover:-translate-y-1 hover:scale-105 transform-none rounded-lg overflow-hidden group">
-          <div className="p-4 lg:h-54 h-54 mb-20 lg:mb-12 sm:p-5">
+          <div className="p-4 h-54 mb-12 sm:p-5">
             <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} />
 </p>
             <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
@@ -186,7 +186,7 @@ function Hit(props) {
               {<Highlight attribute="description.description" hit={props.hit} />}
             </p>
 
-            <div class="py-2">
+            <div class="">
               <p className="highlight-text font-bold font-mxs px-4 py-4 text-sm">
               <Highlight attribute="category" hit={props.hit} />
               </p>

@@ -23,11 +23,14 @@ const width = 70
    
     <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-8 px-4 py-4 text-center grid-cols-2">
       <div>
-        <h5 class="lg:text-xl text-base font-semibold text-gray-700">Categories</h5>
+        <h5 class="lg:text-xl text-base font-semibold text-gray-700">Taxonomies</h5>
         <nav class="mt-4">
           <ul class="space-y-2">
             <li>
             <Link to="/majors"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Majors</span></Link>
+            </li>
+            <li>
+            <Link to="/categories"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Categories</span></Link>
             </li>
             <li>
             <Link to="/years"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Years</span></Link>
@@ -53,26 +56,29 @@ const width = 70
         </nav>
       </div>
       <div class="text-center">
-        <h5 class="text-xl font-semibold text-gray-700">Other</h5>
+        <h5 class="lg:text-xl font-semibold text-gray-700">Other</h5>
 
         <nav class="mt-4">
           <ul class="space-y-2">
           
             <li>
-            <Link to="/why"><span class="font-normal text-base hover:text-gray-400">Philosophy</span></Link>
+            <Link to="/why"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Philosophy</span></Link>
             </li>
             <li>
-            <Link to="/faq"><span class="font-normal text-base hover:text-gray-400">License and Legal</span></Link>
+            <Link to="/faq"><span class="font-normal text-sm lg:text-base hover:text-gray-400">License and Legal</span></Link>
+            </li>
+            <li>
+            <Link to="/contact"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Contact and Contributing</span></Link>
             </li>
           </ul>
         </nav>
       </div>
       <div>
-        <p class="text-xs lg:text-base">&copy; 2021 A <strong><a href="https://theyellipages.in">The Yelli Pages</a></strong> Project</p>
-        <p class="pt-4 text-mxs lg:text-xs text-center">Designed and Developed by Aman Bhargava</p>
+        <p class="text-xs lg:text-base">&copy; 2021 A <span class="font-semibold highlight-text"><a href="https://theyellipages.in">The Yelli Pages</a></span> Project</p>
+        <p class="pt-4 text-mxs lg:text-mxs text-center">Designed and Developed by <a href="https://instagram.com/thedivtagguy" target="_blank"><span class="highlight-text font-semibold">Aman Bhargava</span></a></p>
 
         <a href="https://github.com/thedivtagguy/srishtiarchive-v2/">
-        <button class="text-mxs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 px-4 rounded-sm  mx-auto border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1 duration-500 lg:transform md:transform hover:-translate-y-1 hover:scale-20 transform-none">
+        <button class="lg:text-mxs text-xxs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 lg:px-4 px-2 rounded-sm  mx-auto border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1 duration-500 lg:transform md:transform hover:-translate-y-1 hover:scale-20 transform-none">
           Improve this site on Github</button>
         </a>
       </div>
