@@ -36,7 +36,7 @@ const AboutPage = ({ data }) => (
                 File Requirements
             </h2>
             <ul>
-            <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">All file formats are allowed. PDFs, Videos, MP3, code; if you have if, we can store it.</li>              
+            <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">All file formats are allowed. PDFs, Videos, MP3, code; if you have it, we can store it.</li>              
             <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">Each file must be limited  to <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">50 MB per file</span>.</li>
             <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">You may only upload 4 files for each entry.</li>
             <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">If your project has external links links to hosted videos or websites, included that in a separate PDF with the title 'External Links' and put your links with their titles in one page.</li>
