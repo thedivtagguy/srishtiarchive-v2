@@ -13,8 +13,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       tools: [String]
       files: [ContentfulAsset]
       contact: String
-      course: String!
-      category: String!
+      course: String
+      category: String
 
     }
     type ContentfulPortfolio implements Node {
@@ -28,8 +28,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       tools: [String]!
       year: String!
       contact: String
-      course: String!
-      category: String!
+      course: String
+      category: String
 
     }
   `
