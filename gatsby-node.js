@@ -13,6 +13,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       tools: [String]
       files: [ContentfulAsset]
       contact: String
+      course: String!
+      category: String!
+
     }
     type ContentfulPortfolio implements Node {
       description: contentfulPortfolioDescriptionTextNode
@@ -25,6 +28,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       tools: [String]!
       year: String!
       contact: String
+      course: String!
+      category: String!
+
     }
   `
   createTypes(typeDefs)
