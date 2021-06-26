@@ -42,7 +42,7 @@ body {
 }
 
 input[type="search"] {
-  @apply text-xl  appearance-none shadow-orange py-4 px-16 text-center bg-light-gray text-black ;
+  @apply text-xl  appearance-none shadow-orange rounded-tl-lg rounded-bl-lg py-4 px-16 text-center bg-light-gray text-black ;
   width: 100%!important;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -117,7 +117,8 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 7px;
   }
   input[type="search"] {
-    @apply text-sm;
+    @apply text-sm  appearance-none shadow-orange rounded-lg py-4 px-16 text-center bg-light-gray text-black ;
+
   }
 }
 

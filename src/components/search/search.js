@@ -138,7 +138,7 @@ const SearchGrid = () => {
                       </div>
                       <div
                         id="power"
-                        class="px-4 flex-grow-0	lg:block md:block hidden bg-light-gray shadow-orange"
+                        class="px-4 flex-grow-0	lg:block md:block hidden rounded-tr-lg rounded-br-lg bg-light-gray shadow-orange"
                       >
                         <PoweredBy />
                       </div>

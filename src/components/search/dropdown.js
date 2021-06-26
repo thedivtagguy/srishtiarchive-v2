@@ -14,11 +14,6 @@ class DropdownRefinementList extends Component {
     }
   }
 
-  handleEvent = e => {
-    this.props.setActive();
-    e.stopPropagation(); //stop event from propagating to ancestor elements
-  }
-
   componentDidMount() {
     this.setState({
       mobile: /Mobi/.test(navigator.userAgent),
@@ -74,7 +69,6 @@ class DropdownRefinementList extends Component {
     )
   }
 }
-
 
 DropdownRefinementList.propTypes = {
   attribute: PropTypes.string.isRequired,
