@@ -11,7 +11,7 @@ const Card = props => {
         <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
         <div className="p-4 h-54 sm:p-5">
           <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime">{major}
-</p>
+          </p>
           <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
             {name}
           </h1>

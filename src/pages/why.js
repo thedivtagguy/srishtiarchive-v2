@@ -7,9 +7,6 @@ const AboutPage = ({ data }) => (
   <Layout>
     <SiteMetadata title="Why?" description="Why build an archive at all?" />
 
-
-
-
 <section class="px-2 lg:py-20 h-full md:px-0">
     <div class="flex justify-center items-center flex-col max-w-6xl px-5 mx-auto space-y-6 text-center">
     <h2 class="m-0 text-4xl font-extrabold w-4/5 leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-5xl md:text-2xl">
@@ -33,8 +30,7 @@ const AboutPage = ({ data }) => (
                 ✨Submit Your Project (Free Good Karma)✨
             </a>
         </div>
-    </div>
-    
+    </div>    
 </section>
 
   </Layout>

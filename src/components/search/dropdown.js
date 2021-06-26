@@ -49,8 +49,8 @@ class DropdownRefinementList extends Component {
     return (
       <div
         className={`ais-DropdownRefinementList-container-${attribute}`}
-        onMouseLeave={hoverable &&  this.handleEvent}
-        onMouseEnter={hoverable &&  this.handleEvent}
+        onMouseLeave={hoverable && !mobile && this.handleEvent}
+        onMouseEnter={hoverable && !mobile && this.handleEvent}
       >
         <div className={cx("title-container")} onClick={this.handleEvent}>
           <span class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-gray-600 text-xl text-center ">
