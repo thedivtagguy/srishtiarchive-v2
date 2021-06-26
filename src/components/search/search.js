@@ -14,6 +14,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Mobilebar from "./mobilefilter"
+import TextLoop from "react-text-loop";
+
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
@@ -98,14 +100,31 @@ const SearchGrid = () => {
 
                   <div className="container w-full">
 
-                  <div class="mx-auto lg:flex-row flex-col flex justify-center items-center gap-4">
+                  <div class="mx-auto lg:flex-row flex-col lg:flex justify-center items-center gap-4 md:flex hidden">
                   <p class="text-light-gray w-full text-xs text-center tracking-wide">Search for any keyword, like:</p>  
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">VCSB, HCD, IADP...</p> 
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Digital Media, Research...</p> 
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Photoshop, After Effects...</p> 
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">1st year, 2nd year...</p> 
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Student Name</p> 
+                  </div>
 
+                  <div class="flex flex-row lg:hidden md:hidden px-16 justify-center items-center gap-2 w-full">
+                  <div class="flex-none">
+                    <h2 class="font-semibold w-full tracking-wide text-center text-xs text-light-gray">
+                    Search for anything, like{" "}</h2>
+                  </div>
+                  <div class="flex-grow-0">
+                <TextLoop springConfig={{ stiffness: 180, damping: 15 }}>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">VCSB</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">IADP</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Research</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Photoshop</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">1st year</span>
+
+
+                </TextLoop>
+                </div>
                   </div>
 
                     <div class="flex-row flex z-10 py-1 sticky top-0 mt-3">
@@ -156,8 +175,7 @@ function Hit(props) {
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
         <div className="bg-accent-gray pt-4 transition duration-300 ease-in-out h-full lg:transform md:transform hover:-translate-y-1 hover:scale-105 transform-none rounded-lg overflow-hidden group">
-          <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
-          <div className="p-4 h-54 sm:p-5">
+          <div className="p-4 h-54 mb-12 sm:p-5">
             <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} />
 </p>
             <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
@@ -167,9 +185,12 @@ function Hit(props) {
             <p className="text-light-gray px-4 py-4 h-24 line-clamp-4 text-sm">
               {<Highlight attribute="description.description" hit={props.hit} />}
             </p>
-            <p className="highlight-text font-bold font-mxs px-4 py-4 h-24 line-clamp-4 text-sm">
-            <Highlight attribute="major" hit={props.hit} />
-            </p>
+
+            <div class="py-2">
+              <p className="highlight-text font-bold font-mxs px-4 py-4 text-sm">
+              <Highlight attribute="category" hit={props.hit} />
+              </p>
+            </div>
           </div>
           <div class="flex p-4 px-4 border-t mt-2 border-gray-900 text-gray-600">
             <div class="flex-1 pl-4 inline-flex items-center">

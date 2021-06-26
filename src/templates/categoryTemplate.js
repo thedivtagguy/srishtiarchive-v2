@@ -4,24 +4,25 @@ import Cards from "../components/Cards"
 import { graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
-  const {y } = pageContext;
-  const { totalCount } = data.portfolio;
+    const {c } = pageContext;
+    const { totalCount } = data.portfolio;
   return (
     <Layout>
-  
+ 
     <div className="bg-gray-900 pattern mx-auto overflow-hidden">
     <div class="flex flex-col justify-start items-start w-full px-12 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
 
-<h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">Projects by {y} Students</h1>
+<h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">{c} </h1>
 <p class="text-lg font-medium text-gray-500 sm:text-2xl">{totalCount} Projects</p>
 </div>
-      <div class="lg:px-24 px-4">
-        {data.portfolio && data.portfolio.nodes.length > 0 ? (
-          <Cards items={data.portfolio.nodes} />
-        ) : (
-          <div className="container">No projects found.</div>
-        )}
-      </div>
+<div class="px-4 lg:px-24">
+ 
+      {data.portfolio && data.portfolio.nodes.length > 0 ? (
+        <Cards items={data.portfolio.nodes} />
+      ) : (
+        <div className="container">No projects found.</div>
+      )}
+    </div>
     </div>
   </Layout>
   );
@@ -30,11 +31,11 @@ const Tags = ({ pageContext, data }) => {
 export default Tags;
 
 export const query = graphql`
-query Years($y: String!) {
-  portfolio: allContentfulPortfolio(filter: {year: { in: [$y]}}) {
+query Category($c: String!) {
+  portfolio: allContentfulPortfolio(filter: {category: { in: [$c]}}) {
     nodes {
       ...PortfolioCard
-      year
+      category
     }
     totalCount
   }

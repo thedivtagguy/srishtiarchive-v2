@@ -51,6 +51,8 @@ exports.createPages = ({ graphql, actions }) => {
             year
             name
             major
+            category
+            course
           }
         }
       }
@@ -87,26 +89,33 @@ exports.createPages = ({ graphql, actions }) => {
       const tagTemplate = path.resolve(`src/templates/tagsTemplate.js`);
       const yearTemplate = path.resolve(`src/templates/yearTemplate.js`);
       const majorTemplate = path.resolve(`src/templates/majorTemplate.js`);
+      const categoryTemplate = path.resolve(`src/templates/categoryTemplate.js`);
 
       let tags = [];
       let tools = [];
       let year = [];
       let major = [];
-
+      let categories = [];
+      let category = []
       let years =[];
       let majors =[];
       // Iterate through each post, putting all found tags into `tags`
       toolNodes.map(toolNode => tags.push(...toolNode.tools));  
       toolNodes.map(toolNode => years.push(toolNode.year));  
       toolNodes.map(toolNode => majors.push(toolNode.major));  
+      toolNodes.map(toolNode => categories.push(toolNode.category));  
 
       tags = tags.concat(tools);
       years = years.concat(year);
       majors = majors.concat(major);
+      categories = categories.concat(category);
+
        // Eliminate duplicate tags
       tags = _.uniq(tags);
       years = _.uniq(years);
       majors = _.uniq(majors);
+      categories= _.uniq(categories);
+
 
        // Make tools pages
        tags.forEach(tag => {
@@ -145,7 +154,17 @@ exports.createPages = ({ graphql, actions }) => {
       });
       console.log("Created Pages For " + majors)
 
-      console.log("Generating Project Thumbnails...")
+      // Make major pages
+      categories.forEach(c => {
+        createPage({
+          path: `/categories/${_.kebabCase(c)}/`,
+          component: categoryTemplate,
+          context: {
+            c
+          },
+        });
+      });
+      console.log("Created Pages For " + categories)
 
     
       resolve()

@@ -106,33 +106,33 @@ export default props => {
 
 
                           <p class="text-base text-purple-500 font-bold">METADATA <span class="text-xs text-purple-700">(Click to Explore More)</span></p>
-                          <div class="grid grid-cols-2 md:grid-cols-6 ">
-                              <div class="flex flex-col py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">
+                          <div class="grid grid-cols-1 md:grid-cols-7 ">
+                              <div class="flex flex-col py-2  lg:py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">
                               <Link to={`/years/${kebabCase(year)}/`}>
-                                <span class="px-2 py-1 text-base rounded text-white  bg-purple-600 font-medium">
+                                <span class="px-2 py-1 text-xs lg:text-base rounded text-white  bg-purple-600 font-medium">
                                 { year}
                                 </span>
                                 </Link>
                               </div>
-                              <div class="flex flex-col py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">
-                              <Link to={`/years/${kebabCase(year)}/`}>
-                                <span class="px-2 py-1 text-base rounded text-white  bg-green-600 font-medium">
+                              <div class="flex flex-col py-2 lg:py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-2">
+                              <Link to={`/categories/${kebabCase(category)}/`}>
+                                <span class="px-2 py-1 text-xs lg:text-base rounded text-white  bg-green-600 font-medium">
                                 { category }
                                 </span>
                                 </Link>
                               </div>
-                              <div class="flex flex-col items-start justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                              <div class="flex flex-col py-2  items-start justify-center col-span-1 md:col-span-2 lg:col-span-1">
                               <Link to={`/majors/${kebabCase(major)}/`}>
 
-                                <span class="px-2 py-1  text-base rounded text-white  bg-yellow-600 font-medium">
+                                <span class="px-2 py-1  text-xs lg:text-base rounded text-white  bg-yellow-600 font-medium">
                                 { major }
                                 </span>  
                                 </Link>
                               </div>
-                              <div class="flex lg:flex-row lg:gap-4 lg:items-center lg:justify-start lg:col-span-3 flex-wrap gap-2 flex-row">
+                              <div class="flex lg:flex-row py-2 lg:gap-4 lg:items-center lg:justify-start lg:col-span-3 flex-wrap gap-2 flex-row">
                               {tools.map((tag, i) => [
                                 <Link to={`/tools/${kebabCase(tag)}/`}>
-                                  <span class="px-2 py-1  text-base rounded text-white  bg-red-600 font-medium" key={i}>
+                                  <span class="px-2 py-1  text-xs lg:text-base rounded text-white  bg-red-600 font-medium" key={i}>
                                     {tag}
                                     {i < tools.length - 1 ? ' ' : ''}
                                   </span>

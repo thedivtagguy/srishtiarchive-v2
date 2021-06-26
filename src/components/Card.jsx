@@ -9,13 +9,13 @@ const Card = props => {
     <Link to={`/${slug}`}>
       <div className="bg-accent-gray pt-4 rounded-lg overflow-hidden group">
         <div className="group-hover:opacity-75 transition duration-150 ease-in-out"></div>
-        <div className="p-4 h-54 sm:p-5">
+        <div className="p-4 h-60 sm:p-5">
           <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime">{major}
           </p>
           <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
             {name}
           </h1>
-          <p className="text-light-gray px-4 py-4 h-24 line-clamp-4 text-sm">
+          <p className="text-light-gray px-4 py-4  h-24 line-clamp-4 text-sm">
             {description.description}
           </p>
         </div>
