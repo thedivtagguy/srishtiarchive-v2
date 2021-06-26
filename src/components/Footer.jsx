@@ -77,7 +77,7 @@ const width = 70
         </a>
       </div>
     </div>
-    <p class="pt-4 mx-auto text-xs text-center">99.99% better uptime than any other Srishti website <span role="img" aria-label="Peace Sign">✌️</span></p>
+    <p class="pt-4 mx-auto text-xs text-center">With 99.99% better uptime than any other Srishti website <span role="img" aria-label="Peace Sign">✌️</span></p>
     <p class="pt-4 mx-auto text-mxs text-center"> By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice" target="_blank" class="highlight-text font-bold">Srishti Manipal's Policy on Ethical Conduct and Practice</a></p>
 
 </div>

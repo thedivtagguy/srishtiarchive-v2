@@ -26,7 +26,7 @@ const AboutPage = ({ data }) => (
             If you feel the same, the Archive is for you.<br></br> A permanant online exhibition for your projects that you put so much work into.<br></br> A happier place than your hard-drive.<span class="py-12 block"> Don't let your projects die.</span>
         </p>
         <div class=" flex flex-col justify-center md:flex-row md:space-x-4">
-            <a href="https://submit.sristhiarchive.com" class="font-bold text-center text-sm lg:text-3xl border-2 border-black rounded-sm shadow-shadow-yellow py-2 px-2  hover:bg-yellow focus:outline-none hover:bg-blue-purple bg-yellow-400">
+            <a href="https://submit.srishtiarchive.com" class="font-semibold text-light-gray text-center text-sm lg:text-xl border-2 border-black rounded-lg  py-2 px-2  focus:outline-none highlight-border">
                 ✨Submit Your Project (Free Good Karma)✨
             </a>
         </div>
