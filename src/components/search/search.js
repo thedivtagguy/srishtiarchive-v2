@@ -174,15 +174,15 @@ function Hit(props) {
   return (
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
-        <div className="bg-accent-gray pt-4 transition duration-300 ease-in-out h-full lg:transform md:transform hover:-translate-y-1 hover:scale-105 transform-none rounded-lg overflow-hidden group">
-          <div className="p-4 h-54 mb-12 sm:p-5">
+        <div className="bg-accent-gray lg:pt-4 md:pt-4 transition duration-300 ease-in-out h-full lg:transform md:transform hover:-translate-y-1 hover:scale-105 transform-none rounded-lg overflow-hidden group">
+          <div className="p-4 lg:h-54 h-54 mb-20 lg:mb-12 sm:p-5">
             <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} />
 </p>
             <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
               {" "}
               <Highlight attribute="name" hit={props.hit} />
             </h1>
-            <p className="text-light-gray px-4 py-4 h-24 line-clamp-4 text-sm">
+            <p className="text-light-gray px-4 lg:py-4 py-2 h-20 lg:h-24 md:h-24 line-clamp-4 lg:text-sm md:text-sm text-xs">
               {<Highlight attribute="description.description" hit={props.hit} />}
             </p>
 
