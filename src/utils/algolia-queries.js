@@ -12,6 +12,7 @@ const pageQuery = `{
             author
             year
             slug
+            category
             tools
             description {
               description
@@ -21,7 +22,7 @@ const pageQuery = `{
       }
 }`
 
-function pageToAlgoliaRecord({ node: { id, major, name, slug, course, contact, author, year, tools, description, ...rest } }) {
+function pageToAlgoliaRecord({ node: { id, major, name, slug, category, course, contact, author, year, tools, description, ...rest } }) {
   return {
     objectID: id,
     major,
@@ -29,6 +30,7 @@ function pageToAlgoliaRecord({ node: { id, major, name, slug, course, contact, a
     slug,
     course,
     contact,
+    category,
     author,
     year,
     tools,
@@ -46,7 +48,8 @@ const queries = [
                 attributesForFaceting: [
                   `major`,
                   `tools`,
-                   `year`,
+                  `year`,
+                  `category`,
                 ]
   },
   },

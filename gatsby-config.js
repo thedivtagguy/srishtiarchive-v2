@@ -75,6 +75,7 @@ module.exports = {
             `major`,
             `tools`,
             `year`,
+            `category`,
           ]
         }
       },

@@ -42,7 +42,7 @@ const Header = () => {
               activeClassName="border-blue-600 text-sienna hover:border-blue-600"
               to={link.to}
             >
-             <span className="font-bold text-center text-sm border-2 border-black rounded-sm shadow-shadow-yellow py-2 px-2  hover:bg-yellow focus:outline-none hover:bg-blue-purple bg-yellow-400">{link.name}</span> 
+             <span className="font-semibold tracking-wide text-center text-sm  text-light-gray rounded-md py-2 px-4 highlight-border">{link.name}</span> 
             </Link>
           ))}
         </div>

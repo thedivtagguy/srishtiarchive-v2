@@ -13,7 +13,8 @@ export default props => {
     year,
     tools,
     files,
-    contact
+    contact,
+    category
   } = props.data.item
 
   function handleCopy() {
@@ -48,7 +49,9 @@ export default props => {
                         <h3 className="lg:text-2xl lg:border-l-2 lg:px-4 border-gray-600 leading-tight font-extrabold tracking-tight text-gray-700 sm:text-3xl mb-1">
                             {year}, {major}
                         </h3>
+                      
                       </div>
+                     
                       {description && (
                       <div className="my-4 text-base lg:w-5/6 lg:text-base text-left leading-snug text-gray-500 whitespace-pre-line">
                         {description.description} 
@@ -62,10 +65,10 @@ export default props => {
                   <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12 h-36 overflow-y-auto ">
                       <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1   bg-accent-gray dark:bg-gray-800 rounded-xl">
                         <div class="pb-4 px-3 border-b border-lime w-full">
-                            <h3 class="text-lg leading-6 font-extrabold text-light-gray dark:text-white">
-                              Explore Further
+                            <h3 class="text-lg leading-6 font-extrabold highlight-text  dark:text-white">
+                              Explore Further <span class="text-mxs">(Click to Download)</span>
                             </h3>
-                            <div class="text-mint-cream dark:text-gray-200 text-sm">
+                            <div class="text-mint-cream dark:text-gray-200 text-sm font-semibold">
                               Project Files & Output
                             </div>
                         </div>
@@ -111,6 +114,13 @@ export default props => {
                                 </span>
                                 </Link>
                               </div>
+                              <div class="flex flex-col py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">
+                              <Link to={`/years/${kebabCase(year)}/`}>
+                                <span class="px-2 py-1 text-base rounded text-white  bg-green-600 font-medium">
+                                { category }
+                                </span>
+                                </Link>
+                              </div>
                               <div class="flex flex-col items-start justify-center col-span-1 md:col-span-2 lg:col-span-1">
                               <Link to={`/majors/${kebabCase(major)}/`}>
 
@@ -119,7 +129,7 @@ export default props => {
                                 </span>  
                                 </Link>
                               </div>
-                              <div class="flex lg:flex-row lg:gap-4 lg:items-center lg:justify-start lg:col-span-4 flex-wrap gap-2 flex-row">
+                              <div class="flex lg:flex-row lg:gap-4 lg:items-center lg:justify-start lg:col-span-3 flex-wrap gap-2 flex-row">
                               {tools.map((tag, i) => [
                                 <Link to={`/tools/${kebabCase(tag)}/`}>
                                   <span class="px-2 py-1  text-base rounded text-white  bg-red-600 font-medium" key={i}>
@@ -138,7 +148,7 @@ export default props => {
                     <div className="lg:mt-8 mt-2">
                         <div class="lg:mt-8 px-4 space-x-4 grid grid-cols-2 justify-center items-center bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 py-4 sm:shadow ">
                             <div class="mx-auto">
-                              <p class="text-sm text-center text-mint-cream pb-2 font-bold">Author Contact</p>
+                              <p class="text-sm text-center text-mint-cream pb-1 font-bold">Author Contact</p>
                               
 
 
@@ -186,6 +196,7 @@ export const query = graphql`
       name
       year
       contact
+      category
     }
   }
 `

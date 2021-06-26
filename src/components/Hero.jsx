@@ -2,7 +2,7 @@ import React from "react"
 
 const Hero = () => {
   return (
-    <div className="container lg:py-4  bg-transparent">
+    <div className="container lg:py-12  bg-transparent">
       <div class="flex justify-center flex-col items-center">
         <h1 className="text-4xl leading-tight font-extrabold tracking-tight  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500  sm:text-6xl mb-1">
           Srishti Archive
@@ -13,6 +13,7 @@ const Hero = () => {
         <p class="text-light-gray px-4 text-center py-4  lg:text-base text-sm">
           A crowdsourced structured and searchable <br></br> library of projects by students at Srishti
         </p>
+
       </div>
       
     </div>
