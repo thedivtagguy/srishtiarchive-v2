@@ -30,14 +30,14 @@ const AboutPage = ({ data }) => (
                 Collect your files
             </h2>
             <p class="pt-4 pb-8 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
-            <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium"> Files</span> are anything that make up <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">your output</span>. They can be <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">reflections, PDFs, videos, soundclips, code, images</span>; stuff that shows us what you made and adds context. Stuff you've already submitted also works,<span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">no need to create new files</span>. These are limited to only <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">5 per entry</span>
+            <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium"> Files</span> are anything that make up <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">your output</span>. They can be <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">reflections, PDFs, videos, soundclips, code, images</span>; stuff that shows us what you made and adds context. Stuff you've already submitted also works,<span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">no need to create new files</span>. These are limited to only <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">4 per entry</span>
             </p>
              <h2 class="m-0 text-xl font-extrabold  leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-xl md:text-xl">
                 File Requirements
             </h2>
             <ul>
             <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">All file formats are allowed. PDFs, Videos, MP3, code; if you have if, we can store it.</li>              
-            <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">Each file must be limited to 50 MB.</li>
+            <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">Each file must be limited  to <span class="px-1 py-1  text-base rounded text-white  bg-yellow-600 font-medium">50 MB per file</span>.</li>
             <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">You may only upload 4 files for each entry.</li>
             <li class="py-4 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">If your project has external links links to hosted videos or websites, included that in a separate PDF with the title 'External Links' and put your links with their titles in one page.</li>
         </ul>
