@@ -26,8 +26,11 @@ const menuItem = {
 const MenuMobile = ({ links, isOpen, setIsOpen }) => {
   return (
     <Overlay isOpen={isOpen} setIsOpen={setIsOpen}>
-      <div className="container flex flex-col justify-center">
-        <ul className="text-center">
+      <div className="container flex flex-col justify-start items-center">
+      <Link to="/">
+          <img alt="Logo" className="w-16 pt-12 pb-16 md:w-16" width="64px" src="/white-logo.png" />
+        </Link>
+        <ul className="text-left">
           {links.map((link, key) => (
             <motion.li
               className="my-3"
@@ -37,7 +40,7 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               variants={menuItem}
             >
               <Link
-                className="font-semibold text-4xl text-white"
+                className="font-semibold text-xl text-white"
                 activeClassName="text-blue-500"
                 to={link.to}
                 onClick={() => setIsOpen(false)}
