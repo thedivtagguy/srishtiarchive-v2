@@ -13,7 +13,7 @@ export default props => {
     year,
     tools,
     files,
-    contact,
+    course,
     category
   } = props.data.item
 
@@ -39,7 +39,7 @@ export default props => {
             <div className="container">
                 <div className="flex flex-wrap">
                   <div className="w-full lg:w-2/3 pb-8">
-                      <h1 className="text-4xl pb-4 leading-tight font-extrabold tracking-tight text-lime sm:text-6xl mb-1">
+                      <h1 className="text-4xl pb-4 leading-tight font-extrabold tracking-tight text-lime sm:text-5xl mb-1">
                         {name}
                       </h1>
                       <div className="flex lg:flex-row flex-col justify-start lg:space-x-6 lg:items-center items-start">
@@ -49,9 +49,11 @@ export default props => {
                         <h3 className="lg:text-2xl lg:border-l-2 lg:px-4 border-gray-600 leading-tight font-extrabold tracking-tight text-gray-700 sm:text-3xl mb-1">
                             {year}, {major}
                         </h3>
-                      
-                      </div>
-                     
+                        
+                  </div>
+                  <h3 class="text-lg leading-6 font-extrabold highlight-text  dark:text-white">
+                              {course}
+                            </h3>
                       {description && (
                       <div className="my-4 text-base lg:w-5/6 lg:text-base text-left leading-snug text-gray-500 whitespace-pre-line">
                         {description.description} 
@@ -63,8 +65,8 @@ export default props => {
                        </div>
                   </div>
                   <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12 h-36 overflow-y-auto ">
-                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1   bg-accent-gray dark:bg-gray-800 rounded-xl">
-                        <div class="pb-4 px-3 border-b border-lime w-full">
+                      <div class="container flex flex-col mx-auto w-full items-center justify-center py-4 border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1 bg-accent-gray dark:bg-gray-800 rounded-xl">
+                        <div class="py-4 px-3 border-b border-gray-800 w-7/9">
                             <h3 class="text-lg leading-6 font-extrabold highlight-text  dark:text-white">
                               Explore Further <span class="text-mxs">(Click to Download)</span>
                             </h3>
@@ -75,7 +77,6 @@ export default props => {
                         <ul class="flex flex-col">
                         {files.map(file => {
                                 return (
-                                
                           <a  href={file.localFile.url}>
                                   <li class="flex flex-row justify-start items-center hover:text-blue-purple text-high-yellow ">
                                   <div class="select-none cursor-pointer flex flex-grow-1 items-center p-4">
@@ -146,24 +147,11 @@ export default props => {
                     </div>
                     <div class="lg:col-span-3 lg:pl-12"> 
                     <div className="lg:mt-8 mt-2">
-                        <div class="lg:mt-8 px-4 space-x-4 grid grid-cols-2 justify-center items-center bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 py-4 sm:shadow ">
+                        <div class="lg:mt-8  px-4 space-x-4 grid grid-cols-2  justify-center items-center bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-4 py-8 sm:shadow ">
                             <div class="mx-auto">
-                              <p class="text-sm text-center text-mint-cream pb-1 font-bold">Author Contact</p>
-                              
-
-
-                            <input
-                                readOnly
-                                type="text"
-                                value={contact}
-                                id="mail" disabled="" class=" rounded-sm mx-auto border-transparent text-xs flex-1 ml-4 appearance-none border border-black w-4/5 py-1 px-4 bg-mint-cream text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
-                              />
-                              <button onClick={handleCopy} type="button" class="py-1 ml-2 px-4 mt-2 flex justify-start items-center  highlight-border focus:ring-offset-gray-200 text-white transition ease-in duration-200 text-center lg:text-xs text-mxs font-semibold  focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-sm ">
-                              Click to Copy Email
-                              </button>
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" class="mx-auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
                             </div>
                             <div class="">
-                              <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" class="mx-auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
                               <p class="text-xxs text-center pt-2 text-gray-600 pb-2 font-light">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
                             </div>
                         </div>
@@ -197,6 +185,7 @@ export const query = graphql`
       year
       contact
       category
+      course
     }
   }
 `
