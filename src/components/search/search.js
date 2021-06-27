@@ -169,7 +169,7 @@ const SearchGrid = () => {
 }
 
 function Hit(props) {
-  const items = props.hit.tools.slice(0, 2)
+  const items = props.hit.tools.slice(0, 1)
 
   return (
     <div class="h">

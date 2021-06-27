@@ -23,7 +23,7 @@ const AboutPage = ({ data }) => (
         </p>
 
         <p class="w-full mx-auto text-base text-left pt-4 text-light-gray sm:text-sm lg:text-xl md:max-w-3xl md:text-center">
-            If you feel the same, the Archive is for you.<br></br> A permanant online exhibition for your projects that you put so much work into.<br></br> A happier place than your hard-drive.<span class="py-12 block"> Don't let your projects die.</span>
+          This is wrong. An institution have a longer memory than just a few weeks. If you feel the same, the Archive is for you.<br></br> <br></br>A permanant online exhibition for your projects that you put so much work into, a common pool of knowledge across disciplines and years.<br></br> A happier place than your hard-drive.<span class="py-12 block"> Don't let your projects die.</span>
         </p>
         <div class=" flex flex-col justify-center md:flex-row md:space-x-4">
             <a href="https://submit.srishtiarchive.com" class="font-semibold text-light-gray text-center text-sm lg:text-xl border-2 border-black rounded-lg  py-2 px-2  focus:outline-none highlight-border">
