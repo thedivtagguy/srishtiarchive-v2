@@ -14,6 +14,18 @@ const AboutPage = ({ data }) => (
         Okay but...
         </h3>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+            <h3 class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl">Can I upload XYZ...?</h3>
+            <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
+                You can upload <span class="highlight-text block font-bold">any work done in your time at Srishti</span>. This includes <span class="highlight-text block font-bold">studios, workshops, PoUs, charettes; anything</span>!
+            </p>
+        </div>
+        <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+            <h3 class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl">Do I need to rework/revamp/redo/re-assemble/rethink my project?</h3>
+            <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
+            <span class="highlight-text block font-bold">This is not Behance</span>. You do not need to worry about how your project looks, <span class="highlight-text block font-bold">we do not want to create extra work for you</span>. As long as your files convey the purpose of your project, that's good enough. Don't overthink it.
+            </p>
+        </div>
+        <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
             <h3 class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl">Who owns my work?</h3>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
                 You do! There is no change in ownership, but your work will be shared under a CC-BY-NC-SA license, which allows people to build on it. <span class="highlight-text block font-bold">Your work is safely stored in a reliable server and not shared anywhere else other than this website.</span>
