@@ -108,7 +108,7 @@ const SearchGrid = () => {
                 
                   </div>
                   <div>
-                  <h3 class="font-semibold w-full py-2 tracking-wide text-center text-mxs text-light-gray">⚡ PS: We've got advanced filtering on desktop ⚡</h3>
+                  <h3 class="lg:hidden md:hidden block font-semibold w-full py-2 tracking-wide text-center text-mxs text-light-gray">⚡ PS: We've got advanced filtering on desktop ⚡</h3>
                 </div>
                     <div class="flex-row flex z-10 py-1 sticky top-0 mt-3">
                       <div class="flex-1 ">
