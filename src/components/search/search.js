@@ -181,7 +181,7 @@ function Hit(props) {
             <div class="flex items-center">
               <div>
                 <p class="font-bold px-4 text-md text-light-gray">
-                  <Highlight attribute="author" hit={props.hit} />
+                  <Highlight attribute="author" hit={props.hit} /> {props.hit.groupmembers && <span class="text-xs">et al.</span>}
                 </p>
               </div>
             </div>
