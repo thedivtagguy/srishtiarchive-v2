@@ -27,7 +27,7 @@ export default props => {
                                             <div class="mb-12">
 
                         <Link to={`/tools/${kebabCase(tag)}/`}>
-                                     <span className="font-bold mb-20 mx-8 w-full md:w-6/12 lg:w-3/12 text-center lg:text-4xl border-2 border-black rounded-sm shadow-shadow-yellow py-2 px-8 text-lg hover:bg-yellow focus:outline-none hover:bg-blue-purple bg-yellow-400">{tag}</span>
+                                     <span className="font-bold mb-20 mx-8 w-full md:w-6/12 lg:w-3/12 text-center lg:text-4xl border-2  tracking-wide  text-sm  text-light-gray rounded-md py-2 px-4 highlight-border">{tag}</span>
                         </Link>,
                         </div>
 

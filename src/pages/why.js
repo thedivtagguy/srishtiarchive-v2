@@ -1,4 +1,3 @@
-import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
@@ -16,14 +15,14 @@ const AboutPage = ({ data }) => (
             1. I do a lot of work for each course.
         </p>
         <p class="w-full mx-auto text-base text-left text-light-gray sm:text-sm lg:text-xl md:max-w-3xl md:text-center">
-            2. The work lives for 5 weeks, after which it rots on my computer.
+            2. The work lives for 5 weeks, after which it sits on my computer.
         </p>
         <p class="w-full mx-auto text-base text-left text-light-gray sm:text-sm lg:text-xl md:max-w-3xl md:text-center">
             3. I love seeing what other people have done. 
         </p>
 
         <p class="w-full mx-auto text-base text-left pt-4 text-light-gray sm:text-sm lg:text-xl md:max-w-3xl md:text-center">
-          This is wrong. An institution have a longer memory than just a few weeks. If you feel the same, the Archive is for you.<br></br> <br></br>A permanant online exhibition for your projects that you put so much work into, a common pool of knowledge across disciplines and years.<br></br> A happier place than your hard-drive.<span class="py-12 block"> Don't let your projects die.</span>
+          An institution have a longer memory than just a few weeks. Your work is valuable and people should have a chance to see it. <br/> If you feel the same, the Archive is for you.<br></br> <br></br>A permanant online exhibition for your projects that you put so much work into, a common pool of knowledge across disciplines and years.<br></br> A happier place than your hard-drive.<span class="py-12 block"> Don't let your projects die.</span>
         </p>
         <div class=" flex flex-col justify-center md:flex-row md:space-x-4">
             <a href="https://submit.srishtiarchive.com" class="font-semibold text-light-gray text-center text-sm lg:text-xl border-2 border-black rounded-lg  py-2 px-2  focus:outline-none highlight-border">

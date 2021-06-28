@@ -14,8 +14,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       files: [ContentfulAsset]
       contact: String
       course: String
+      urls: [String]
       category: String
-
+      groupmembers: [String]
     }
     type ContentfulPortfolio implements Node {
       description: contentfulPortfolioDescriptionTextNode
@@ -28,8 +29,10 @@ exports.createSchemaCustomization = ({ actions }) => {
       tools: [String]!
       year: String!
       contact: String
+      urls: [String]
       course: String
       category: String
+      groupmembers: [String]
 
     }
   `
@@ -173,3 +176,10 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    node: {
+      fs: "empty",
+    },
+  })
+}

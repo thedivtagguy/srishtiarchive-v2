@@ -75,7 +75,7 @@ const width = 70
       </div>
       <div>
         <p class="text-xs lg:text-base">&copy; 2021 A <span class="font-semibold highlight-text"><a href="https://theyellipages.in">The Yelli Pages</a></span> Project</p>
-        <p class="pt-4 text-mxs lg:text-mxs text-center">Designed and Developed by <a href="https://instagram.com/thedivtagguy" target="_blank"><span class="highlight-text font-semibold">Aman Bhargava</span></a></p>
+        <p class="pt-4 text-mxs lg:text-mxs text-center">Designed and Developed by <a href="https://instagram.com/thedivtagguy"  rel="noreferrer" target="_blank"><span class="highlight-text font-semibold">Aman Bhargava</span></a></p>
 
         <a href="https://github.com/thedivtagguy/srishtiarchive-v2/">
         <button class="lg:text-mxs text-xxs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 lg:px-4 px-2 rounded-sm  mx-auto border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1 duration-500 lg:transform md:transform hover:-translate-y-1 hover:scale-20 transform-none">
@@ -83,8 +83,8 @@ const width = 70
         </a>
       </div>
     </div>
-    <p class="pt-4 mx-auto text-xs text-center">With 99.99% better uptime than any other Srishti website <span role="img" aria-label="Peace Sign">✌️</span></p>
-    <p class="pt-4 mx-auto text-mxs text-center"> By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice" target="_blank" class="highlight-text font-bold">Srishti Manipal's Policy on Ethical Conduct and Practice</a></p>
+    <p class="pt-4 mx-auto text-mxs lg:text-mxs text-center">With 99.99% better uptime than any other Srishti website <span role="img" aria-label="Peace Sign">✌️</span></p>
+    <p class="pt-4 mx-auto text-mxs lg:text-xs text-center"> By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice"  rel="noreferrer" target="_blank" class="highlight-text font-bold">Srishti Manipal's Policy on Ethical Conduct and Practice</a></p>
 
 </div>
   </footer>

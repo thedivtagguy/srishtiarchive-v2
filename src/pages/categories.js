@@ -21,7 +21,7 @@ export default props => {
     <body class="lg:px-40">
     <div class="flex justify-center flex-col items-center">
         <h1 className="text-4xl leading-tight font-extrabold tracking-tight  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500  sm:text-6xl mb-1">
-          Majors
+          Categories
         </h1>
         <div class="flex justify-center py-20 mx-auto max-w-6xl items-center">
             <div class="flex lg:flex-wrap flex-col justify-center items-center lg:flex-row ">
@@ -29,7 +29,7 @@ export default props => {
                                             <div class="mb-12">
 
                         <Link to={`/categories/${kebabCase(tag)}/`}>
-                                     <span className="font-bold mb-20 mx-8 w-full md:w-6/12 lg:w-3/12 text-center lg:text-4xl border-2 border-black rounded-sm shadow-shadow-yellow py-2 px-8 text-lg hover:bg-yellow focus:outline-none hover:bg-blue-purple bg-yellow-400">{emojis[Math.floor(Math.random()*emojis.length)]}{tag}</span>
+                                     <span className="font-bold mb-20 mx-8 w-full md:w-6/12 lg:w-3/12 text-center lg:text-4xl border-2  tracking-wide  text-sm  text-light-gray rounded-md py-2 px-4 highlight-border">{emojis[Math.floor(Math.random()*emojis.length)]}{tag}</span>
                         </Link>,
                         </div>
 

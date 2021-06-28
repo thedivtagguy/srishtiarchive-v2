@@ -21,31 +21,21 @@ const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
 
-
-
 //Search Grid
-
 const SearchGrid = () => {
-  
-  return (
-    
+  return (    
     <div id="search-box" className="bg-transparent pattern ">
-
       <div class="search-box-contents">
         <div class="sticky top-0 ">
           <InstantSearch searchClient={searchClient} indexName="archives">
-
             <Mobilebar/>
-            <div class="flex sticky top-0">
-          
+            <div class="flex sticky top-0">          
               <div class="bg-accent-gray h-screen  rounded-tr-xl rounded-br-xl sticky top-0 pl-4 w-64 pb-6 hidden md:block">
-
                 <div class="sticky top-0 pt-2">
                 <div class="py-2 mt-4 w-2/3 flex justify-start items-center mx-4">
-                    <ClearRefinements />
+                    <ClearRefinements/>
                   </div>
                   <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
-        
                     <div class="flex flex-col">
                       <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-tl from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
                         Major
@@ -54,11 +44,8 @@ const SearchGrid = () => {
                         <MenuSelect attribute="major"></MenuSelect>
                       </div>
                     </div>
-                   
-
                   </div>
-                  <div class="mb-2">
-                      
+                  <div class="mb-2">                     
                       <div class="px-4 pt-2">
                         <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
                           Category
@@ -68,8 +55,7 @@ const SearchGrid = () => {
                         <RefinementList attribute="category" className="categoryList" />
                       </div>
                     </div>
-                  <div class="mb-2">
-                      
+                  <div class="mb-2">                     
                     <div class="px-4 pt-2">
                       <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
                         Year
@@ -91,16 +77,12 @@ const SearchGrid = () => {
                       </div>
                     </div>
                   </div>
-        
                 </div>
               </div>
               <div class="w-full">
-
                 <div class="h-full">
-
                   <div className="container w-full">
-
-                  <div class="mx-auto lg:flex-row flex-col lg:flex justify-center items-center gap-4 md:flex hidden">
+                  <div class="mx-auto lg:flex-row flex-col lg:flex justify-center items-center gap-4 md:hidden hidden">
                   <p class="text-light-gray w-full text-xs text-center tracking-wide">Search for any keyword, like:</p>  
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">VCSB, HCD, IADP...</p> 
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Digital Media, Research...</p> 
@@ -108,7 +90,6 @@ const SearchGrid = () => {
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">1st year, 2nd year...</p> 
                   <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Student Name</p> 
                   </div>
-
                   <div class="flex flex-row lg:hidden md:hidden px-16 justify-center items-center gap-2 w-full">
                   <div class="flex-none">
                     <h2 class="font-semibold w-full tracking-wide text-center text-xs text-light-gray">
@@ -118,40 +99,25 @@ const SearchGrid = () => {
                 <TextLoop springConfig={{ stiffness: 180, damping: 15 }}>
                     <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">VCSB</span>
                     <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">IADP</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Research</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Data</span>
                     <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Photoshop</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">1st year</span>
-
-
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">2nd year</span>
                 </TextLoop>
                 </div>
                   </div>
-
                     <div class="flex-row flex z-10 py-1 sticky top-0 mt-3">
                       <div class="flex-1 ">
-                        <SearchBox
-                          className="search"
-                          translations={{
-                            placeholder: "Type keywords to search...",
-                          }}
-                        />
+                        <SearchBox className="search" translations={{ placeholder: "Type keywords to search...", }} />
                       </div>
-                      <div
-                        id="power"
-                        class="px-4 flex-grow-0	lg:block md:block hidden rounded-tr-lg rounded-br-lg bg-light-gray shadow-orange"
-                      >
-                        <PoweredBy />
+                      <div id="power" class="px-4 flex-grow-0	lg:block md:block hidden rounded-tr-lg rounded-br-lg bg-light-gray shadow-orange">
+                        <PoweredBy/>
                       </div>
                     </div>
                     <div class="flex ">
                       <Results>
-                        <div class="py-8">
-                          
+                        <div class="py-2">
                           <Hits hitComponent={Hit} />
-                          <div
-                            id="mobile-alg"
-                            class="lg:hidden md:hidden mx-auto flex justify-center items-center"
-                          >
+                          <div id="mobile-alg" class="lg:hidden md:hidden mx-auto flex justify-center items-center">
                             <PoweredBy />
                           </div>
                         </div>
@@ -175,7 +141,7 @@ function Hit(props) {
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
         <div className="bg-accent-gray lg:pt-4 md:pt-4 transition duration-300 ease-in-out h-full lg:transform md:transform hover:-translate-y-1 hover:scale-105 transform-none rounded-lg overflow-hidden group">
-          <div className="p-4 h-54 mb-12 sm:p-5">
+          <div className="p-4 h-40 mb-12 sm:p-5">
             <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} /></p>
             <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
               {" "}
@@ -184,20 +150,19 @@ function Hit(props) {
             <p className="text-light-gray px-4 lg:py-4 py-2 h-20 lg:h-24 md:h-24 line-clamp-4 lg:text-sm md:text-sm text-xs">
               {<Highlight attribute="description.description" hit={props.hit} />}
             </p>
-            <div class="">
-              <p className="highlight-text font-bold font-mxs px-4 py-4 text-sm">
+          
+          </div>
+          <div class="">
+              <p className="highlight-text font-bold font-mxs px-9 py-1 text-sm">
               <Highlight attribute="category" hit={props.hit} />
               </p>
             </div>
-          </div>
           <div class="flex p-4 px-4 border-t mt-2 border-gray-900 text-gray-600">
             <div class="flex-1 pl-4 inline-flex items-center">
               <svg class="h-5 w-5 mr-3 text-gray-200"  fill="#F1FFFA" aria-hidden="true" focusable="false"  width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
                 <g><path d="M6 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6zm-5 6s-1 0-1-1s1-4 6-4s6 3 6 4s-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" /> </g>
-                <rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)"/>
-              </svg>
-              <p class="text-xs text-lime font-semibold pr-1">
-                <Highlight attribute="year" hit={props.hit} />
+                <rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)"/> </svg>
+              <p class="text-xs text-lime font-semibold pr-1"> <Highlight attribute="year" hit={props.hit} />
               </p>
             </div>
             <div class="flex-1 pr-4 inline-flex items-center">

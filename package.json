@@ -14,6 +14,7 @@
     "dotenv": "^8.2.0",
     "expect": "^27.0.2",
     "framer-motion": "^1.10.3",
+    "fs": "0.0.1-security",
     "gatsby": "^2.21.10",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-algolia": "^0.20.1",
@@ -27,7 +28,9 @@
     "gatsby-source-contentful": "^2.3.1",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-sharp": "^2.12.1",
+    "get-title-at-url": "^1.1.8",
     "htmlparser2": "^6.1.0",
+    "net": "^1.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -42,7 +45,9 @@
     "tailwindcss": "^1.4.4",
     "tailwindcss-border-gradient-radius": "^2.0.0",
     "tailwindcss-border-gradients": "^2.0.3",
-    "typeface-inter": "^3.12.0"
+    "tls": "0.0.1",
+    "typeface-inter": "^3.12.0",
+    "url-to-title": "^1.0.6"
   },
   "devDependencies": {
     "chalk": "^3.0.0",
