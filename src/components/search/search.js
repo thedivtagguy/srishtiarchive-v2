@@ -13,7 +13,7 @@ import {
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Mobilebar from "./mobilefilter"
+// import Mobilebar from "./mobilefilter"
 import TextLoop from "react-text-loop";
 
 const searchClient = algoliasearch(
@@ -28,7 +28,7 @@ const SearchGrid = () => {
       <div class="search-box-contents">
         <div class="sticky top-0 ">
           <InstantSearch searchClient={searchClient} indexName="archives">
-            <Mobilebar/>
+            {/* <Mobilebar/> */}
             <div class="flex sticky top-0">          
               <div class="bg-accent-gray h-screen  rounded-tr-xl rounded-br-xl sticky top-0 pl-4 w-64 pb-6 hidden md:block">
                 <div class="sticky top-0 pt-2">
@@ -97,14 +97,19 @@ const SearchGrid = () => {
                   </div>
                   <div class="flex-grow-0">
                 <TextLoop springConfig={{ stiffness: 180, damping: 15 }}>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">HCD</span>
                     <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">VCSB</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">IADP</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Data</span>
                     <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Photoshop</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Illustrations</span>
                     <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">2nd year</span>
                 </TextLoop>
+               
                 </div>
+                
                   </div>
+                  <div>
+                  <h3 class="font-semibold w-full py-2 tracking-wide text-center text-mxs text-light-gray">⚡ PS: We've got advanced filtering on desktop ⚡</h3>
+                </div>
                     <div class="flex-row flex z-10 py-1 sticky top-0 mt-3">
                       <div class="flex-1 ">
                         <SearchBox className="search" translations={{ placeholder: "Type keywords to search...", }} />
