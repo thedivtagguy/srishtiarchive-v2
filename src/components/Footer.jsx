@@ -23,19 +23,16 @@ const width = 70
    
     <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-x-8 px-4 py-4 text-center grid-cols-2">
       <div>
-        <h5 class="lg:text-xl text-base font-semibold text-gray-700">Taxonomies</h5>
+        <h5 class="lg:text-xl text-base font-semibold text-gray-700">Categories</h5>
         <nav class="mt-4">
           <ul class="space-y-2">
             <li>
             <Link to="/majors"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Majors</span></Link>
             </li>
             <li>
-            <Link to="/categories"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Categories</span></Link>
+            <Link to="/categories"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Project Type</span></Link>
             </li>
-            <li>
-            <Link to="/years"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Years</span></Link>
-            </li>
-            <li>
+             <li>
             <Link to="/tools"><span class="font-normal lg:text-base text-sm hover:text-gray-400">Tools</span></Link>
             </li>
           </ul>
@@ -62,10 +59,10 @@ const width = 70
           <ul class="space-y-2">
           
             <li>
-            <Link to="/why"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Philosophy</span></Link>
+            <Link to="/why"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Why?</span></Link>
             </li>
             <li>
-            <Link to="/faq"><span class="font-normal text-sm lg:text-base hover:text-gray-400">License and Legal</span></Link>
+            <Link to="/faq"><span class="font-normal text-sm lg:text-base hover:text-gray-400">FAQ</span></Link>
             </li>
             <li>
             <Link to="/contact"><span class="font-normal text-sm lg:text-base hover:text-gray-400">Contact and Contributing</span></Link>

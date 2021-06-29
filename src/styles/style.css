@@ -149,3 +149,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .highlight-text {
   @apply  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500;
 }
+
+.ais-RefinementList.categoryList > span > .ais-RefinementList-labelText {
+  font-size: 5px;
+}

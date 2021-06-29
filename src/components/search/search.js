@@ -51,7 +51,7 @@ const SearchGrid = () => {
                           Category
                         </h1>
                       </div>
-                      <div class="bg-teal-dark py-1 px-4 text-xs text-white">
+                      <div class="bg-teal-dark py-1 px-4  text-white">
                         <RefinementList attribute="category" className="categoryList" />
                       </div>
                     </div>

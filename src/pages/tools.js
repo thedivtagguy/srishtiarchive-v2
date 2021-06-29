@@ -28,7 +28,7 @@ export default props => {
 
                         <Link to={`/tools/${kebabCase(tag)}/`}>
                                      <span className="font-bold mb-20 mx-8 w-full md:w-6/12 lg:w-3/12 text-center lg:text-4xl border-2  tracking-wide  text-sm  text-light-gray rounded-md py-2 px-4 highlight-border">{tag}</span>
-                        </Link>,
+                        </Link>
                         </div>
 
                       ])}
