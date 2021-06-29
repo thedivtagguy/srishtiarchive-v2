@@ -25,7 +25,7 @@ const AboutPage = ({ data }) => (
           An institution have a longer memory than just a few weeks. Your work is valuable and people should have a chance to see it. If you feel the same, the Archive is for you.<br></br> <br></br>A permanant online exhibition for your projects that you put so much work into, a common pool of knowledge across disciplines and years.<br></br><br/> A happier place than your hard-drive.<span class="py-12 block"> Don't let your projects die.</span>
         </p>
         <div class=" flex flex-col justify-center md:flex-row md:space-x-4">
-            <a href="https://submit.srishtiarchive.com" class="font-semibold text-light-gray text-center text-sm lg:text-xl border-2 border-black rounded-lg  py-2 px-2  focus:outline-none highlight-border">
+            <a href="https://submit.srishtiarchive.com" class="font-semibold m-2 tracking-wide text-center lg:text-2xl text-sm  text-light-gray rounded-md py-2 px-4 bg-accent-gray hover:bg-yellow-700 transition duration-150 ease-in-out">
                 ✨Submit Your Project (Free Good Karma)✨
             </a>
         </div>

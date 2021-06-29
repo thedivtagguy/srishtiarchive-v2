@@ -38,11 +38,11 @@ const Header = () => {
           {site.data.menu.map((link, key) => (
             <Link
               key={`menu_desktop_link${key}`}
-              className="ml-6 sm:ml-8 text-xs  sm:text-base font-medium border-b-5 pb-2 border-transparent text-black hover:text-gray-800 hover:border-gray-600 transition duration-150 ease-in-out"
-              activeClassName="border-blue-600 text-sienna hover:border-blue-600"
+              className="font-semibold m-2 tracking-wide text-center text-sm  text-light-gray rounded-md py-2 px-4 bg-accent-gray hover:bg-yellow-700 transition duration-150 ease-in-out"
+              activeClassName="border-b-1 border-yellow-600"
               to={link.to}
             >
-             <span className="font-semibold tracking-wide text-center text-sm  text-light-gray rounded-md py-2 px-4 highlight-border">{link.name}</span> 
+             {link.name}
             </Link>
           ))}
         </div>

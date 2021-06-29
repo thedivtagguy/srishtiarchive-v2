@@ -74,7 +74,7 @@ const AboutPage = ({ data }) => (
         </div>
     </div>
     <div class=" flex flex-col justify-center md:flex-row p-8 md:space-x-4">
-    <a href="https://submit.srishtiarchive.com" class="font-semibold text-light-gray text-center text-sm lg:text-xl border-2 border-black rounded-lg  py-2 px-2  focus:outline-none highlight-border">
+    <a href="https://submit.srishtiarchive.com" class="font-semibold m-2 tracking-wide text-center lg:text-2xl text-sm  text-light-gray rounded-md py-2 px-4 bg-accent-gray hover:bg-yellow-700 transition duration-150 ease-in-out">
                 ✨Cool cool cool cool cool let's submit✨
             </a>
         </div>
