@@ -38,7 +38,7 @@ export default props => {
                   {year}, {major}
                 </h3>
               </div>
-              <h3 class="text-lg leading-6 font-extrabold highlight-text  dark:text-white">
+              <h3 class="text-lg leading-6 font-extrabold text-gray-700  dark:text-white">
                 {course}
               </h3>
               {description && (
@@ -65,7 +65,7 @@ export default props => {
                 <div class="py-4 mx-3 border-b border-gray-800 w-7/9">
                   <h3 class="text-lg leading-6 font-extrabold highlight-text  dark:text-white">
                     Explore Further{" "}
-                    <span class="text-mxs">(Click to Download)</span>
+                    <span class="text-mxs font-semibold text-light-gray">(Click to Download)</span>
                   </h3>
                   <div class="text-mint-cream dark:text-gray-200 text-sm font-semibold">
                     Project Files & Output

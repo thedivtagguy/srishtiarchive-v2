@@ -30,14 +30,14 @@ const AboutPage = ({ data }) => (
                 Collect your files
             </h2>
             <p class="pt-4 pb-8 m-0 leading-8 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
-            <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium"> Files</span> are anything that make up <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">your output</span>. They can be <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">reflections, PDFs, videos, soundclips, code, images</span>; stuff that shows us what you made and adds context. Stuff you've already submitted also works,<span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">no need to create new files</span>. These are limited to only <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">4 per entry</span>
+              Files  are anything that make up  your output . They can be  reflections, PDFs, videos, soundclips, code, images ; stuff that shows us what you made and adds context. Stuff you've already submitted also works, no need to create new files . These are limited to only  4 per entry 
             </p>
              <h2 class="m-0 text-xl font-extrabold  leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-xl md:text-xl">
                 File Requirements
             </h2>
             <ul>
             <li class="py-2 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">All file formats are allowed. PDFs, Videos, MP3, code; if you have it, we can store it.</li>              
-            <li class="py-2 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">Each file must be limited  to <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">50 MB per file</span>.</li>
+            <li class="py-2 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">Each file must be limited  to  50 MB per file .</li>
             <li class="py-2 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">You may only upload 4 files for each entry.</li>
             <li class="py-2 m-0 leading-7 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">If your project has external links links to hosted videos or websites, included that in a separate PDF with the title 'External Links' and put your links with their titles in one page.</li>
         </ul>
@@ -50,7 +50,7 @@ const AboutPage = ({ data }) => (
                 Write a Description
             </h2>
             <p class="pt-4 pb-8 m-0 leading-8 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-20 lg:text-lg">
-                Since we don't know what you've made, each entry comes with a <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">short description of the project</span>. This should explain what the project is and doesn't need to be longer than <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium"> 300 characters</span>. You should aim to <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium"> explain it like we're five</span>. 
+                Since we don't know what you've made, each entry comes with a  short description of the project . This should explain what the project is and doesn't need to be longer than   300 characters . You should aim to   explain it like we're five . 
             </p>
         </div>
 
@@ -69,7 +69,7 @@ const AboutPage = ({ data }) => (
                 Thatsssssss it
             </h2>
             <p class="pt-4 pb-8 m-0 leading-8 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-40 lg:text-lg">
-                Once you have these things read, <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">head over to the form</span> and submit it! You'll get an <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">email confirmation</span> once we get it. Once it is reviewed and approved, it'll be <span class="px-1 py-1  text-base rounded text-white  highlight-border font-medium">published on the website within 2-3 days</span>. 
+                Once you have these things read,  head over to the form  and submit it! You'll get an  email confirmation  once we get it. Once it is reviewed and approved, it'll be  published on the website within 2-3 days . 
             </p>
         </div>
     </div>

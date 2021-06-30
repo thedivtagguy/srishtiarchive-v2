@@ -16,25 +16,25 @@ const AboutPage = ({ data }) => (
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
            <a href="#what-to-upload"> <h3 id="what-to-upload" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl hover:underline">Can I upload XYZ...?</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
-                You can upload <span class="highlight-text font-bold">any work done in your time at Srishti</span>. This includes <span class="highlight-text font-bold">studios, workshops, PoUs, charettes; anything</span>! Just input the relevant unit name in the form. If it is a PoU or a charette project, enter 'Performance of Understanding' or 'Charette'.
+                You can upload  any work done in your time at Srishti. This includes  studios, workshops, PoUs, charettes; anything! Just input the relevant unit name in the form. If it is a PoU or a charette project, enter 'Performance of Understanding' or 'Charette'.
             </p>
         </div>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
         <a href="#not-good-enough"><h3 id="not-good-enough" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl  hover:underline">I don't think I did anything good enough...</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
-            <span class="highlight-text font-bold">Wrong</span>. There is no gold standard for projects uploaded here. <span class="highlight-text font-bold">Any and all work you do is valuable</span>. Do not overthink. See below.
+             Wrong . There is no gold standard for projects uploaded here.  Any and all work you do is valuable . Do not overthink. See below.
             </p>
         </div>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
         <a href="#overthink"> <h3 id="overthink" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl hover:underline">Do I need to rework/revamp/redo/re-assemble/rethink my project?</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
-            <span class="highlight-text font-bold">This is not Behance</span>. You do not need to worry about how your project looks, <span class="highlight-text font-bold">we do not want to create extra work for you</span>. As long as your files convey the purpose of your project, that's good enough. Don't overthink it. See above.
+             This is not Behance . You do not need to worry about how your project looks,  we do not want to create extra work for you . As long as your files convey the purpose of your project, that's good enough. Don't overthink it. See above.
             </p>
         </div>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
         <a href="#ownership"><h3 id="ownership" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl hover:underline">Who owns my work?</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
-                You do! There is no change in ownership, but your work will be shared under a CC-BY-NC-SA license, which allows people to build on it. <span class="highlight-text block font-bold">Your work is safely stored in a reliable server and not shared anywhere else other than this website.</span>
+                You do! There is no change in ownership, but your work will be shared under a CC-BY-NC-SA license, which allows people to build on it.  Your work is safely stored in a reliable server and not shared anywhere else other than this website. 
             </p>
         </div>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">

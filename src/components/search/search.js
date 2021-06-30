@@ -37,7 +37,7 @@ const SearchGrid = () => {
                   </div>
                   <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
                     <div class="flex flex-col">
-                      <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-tl from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-extrabold  tracking-wide text-lime text-sm leading-tight mb-1 truncate">
                         Major
                       </h1>
                       <div class="mb-2 text-black text-sm font-semibold flex justify-between items-center">
@@ -47,7 +47,7 @@ const SearchGrid = () => {
                   </div>
                   <div class="mb-2">                     
                       <div class="px-4 pt-2">
-                        <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
+                        <h1 class="font-extrabold tracking-wide  text-lime text-sm leading-tight mb-1 truncate">
                           Category
                         </h1>
                       </div>
@@ -57,7 +57,7 @@ const SearchGrid = () => {
                     </div>
                   <div class="mb-2">                     
                     <div class="px-4 pt-2">
-                      <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-extrabold  tracking-wide text-lime text-sm leading-tight mb-1 truncate">
                         Year
                       </h1>
                     </div>
@@ -66,7 +66,7 @@ const SearchGrid = () => {
                     </div>
                   </div>
                   <div class="px-4 pt-2">
-                      <h1 class="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-extrabold bg-clip-text text-transparent text-lime tracking-wide text-sm leading-tight mb-1 truncate">
                         Tools
                       </h1>
                     </div>
@@ -82,33 +82,40 @@ const SearchGrid = () => {
               <div class="w-full">
                 <div class="h-full">
                   <div className="container w-full">
-                  <div class="mx-auto lg:flex-row flex-col lg:flex justify-center items-center gap-4 md:hidden hidden">
-                  <p class="text-light-gray w-full text-xs text-center tracking-wide">Search for any keyword, like:</p>  
-                  <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">VCSB, HCD, IADP...</p> 
-                  <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Digital Media, Research...</p> 
-                  <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Photoshop, After Effects...</p> 
-                  <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">1st year, 2nd year...</p> 
-                  <p className="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md  px-2 bg-accent-gray">Student Name</p> 
-                  </div>
-                  <div class="flex flex-row lg:hidden md:hidden px-16 justify-center items-center gap-2 w-full">
+                  <div class="mx-auto lg:flex-row flex-col lg:flex justify-start items-center gap-4 md:hidden hidden">
                   <div class="flex-none">
-                    <h2 class="font-semibold w-full tracking-wide text-center text-xs text-light-gray">
+                    <h2 class="font-semibold w-full tracking-wide text-center text-sm  text-light-gray">
                     Search for anything, like{" "}</h2>
                   </div>
                   <div class="flex-grow-0">
                 <TextLoop springConfig={{ stiffness: 180, damping: 15 }}>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">HCD</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">VCSB</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Photoshop</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">Illustrations</span>
-                    <span class="font-semibold w-full tracking-wide text-center text-xs hover:bg-purple-800 text-light-gray rounded-md px-2 bg-accent-gray">2nd year</span>
+                    <span class="font-semibold w-full tracking-wider text-center text-sm text-light-gray rounded-md px-2 bg-accent-gray">HCD</span>
+                    <span class="font-semibold w-full tracking-wider text-center text-sm text-light-gray rounded-md px-2 bg-accent-gray">VCSB</span>
+                    <span class="font-semibold w-full tracking-wider text-center text-sm text-light-gray rounded-md px-2 bg-accent-gray">Photoshop</span>
+                    <span class="font-semibold w-full tracking-wider text-center text-sm text-light-gray rounded-md px-2 bg-accent-gray">Illustrations</span>
+                    <span class="font-semibold w-full tracking-wider text-center text-sm text-light-gray rounded-md px-2 bg-accent-gray">2nd year</span>
+                </TextLoop>
+               </div>
+                  </div>
+                  <div class="flex flex-row lg:hidden md:hidden px-16 justify-center items-center gap-2 w-full">
+                  <div class="flex-none">
+                    <h2 class="font-semibold w-full tracking-wide text-center text-xs  text-lime">
+                    Search for anything, like{" "}</h2>
+                  </div>
+                  <div class="flex-grow-0">
+                <TextLoop springConfig={{ stiffness: 180, damping: 15 }}>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">HCD</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">VCSB</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">Photoshop</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">Illustrations</span>
+                    <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">2nd year</span>
                 </TextLoop>
                
                 </div>
                 
                   </div>
                   <div>
-                  <h3 class="lg:hidden md:hidden block font-semibold w-full py-2 tracking-wide text-center text-mxs text-light-gray">⚡ PS: We've got advanced filtering on desktop ⚡</h3>
+                  <h3 class="lg:hidden md:hidden block font-semibold w-full py-2 tracking-wide text-center text-mxs  text-lime">⚡ PS: We've got advanced filtering on desktop ⚡</h3>
                 </div>
                     <div class="flex-row flex z-10 py-1 sticky top-0 mt-3">
                       <div class="flex-1 ">
@@ -145,21 +152,28 @@ function Hit(props) {
   return (
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
-        <div className="bg-accent-gray lg:pt-4 md:pt-4 transition duration-300 ease-in-out h-full lg:transform md:transform hover:-translate-y-1 hover:scale-105 transform-none rounded-lg overflow-hidden group">
+        
+        <div className="bg-accent-gray  transition duration-300 ease-in-out h-full  rounded-lg overflow-hidden group">
+        <div className="group-hover:opacity-75 h-1/2 transition duration-150 ease-in-out">
+        <img className="h-1/2" src="/social.png"/>
+        </div>
           <div className="p-4 h-40 mb-12 sm:p-5">
-            <p class="uppercase tracking-wide px-4 text-sm font-bold text-lime"><Highlight attribute="major" hit={props.hit} /></p>
+            <p class="uppercase tracking-wide mx-4 mb-1  text-sm font-bold text-light-gray "><span class="bg-purple-700 rounded-md px-2"><Highlight attribute="major" hit={props.hit} /></span></p>
             <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
               {" "}
               <Highlight attribute="name" hit={props.hit} />
             </h1>
-            <p className="text-light-gray px-4 lg:py-4 py-2 h-20 lg:h-24 md:h-24 line-clamp-4 lg:text-sm md:text-sm text-xs">
-              {<Highlight attribute="description.description" hit={props.hit} />}
+
+            <p className="text-light-gray px-4 lg:py-4 py-2 h-20 lg:h-20 md:h-24 line-clamp-3 lg:text-sm md:text-sm text-xs">
+              {<Highlight attribute="description.description" hit={props.hit} />} 
             </p>
           
           </div>
           <div class="">
-              <p className="highlight-text font-bold font-mxs px-9 py-1 text-sm">
-              <Highlight attribute="category" hit={props.hit} />
+              <p className="tracking-wider font-semibold px-9 py-1 text-xs">
+              <span class="text-blue-300 rounded-md px-1 py-1">
+                <Highlight attribute="category" hit={props.hit} /> 
+              </span>
               </p>
             </div>
           <div class="flex p-4 px-4 border-t mt-2 border-gray-900 text-gray-600">
@@ -167,7 +181,7 @@ function Hit(props) {
               <svg class="h-5 w-5 mr-3 text-gray-200"  fill="#F1FFFA" aria-hidden="true" focusable="false"  width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
                 <g><path d="M6 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6zm-5 6s-1 0-1-1s1-4 6-4s6 3 6 4s-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" /> </g>
                 <rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)"/> </svg>
-              <p class="text-xs text-lime font-semibold pr-1"> <Highlight attribute="year" hit={props.hit} />
+              <p class="text-xs text-blue-300 tracking-wider font-semibold pr-1"> <Highlight attribute="year" hit={props.hit} />
               </p>
             </div>
             <div class="flex-1 pr-4 inline-flex items-center">
@@ -176,7 +190,7 @@ function Hit(props) {
                 <rect stroke-width="1" x="0" y="0" width="32"  height="32" fill="rgba(0, 0, 0, 0)"/></svg>
               {items.map((tag, i) => [
                 <p class="text-xs whitespace-normal pl-1" key={i}>
-                  <span class="text-lime font-semibold">{tag}</span>
+                  <span class="text-blue-300 tracking-wider font-semibold">{tag}</span>
                   {i < items.length - 1 ? ", " : ""}
                 </p>,
               ])}
@@ -185,7 +199,7 @@ function Hit(props) {
           <div class="px-4 pt-3 pb-4 border-t border-gray-900 bg-accent-gray">
             <div class="flex items-center">
               <div>
-                <p class="font-bold px-4 text-md text-light-gray">
+                <p class="font-bold px-4 text-md  text-light-gray">
                   <Highlight attribute="author" hit={props.hit} /> {props.hit.groupmembers && <span class="text-xs">et al.</span>}
                 </p>
               </div>
