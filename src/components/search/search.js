@@ -170,7 +170,7 @@ function Hit(props) {
           
           </div>
           <div class="">
-              <p className="tracking-wider font-semibold px-6 py-1 text-xs">
+              <p className="tracking-wider font-semibold px-6 py-1 text-sm">
               <span class="text-blue-300 rounded-md px-1 py-1">
                 <Highlight attribute="category" hit={props.hit} /> 
               </span>
@@ -181,7 +181,7 @@ function Hit(props) {
               <svg class="h-5 w-5 mr-3 text-gray-200"  fill="#F1FFFA" aria-hidden="true" focusable="false"  width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
                 <g><path d="M6 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6zm-5 6s-1 0-1-1s1-4 6-4s6 3 6 4s-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" /> </g>
                 <rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)"/> </svg>
-              <p class="text-xs text-blue-300 tracking-wider font-semibold pr-1"> <Highlight attribute="year" hit={props.hit} />
+              <p class="text-sm text-blue-300 tracking-wider font-semibold pr-1"> <Highlight attribute="year" hit={props.hit} />
               </p>
             </div>
             <div class="flex-1 pr-4 inline-flex items-center">
@@ -189,7 +189,7 @@ function Hit(props) {
                 <path stroke-width="1" d="M29.415 21.666l-6.335-6.335l6.334-6.334a2 2 0 0 0 .001-2.829l-.001-.002l-3.58-3.58a2 2 0 0 0-2.829-.001l-.001.001L16.67 8.92l-6.335-6.335a2.004 2.004 0 0 0-2.828 0L2.585 7.506a2.001 2.001 0 0 0 0 2.829l6.334 6.334L2 23.59V30h6.41l6.92-6.92l6.335 6.337a2.008 2.008 0 0 0 2.83 0l4.92-4.922a2.001 2.001 0 0 0 0-2.829zm-5.002-17.67l3.59 3.59l-6.333 6.334l-3.59-3.59zM8 28H4v-3.591l6.33-6.329l3.676 3.678zm15.08.004L4 8.92L8.922 4l3.788 3.787l-2.252 2.253l1.415 1.414l2.251-2.252l4.13 4.13L16 15.582l1.416 1.414l2.252-2.252l4.13 4.13l-2.252 2.251l1.414 1.415l2.252-2.251l2.79 2.791z" />
                 <rect stroke-width="1" x="0" y="0" width="32"  height="32" fill="rgba(0, 0, 0, 0)"/></svg>
               {items.map((tag, i) => [
-                <p class="text-xs whitespace-normal pl-1" key={i}>
+                <p class="text-sm whitespace-normal pl-1" key={i}>
                   <span class="text-blue-300 tracking-wider font-semibold">{tag}</span>
                   {i < items.length - 1 ? ", " : ""}
                 </p>,

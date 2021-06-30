@@ -14,6 +14,7 @@ export default props => {
     tools,
     files,
     course,
+    thumbnailUrl,
     urls,
     category,
     groupmembers,
@@ -105,6 +106,9 @@ export default props => {
                   </div>
                 )}
               </div>
+              
+              <div class="py-4">{thumbnailUrl && <img src={thumbnailUrl} class="rounded-lg h-56 object-cover w-full"/> }</div>
+
             </div>
             <div class="grid lg:grid-cols-9 grid-cols-1">
               <div class="lg:col-span-6">
@@ -214,6 +218,7 @@ export const query = graphql`
       category
       course
       groupmembers
+      thumbnailUrl
       urls
     }
   }
