@@ -154,29 +154,29 @@ function Hit(props) {
       <Link to={`/${props.hit.slug}`}>
         
         <div className="bg-accent-gray  transition duration-300 ease-in-out h-full  rounded-lg overflow-hidden group">
-        <div className="group-hover:opacity-75 h-1/2 transition duration-150 ease-in-out">
-        <img className="h-1/2" src="/social.png"/>
+        <div className="group-hover:opacity-75  h-56 transition duration-150 ease-in-out">
+        {props.hit.thumbnailUrl ? <img style={{"width" : "444px"}}  className="object-cover h-56" src={props.hit.thumbnailUrl} /> : <img style={{"width" : "444px"}} className="h-56 object-cover" src="/social.png"/>}
         </div>
           <div className="p-4 h-40 mb-12 sm:p-5">
-            <p class="uppercase tracking-wide mx-4 mb-1  text-sm font-bold text-light-gray "><span class="bg-purple-700 rounded-md px-2"><Highlight attribute="major" hit={props.hit} /></span></p>
-            <h1 className="text-xl px-4 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
+            <p class="uppercase tracking-wide mx-2 mb-1  text-sm font-bold text-light-gray "><span class="bg-purple-700 rounded-md px-2"><Highlight attribute="major" hit={props.hit} /></span></p>
+            <h1 className="text-xl px-2 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
               {" "}
               <Highlight attribute="name" hit={props.hit} />
             </h1>
 
-            <p className="text-light-gray px-4 lg:py-4 py-2 h-20 lg:h-20 md:h-24 line-clamp-3 lg:text-sm md:text-sm text-xs">
+            <p className="text-light-gray px-2 lg:py-4 py-2 h-20 lg:h-20 md:h-24 line-clamp-3 lg:text-sm md:text-sm text-xs">
               {<Highlight attribute="description.description" hit={props.hit} />} 
             </p>
           
           </div>
           <div class="">
-              <p className="tracking-wider font-semibold px-9 py-1 text-xs">
+              <p className="tracking-wider font-semibold px-6 py-1 text-xs">
               <span class="text-blue-300 rounded-md px-1 py-1">
                 <Highlight attribute="category" hit={props.hit} /> 
               </span>
               </p>
             </div>
-          <div class="flex p-4 px-4 border-t mt-2 border-gray-900 text-gray-600">
+          <div class="flex p-4 px-2 border-t mt-2 border-gray-900 text-gray-600">
             <div class="flex-1 pl-4 inline-flex items-center">
               <svg class="h-5 w-5 mr-3 text-gray-200"  fill="#F1FFFA" aria-hidden="true" focusable="false"  width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
                 <g><path d="M6 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6zm-5 6s-1 0-1-1s1-4 6-4s6 3 6 4s-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" /> </g>
@@ -199,7 +199,7 @@ function Hit(props) {
           <div class="px-4 pt-3 pb-4 border-t border-gray-900 bg-accent-gray">
             <div class="flex items-center">
               <div>
-                <p class="font-bold px-4 text-md  text-light-gray">
+                <p class="font-bold px-2 text-md  text-light-gray">
                   <Highlight attribute="author" hit={props.hit} /> {props.hit.groupmembers && <span class="text-xs">et al.</span>}
                 </p>
               </div>
