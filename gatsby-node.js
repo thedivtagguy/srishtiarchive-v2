@@ -17,7 +17,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       urls: [String]
       category: String
       groupmembers: [String]
-      thumbnailUrl: String!
+      thumbnailUrl: String
     }
     type ContentfulPortfolio implements Node {
       description: contentfulPortfolioDescriptionTextNode
@@ -34,7 +34,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       course: String
       category: String
       groupmembers: [String]
-      thumbnailUrl: String!
+      thumbnailUrl: String
     }
   `
   createTypes(typeDefs)
