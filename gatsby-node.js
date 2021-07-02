@@ -18,6 +18,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       category: String
       groupmembers: [String]
       thumbnailUrl: String
+      featured: Boolean
     }
     type ContentfulPortfolio implements Node {
       description: contentfulPortfolioDescriptionTextNode
@@ -35,6 +36,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       category: String
       groupmembers: [String]
       thumbnailUrl: String
+      featured: Boolean
     }
   `
   createTypes(typeDefs)

@@ -3,11 +3,12 @@ import PropTypes from "prop-types"
 import React from "react"
 import Card from "./Card"
 
-const Cards = ({ items, hideLastItemOnMobile = false }) => {
+const Cards = ({ items, no, hideLastItemOnMobile = false }) => {
+  items = items.slice(0,no)
   return (
     <div>
-  
-        <div className="grid grid-flow-row xl:grid-cols-4 px-8 gap-5 mb-8">
+      
+        <div className="grid grid-flow-row gap-5 px-8 mb-8 xl:grid-cols-4">
             {items.map(item => (
               <div
                 className={classNames("w-full", {

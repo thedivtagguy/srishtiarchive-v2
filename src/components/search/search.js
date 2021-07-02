@@ -73,7 +73,7 @@ const SearchGrid = () => {
                   <div>
                     <div class="mb-2 text-white flex justify-between items-center">
                       <div class="bg-teal-dark py-1 px-4 w-2/3 text-sm text-black">
-                      <MenuSelect attribute="tools"></MenuSelect>
+                      <MenuSelect   limit={20} attribute="tools"></MenuSelect>
                       </div>
                     </div>
                   </div>
@@ -99,7 +99,7 @@ const SearchGrid = () => {
                   </div>
                   <div class="flex flex-row lg:hidden md:hidden px-16 justify-center items-center gap-2 w-full">
                   <div class="flex-none">
-                    <h2 class="font-semibold w-full tracking-wide text-center text-xs  text-lime">
+                    <h2 class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray">
                     Search for anything, like{" "}</h2>
                   </div>
                   <div class="flex-grow-0">
@@ -115,7 +115,7 @@ const SearchGrid = () => {
                 
                   </div>
                   <div>
-                  <h3 class="lg:hidden md:hidden block font-semibold w-full py-2 tracking-wide text-center text-mxs  text-lime">⚡ PS: We've got advanced filtering on desktop ⚡</h3>
+                  <h3 class="lg:hidden md:hidden block font-semibold w-full py-2 tracking-wide text-center text-mxs  text-white">⚡ PS: We've got advanced filtering on desktop ⚡</h3>
                 </div>
                     <div class="flex-row flex z-10 py-1 sticky top-0 mt-3">
                       <div class="flex-1 ">
@@ -152,25 +152,26 @@ function Hit(props) {
   return (
     <div class="h">
       <Link to={`/${props.hit.slug}`}>
-        
-        <div className="bg-accent-gray  transition duration-300 ease-in-out h-full  rounded-lg overflow-hidden group">
-        <div className="group-hover:opacity-75  h-56 transition duration-150 ease-in-out">
-        {props.hit.thumbnailUrl ? <img style={{"width" : "444px"}}  className="object-cover h-56" src={props.hit.thumbnailUrl} /> : <img style={{"width" : "444px"}} className="h-56 object-cover" src="/social.png"/>}
+      {props.hit.featured && <svg class="absolute -ml-1" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false" width="3em" height="3em"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="#FFCE31"><path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/></g></svg>}
+
+        <div className="h-full overflow-hidden transition duration-300 ease-in-out rounded-lg bg-accent-gray group">
+        <div className="h-56 transition duration-150 ease-in-out group-hover:opacity-75">
+        {props.hit.thumbnailUrl ? <img style={{"width" : "444px"}}  className="object-cover h-56" src={props.hit.thumbnailUrl} /> : <img style={{"width" : "444px"}} className="object-cover h-56" src="/social.png"/>}
         </div>
-          <div className="p-4 h-40 mb-12 sm:p-5">
+          <div className="h-40 p-4 mb-12 sm:p-5">
             <p class="uppercase tracking-wide mx-2 mb-1  text-sm font-bold text-light-gray "><span class="bg-purple-700 rounded-md px-2"><Highlight attribute="major" hit={props.hit} /></span></p>
-            <h1 className="text-xl px-2 bg-clip-text text-transparent bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 font-extrabold">
+            <h1 className="px-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600">
               {" "}
               <Highlight attribute="name" hit={props.hit} />
             </h1>
 
-            <p className="text-light-gray px-2 lg:py-4 py-2 h-20 lg:h-20 md:h-24 line-clamp-3 lg:text-sm md:text-sm text-xs">
+            <p className="h-20 px-2 py-2 text-xs text-light-gray lg:py-4 lg:h-20 md:h-24 line-clamp-3 lg:text-sm md:text-sm">
               {<Highlight attribute="description.description" hit={props.hit} />} 
             </p>
           
           </div>
           <div class="">
-              <p className="tracking-wider font-semibold px-6 py-1 text-sm">
+              <p className="px-6 py-1 text-sm font-semibold tracking-wider">
               <span class="text-blue-300 rounded-md px-1 py-1">
                 <Highlight attribute="category" hit={props.hit} /> 
               </span>
