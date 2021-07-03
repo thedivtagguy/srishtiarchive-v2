@@ -7,11 +7,12 @@ const Card = props => {
   return (
     <div class="h">
     <Link to={`/${slug}`}>
-    {featured && <svg class="absolute -ml-1 z-10" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false" width="3em" height="3em"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="#FFCE31"><path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/></g></svg>}
       <div className="h-full overflow-hidden transition duration-300 ease-in-out rounded-lg bg-accent-gray group">
       <div className="h-56 transition duration-150 ease-in-out group-hover:opacity-75">
       {thumbnailUrl ? <img style={{"width" : "444px"}}  className="object-cover h-56" src={thumbnailUrl} /> : <img style={{"width" : "444px"}} className="object-cover h-56" src="/social.png"/>}
       </div>
+      {featured && <svg class="absolute  -mt-1  z-10" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false" width="2.5em" height="2.5em"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="#FFCE31"><path fill-rule="evenodd" d="M 2 15.5 V 2 a 0 2 0 0 1 2 0 h 8 a 0 2 0 0 1 2 0 v 13.5 a 0.5 0.5 0 0 1 -0.74 0.439 L 8 13.069 l -5.26 2.87 A 0.5 0.5 0 0 1 2 15.5 z M 8.16 4.1 a 0.178 0.178 0 0 0 -0.32 0 l -0.634 1.285 a 0.178 0.178 0 0 1 -0.134 0.098 l -1.42 0.206 a 0.178 0.178 0 0 0 -0.098 0.303 L 6.58 6.993 c 0.042 0.041 0.061 0.1 0.051 0.158 L 6.39 8.565 a 0.178 0.178 0 0 0 0.258 0.187 l 1.27 -0.668 a 0.178 0.178 0 0 1 0.165 0 l 1.27 0.668 a 0.178 0.178 0 0 0 0.257 -0.187 L 9.368 7.15 a 0.178 0.178 0 0 1 0.05 -0.158 l 1.028 -1.001 a 0.178 0.178 0 0 0 -0.098 -0.303 l -1.42 -0.206 a 0.178 0.178 0 0 1 -0.134 -0.098 L 8.16 4.1 z"/></g></svg>}
+
         <div className="h-40 p-4 mb-12 sm:p-5">
           <p class="uppercase tracking-wide mx-2 mb-1  text-sm font-bold text-light-gray "><span class="bg-purple-700 rounded-md px-2">{major}</span></p>
           <h1 className="px-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600">

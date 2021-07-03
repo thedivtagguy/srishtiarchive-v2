@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <div className="container bg-transparent pattern">
-      <div className="flex justify-between py-8 px-2 items-center">
+      <div className="flex items-center justify-between px-2 py-8">
         <Link to="/">
           <img alt="Logo" className="w-16 md:w-16" width="64px" src="/white-logo.png" />
         </Link>
@@ -31,14 +31,14 @@ const Header = () => {
           onClick={() => setIsMenuOpen(true)}
           aria-label="Open Menu"
         >
-          <FaBars className="h-6 w-auto text-lime fill-current -mt-1" />
+          <FaBars className="w-auto h-6 -mt-1 fill-current text-lime" />
         </button>
 
-        <div className="hidden sm:block">
+        <div className="hidden md:block sm:block">
           {site.data.menu.map((link, key) => (
             <Link
               key={`menu_desktop_link${key}`}
-              className="font-semibold m-2 tracking-wide text-center text-sm  text-light-gray rounded-md py-2 px-4 bg-accent-gray hover:bg-yellow-700 transition duration-150 ease-in-out"
+              className="px-4 py-2 m-2 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray bg-accent-gray hover:bg-yellow-700"
               activeClassName="border-b-1 border-yellow-600"
               to={link.to}
             >
