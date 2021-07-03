@@ -12,6 +12,7 @@ export default props => {
     major,
     year,
     tools,
+    featured,
     files,
     course,
     thumbnailUrl,
@@ -22,8 +23,9 @@ export default props => {
   return (
     <Layout>
       <SiteMetadata title={name} description={description} />
+      {featured && <div class="max-w-3xl lg:px-0 px-10 w-full lg:text-base text-sm mx-auto text-yellow-500 font-bold">⭐ Featured Project</div>}
 
-      <section class="flex items-center justify-center py-6  sm:py-8 md:pt-24 lg:pt-12">
+      <section class="flex items-center justify-center py-4 ">
         <div class="relative max-w-3xl px-10 text-white auto lg:px-0">
           <div class="flex flex-col w-full md:flex-col">
             <div class="flex justify-between">
@@ -218,6 +220,7 @@ export const query = graphql`
       category
       course
       groupmembers
+      featured
       thumbnailUrl
       urls
     }
