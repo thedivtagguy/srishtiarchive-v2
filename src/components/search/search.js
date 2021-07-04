@@ -36,9 +36,27 @@ const SearchGrid = () => {
                   <div class="py-2 mt-4 w-2/3 flex justify-start items-center mx-4">
                     <ClearRefinements />
                   </div>
+                  <div class="px-4 pt-2">
+                    <h1 class="font-bold bg-clip-text text-transparent text-lime tracking-wide text-sm leading-tight mb-1 truncate">
+                      Featured Projects
+                    </h1>
+                  </div>
+                  <div>
+                    <div class="mb-2 text-white flex justify-between items-center">
+                      <div class="bg-teal-dark py-1 px-4  text-sm text-black">
+                      <RefinementList attribute="featured" className="pb-2 featurelist" transformItems={items =>
+                        items.map(item => ({
+                          ...item,
+                          label: item.label.replace("true", "Featured Projects Only"),
+                        }))
+                      } />
+                      </div>
+                    </div>
+                  </div>
                   <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
+                    
                     <div class="flex flex-col">
-                      <h1 class="font-bold  tracking-wide text-lime text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-bold pb-2  tracking-wide text-lime text-sm leading-tight mb-1 truncate">
                         Major
                       </h1>
                       <div class="mb-2  w-2/3 text-black text-sm font-semibold">
@@ -81,23 +99,7 @@ const SearchGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="px-4 pt-2">
-                    <h1 class="font-bold bg-clip-text text-transparent text-lime tracking-wide text-sm leading-tight mb-1 truncate">
-                      Featured Projects
-                    </h1>
-                  </div>
-                  <div>
-                    <div class="mb-2 text-white flex justify-between items-center">
-                      <div class="bg-teal-dark py-1 px-4  text-sm text-black">
-                      <RefinementList attribute="featured" className="featurelist" transformItems={items =>
-    items.map(item => ({
-      ...item,
-      label: item.label.replace("true", "Featured Projects Only"),
-    }))
-  } />
-                      </div>
-                    </div>
-                  </div>
+            
                 </div>
               </div>
               <div class="w-full">
