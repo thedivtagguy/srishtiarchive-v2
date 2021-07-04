@@ -41,7 +41,7 @@ export default props => {
             </div>
             <Link to={`/authors/${kebabCase(author)}/`}>
               <h2 className="py-3 pb-4 mb-4 text-xl font-extrabold leading-tight tracking-tight border-gray-500 hover:text-purple-500 lg:text-2xl border-b-1 text-light-gray sm:text-3xl">
-              {author}{" "}
+              <span class="text-sm">🔗</span> {author}{" "}
               <span class="px-2 text-base lg:text-lg text-gray-600">
                 {year}, {major}
               </span>

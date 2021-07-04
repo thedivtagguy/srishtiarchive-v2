@@ -5,7 +5,7 @@ import React from "react"
 const Card = props => {
   const { major, tools, thumbnailUrl, featured, groupmembers, category, items = tools.slice(0, 1), name, author, year, slug, description } = props
   return (
-    <div class="h">
+    <div class=" max-w-sm">
     <Link to={`/${slug}`}>
       <div className="h-full overflow-hidden transition duration-300 ease-in-out rounded-lg bg-accent-gray group">
       <div className="h-56 transition duration-150 ease-in-out group-hover:opacity-75">

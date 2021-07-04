@@ -14,13 +14,13 @@ const IndexPage = ({ data }) => {
       <Hero />
 
       <section class="lg:px-8 w-full mx-auto max-w-7xl">
-        <div class="lg:pb-4 pb-2 flex lg:flex-row md:flex-row flex-col justify-between items-center">
+        <div class="flex lg:flex-row md:flex-row flex-col justify-between items-center">
           <h2 className="px-8 pb-2 text-xl font-extrabold leading-tight tracking-tight text-transparent lg:pb-4 bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-4xl">
             Featured Projects <span class="text-white">🎉</span> 
           </h2>
           <div class="lg:block md:block hidden">
             <Link
-              className="py-2 m-2 mx-8 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:bg-yellow-700"
+              className="py-2 m-2 mx-8 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:text-purple-500 "
               to="/all">
               See All Projects ➡️
             </Link>
@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
         )}
         <div class="flex items-center justify-center pb-4 max-w-  lg:hidden md:hidden">
           <Link
-            className="w-full px-4 py-2 mx-8 text-sm font-semibold tracking-wide text-center text-white transition duration-150 ease-in-out bg-purple-700 rounded-md hover:bg-yellow-700"
+            className="w-full px-4 py-2 mx-8 text-sm font-semibold tracking-wide text-center text-white transition duration-150 ease-in-out bg-purple-700 rounded-md "
             to="/all">
             See All Projects ➡️
           </Link>
@@ -41,14 +41,14 @@ const IndexPage = ({ data }) => {
 
         <div class="grid lg:grid-cols-2 py-8  px-4 gap-8">
           
-          <div class="flex flex-col px-4">
+          <div class="flex flex-col pl-4">
             <div class="lg:pb-4 pb-2 flex  lg:flex-row flex-col justify-between items-center">
               <h2 className="pb-2 text-lg font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-2xl">
                 Top Tools <span class="text-white ">🧰</span>
               </h2>
               <div class="lg:block md:block hidden">
                 <Link
-                  className="py-2 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:bg-yellow-700"
+                  className="py-2 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md hover:text-purple-500 text-light-gray "
                   to="/tools">
                   See All Tools ➡️
                 </Link>
@@ -57,14 +57,14 @@ const IndexPage = ({ data }) => {
             <Top/>
           </div>
 
-          <div class="flex flex-col px-4">
+          <div class="flex flex-col pr-4">
             <div class="lg:pb-4 pb-2 flex lg:flex-row flex-col justify-between items-center">
               <h2 className="pb-2 text-lg font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-2xl">
               Top Categories <span class="text-white ">📋</span>
               </h2>
               <div class="lg:block md:block hidden">
                 <Link
-                  className="py-2 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:bg-yellow-700"
+                  className="py-2 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md hover:text-purple-500 text-light-gray "
                   to="/categories">
                   See All Categories ➡️
                 </Link>

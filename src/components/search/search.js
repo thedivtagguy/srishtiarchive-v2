@@ -9,6 +9,7 @@ import {
   PoweredBy,
   ClearRefinements,
   MenuSelect,
+  ToggleRefinement,
 } from "react-instantsearch-dom"
 import React from "react"
 import PropTypes from "prop-types"
@@ -77,6 +78,23 @@ const SearchGrid = () => {
                     <div class="mb-2 text-white flex justify-between items-center">
                       <div class="bg-teal-dark py-1 px-4 w-2/3 text-sm text-black">
                         <MenuSelect limit={15} attribute="tools"></MenuSelect>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-4 pt-2">
+                    <h1 class="font-bold bg-clip-text text-transparent text-lime tracking-wide text-sm leading-tight mb-1 truncate">
+                      Featured Projects
+                    </h1>
+                  </div>
+                  <div>
+                    <div class="mb-2 text-white flex justify-between items-center">
+                      <div class="bg-teal-dark py-1 px-4  text-sm text-black">
+                      <RefinementList attribute="featured" className="featurelist" transformItems={items =>
+    items.map(item => ({
+      ...item,
+      label: item.label.replace("true", "Featured Projects Only"),
+    }))
+  } />
                       </div>
                     </div>
                   </div>

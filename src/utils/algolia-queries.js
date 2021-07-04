@@ -57,6 +57,7 @@ const queries = [
                   `tools`,
                   `year`,
                   `category`,
+                  `featured`,
                 ]
   },
   },

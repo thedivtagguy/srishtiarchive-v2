@@ -1,18 +1,19 @@
-import { graphql } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
 
-const AboutPage = ({ data }) => (
+const AboutPage = () => (
   <Layout>
     <SiteMetadata title="FAQ" description="I have concerns..." />
 
 <section class="relative min-w-screen animation-fade animation-delay">
-    <div class="container px-8 mx-auto sm:px-12 xl:px-5">
+    <div class="container flex flex-col justify-center items-center px-8 mx-auto sm:px-12 xl:px-5">
        
         <h3 class="mt-1 text-2xl font-extrabold text-left highlight-text sm:mx-6 sm:text-3xl md:text-4xl lg:text-5xl sm:text-center">
         Okay but...
         </h3>
+        <Link to="/guidelines" className="px-4 py-2 m-auto mt-4 text-lg font-semibold tracking-wide text-center transition duration-150 ease-in-out border-yellow-600 rounded-md text-light-gray bg-accent-gray hover:bg-yellow-700 border-b-1">✔️ You might be looking for Submission Guidelines</Link>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
            <a href="#what-to-upload"> <h3 id="what-to-upload" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl hover:underline">Can I upload XYZ...?</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
@@ -22,7 +23,7 @@ const AboutPage = ({ data }) => (
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
         <a href="#featured"><h3 id="featured" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl  hover:underline">What are Featured Projects?</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
-            Featured Projects are a curated selection of projects from the archive, selected by either the editorial or recommended for submission by a facilitator. This might be because the projects are well documented, contain enough information to convey the project's aim, demonstrate the use of a particular tool with a greater level of expertise and can serve as useful projects to take inspiration from. This section is updated monthly.
+            Featured Projects are a curated selection of projects from the archive, selected by either the editorial or recommended for submission by a facilitator. This might be because the projects are well documented, contain enough information to convey the project's aim, demonstrate the use of a particular tool with a greater level of expertise and can b. This section is updated monthly.
             </p>
         </div>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">

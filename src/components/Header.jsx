@@ -20,8 +20,8 @@ const Header = () => {
   `)
 
   return (
-    <div className="container bg-transparent pattern">
-      <div className="flex items-center justify-between px-2 py-8">
+    <div className="w-full px-8 mx-auto bg-transparent lg:px-16 max-w-7xl pattern">
+      <div className="flex items-center justify-between py-8 lg:px-6 ">
         <Link to="/">
           <img alt="Logo" className="w-16 md:w-16" width="64px" src="/white-logo.png" />
         </Link>
@@ -34,7 +34,7 @@ const Header = () => {
           <FaBars className="w-auto h-6 -mt-1 fill-current text-lime" />
         </button>
 
-        <div className="hidden md:block sm:block">
+        <div className="hidden lg:block">
           {site.data.menu.map((link, key) => (
             <Link
               key={`menu_desktop_link${key}`}
