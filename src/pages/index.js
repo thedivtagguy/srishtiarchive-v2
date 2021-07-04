@@ -13,14 +13,14 @@ const IndexPage = ({ data }) => {
       <SiteMetadata title="Home" description="Srishti Archives" />
       <Hero />
 
-      <section class="lg:px-8 w-full mx-auto max-w-7xl">
-        <div class="flex lg:flex-row md:flex-row flex-col justify-between items-center">
-          <h2 className="px-8 pb-2 text-xl font-extrabold leading-tight tracking-tight text-transparent lg:pb-4 bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-4xl">
+      <section class="lg:px-6 w-full mx-auto max-w-7xl">
+        <div class="flex lg:flex-row md:flex-row flex-col justify-start items-start">
+          <h2 className="px-6 pb-2 text-xl font-extrabold leading-tight tracking-tight text-transparent lg:pb-4 bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-4xl">
             Featured Projects <span class="text-white">🎉</span> 
           </h2>
           <div class="lg:block md:block hidden">
             <Link
-              className="py-2 m-2 mx-8 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:text-purple-500 "
+              className="py-2 mx-6 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:text-purple-500 "
               to="/all">
               See All Projects ➡️
             </Link>
@@ -75,7 +75,7 @@ const IndexPage = ({ data }) => {
         </div>
         
 
-        <div class="flex lg:py-20 px-8 flex-col items-center justify-center leading-7 text-gray-900 border-0 border-gray-200 lg:items-start lg:flex-row">
+        <div class="flex lg:py-20 px-6 flex-col items-center justify-center leading-7 text-gray-900 border-0 border-gray-200 lg:items-start lg:flex-row">
             <Link to="/all" className="inline-flex items-center justify-start w-full px-5 py-2 mt-6 ml-0 font-sans text-base font-bold leading-none text-white no-underline bg-purple-700 border border-purple-700 border-solid rounded-lg cursor-pointer lg:py-4 md:w-auto lg:mt-0 hover:bg-purple-800 hover:border-purple-800 hover:text-white focus-within:bg-indigo-700 focus-within:border-indigo-700 lg:text-2xl focus-within:text-white lg:ml-6 md:text-base">
                View Full Projects Archive
                 <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-8 lg:h-8 w-5 h-5 ml-2 lg:mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" strokeLinecap="round" strokeLinejoin="round">

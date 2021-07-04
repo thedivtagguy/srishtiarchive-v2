@@ -9,12 +9,12 @@ const Tags = ({ data, pageContext }) => {
   return (
     <Layout>
     <div className="mx-auto overflow-hidden bg-gray-900 pattern">
-    <div class="flex flex-col justify-start items-start w-full px-10 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
+    <div class="flex flex-col justify-start items-start w-full px-6 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
 
 <h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">Projects made with {tag}</h1>
 <p class="text-lg font-medium text-gray-500 sm:text-2xl">{totalCount} Projects</p>
 </div>
-<div class="px-2 lg:px-24">
+<div class="lg:px-24">
       {data.portfolio && data.portfolio.nodes.length > 0 ? (
         <Cards items={data.portfolio.nodes} />
       ) : (

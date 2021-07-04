@@ -29,7 +29,7 @@ const Tags = ({ pageContext, data }) => {
     return (
     <Layout>
       <div className="mx-auto overflow-hidden bg-gray-900 pattern">
-        <div class="flex flex-col justify-start items-start w-full px-10 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
+        <div class="flex flex-col justify-start items-start w-full px-6 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-6 max-w-7xl">
           <h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">
             Projects by {a}
           </h1>
@@ -40,14 +40,14 @@ const Tags = ({ pageContext, data }) => {
             Top Tools: {toptools.map((tag, i) => [
         <Link to={`/tools/${kebabCase(tag[0])}/`}>
         
-              <span class="hover:text-purple-500 px-2 bg-accent-gray rounded-md">{" "}  {tag[0]}</span>{i < toptools.length - 1 ? ", " : ""}
+              <span class="hover:text-purple-500 px-2 bg-accent-gray rounded-md">{" "}  {tag[0]}</span>{i < toptools.length - 1 ? " " : ""}
 
         
         </Link>
       ])}
           </p>
         </div>
-        <div class="px-2 lg:px-24">
+        <div class="lg:px-24">
           {data.portfolio && data.portfolio.nodes.length > 0 ? (
             <Cards items={data.portfolio.nodes} />
           ) : (

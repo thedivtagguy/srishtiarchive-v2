@@ -6,7 +6,7 @@ const AboutPage = ({ data }) => (
   <Layout>
     <SiteMetadata title="Why?" description="Why build an archive at all?" />
 
-    <section class=" lg:py-20 h-full max-w-6xl mx-auto">
+    <section class=" lg:py-20 h-full max-w-6xl px-6 mx-auto">
       <div class="flex flex-col lg:flex-row gap-5 justify-center items-center">
         <div class="flex justify-center items-start flex-col text-left">
           <h2 class="text-4xl font-extrabold w-4/5 pb-4 leading-tight border-0 highlight-text  border-gray-300 lg:text-5xl md:text-2xl">

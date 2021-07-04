@@ -25,14 +25,14 @@ export default props => {
     <Layout>
       <SiteMetadata title={name} description={description} />
      
-        <div class="max-w-3xl flex flex-row justify-between items-center mx-auto lg:px-0 px-10 w-full">
+        <div class="max-w-3xl flex flex-row justify-between items-center mx-auto lg:px-0 px-5 w-full">
         {featured ? ( <span class="lg:text-base text-sm text-yellow-500 font-bold">⭐ Featured Project</span> ) : <span>{" "}</span>}
           <span class="lg:text-base text-sm text-yellow-500 font-bold">{createdAt}</span>
         </div>
      
 
       <section class="flex items-center justify-center py-4 ">
-        <div class="relative max-w-3xl px-10 text-white auto lg:px-0">
+        <div class="relative max-w-3xl px-6 text-white auto lg:px-0">
           <div class="flex flex-col w-full md:flex-col">
             <div class="flex justify-between">
               <h1 class="relative leading-tight flex flex-col text-3xl lg:text-6xl font-extrabold text-left text-lime">
@@ -42,7 +42,7 @@ export default props => {
             <Link to={`/authors/${kebabCase(author)}/`}>
               <h2 className="py-3 pb-4 mb-4 text-xl font-extrabold leading-tight tracking-tight border-gray-500 hover:text-purple-500 lg:text-2xl border-b-1 text-light-gray sm:text-3xl">
               <span class="text-sm">🔗</span> {author}{" "}
-              <span class="px-2 text-base lg:text-lg text-gray-600">
+              <span class="px-2 lg:inline md:inline block lg:pl-1 md:pl-1 pl-6 text-base lg:text-lg text-gray-600">
                 {year}, {major}
               </span>
             </h2>
@@ -70,7 +70,7 @@ export default props => {
           </p>
         </div>
       </section>
-      <section class="grid lg:grid-cols-2 grid-cols-1 lg:px-0 px-10 w-full py-4 gap-2 lg:gap-10 max-w-3xl mx-auto">
+      <section class="grid lg:grid-cols-2 grid-cols-1 lg:px-0 px-6 w-full py-4 gap-2 lg:gap-10 max-w-3xl mx-auto">
         <div class="">
           <h4 class="font-bold text-lg text-lime">Project Files and Output</h4>
           <ul class="flex flex-col lg:py-4 ">
@@ -123,7 +123,7 @@ export default props => {
         )}
       </section>
 
-      <section class="flex items-center w-full max-w-3xl lg:px-0 px-10 mx-auto justify-center">
+      <section class="flex items-center w-full max-w-3xl lg:px-0 px-6 mx-auto justify-center">
         <div>
           {thumbnailUrl && (
             <img
@@ -136,7 +136,7 @@ export default props => {
       </section>
 
       <section>
-        <div class="grid lg:grid-cols-6 grid-cols-1 lg:px-0 px-10 max-w-3xl mx-auto">
+        <div class="grid lg:grid-cols-6 grid-cols-1 lg:px-0 px-6 max-w-3xl mx-auto">
           <div class="lg:col-span-6 ">
             <div class="mt-8 px-4 bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-8 py-5 sm:shadow ">
               <p class="text-base text-purple-500 font-bold">
