@@ -75,7 +75,7 @@ const width = 70
         <p class="pt-4 text-mxs lg:text-mxs text-center">Designed and Developed by <a href="https://instagram.com/thedivtagguy"  rel="noreferrer" target="_blank"><span class="highlight-text font-semibold">Aman Bhargava</span></a></p>
 
         <a href="https://github.com/thedivtagguy/srishtiarchive-v2/">
-        <button class="lg:text-mxs text-xxs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 lg:px-4 px-2 rounded-sm  mx-auto border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1 duration-500 lg:transform md:transform hover:-translate-y-1 hover:scale-20 transform-none">
+        <button class="lg:text-mxs bg-accent-gray tracking-wider text-xxs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 lg:px-4 px-2 rounded-lg  mx-auto hover:bg-purple-700 ">
           Improve this site on Github</button>
         </a>
       </div>

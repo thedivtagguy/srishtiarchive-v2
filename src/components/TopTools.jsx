@@ -1,8 +1,6 @@
 import { graphql, Link , useStaticQuery} from "gatsby"
 import React from "react"
-import Layout from "../layouts/Layout"
 import kebabCase from "lodash/kebabCase"
-const _ = require("lodash")
 
 const Top = () => {
   const data = useStaticQuery(graphql`

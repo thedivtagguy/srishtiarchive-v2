@@ -5,8 +5,21 @@ const Url = ({ link, number }) => {
 number = number + 1;
 
 return (
-    <a href={link}  target="_blank"  rel="noreferrer" class="font-semibold text-light-gray text-center text-xs lg:text-sm border-2 border-black rounded-lg  py-1 px-2  focus:outline-none highlight-border">
-                       Project link {number} </a>
+    <a href={link}  target="_blank"  rel="noreferrer" class="font-semibold text-sm  inline-flex hover:text-blue-purple text-high-yellow dark:text-white">
+                       Project link {number} {" "}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 ml-2"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg></a>
 )
 }
 

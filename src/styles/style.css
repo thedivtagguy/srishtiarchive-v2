@@ -42,7 +42,7 @@ body {
 }
 
 input[type="search"] {
-  @apply text-xl  appearance-none shadow-orange rounded-tl-lg rounded-bl-lg py-4 px-16 text-left bg-light-gray text-accent-gray ;
+  @apply px-16 py-4 text-xl text-left rounded-tl-lg rounded-bl-lg appearance-none shadow-orange bg-light-gray text-accent-gray ;
   width: 100%!important;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -54,14 +54,14 @@ input[type="search"] .focus\:outline-none:focus {
 }
 
 input[type="checkbox"] {
-  @apply  rounded-sm h-3 w-3 text-sm text-gray-600;
+  @apply  w-3 h-3 text-sm text-gray-600 rounded-sm;
 
 }
 
 
 
 .ais-RefinementList-labelText {
-  @apply px-2 py-1 text-light-gray font-semibold text-sm rounded;
+  @apply px-2 py-1 text-sm font-semibold rounded text-light-gray;
 }
 .ais-SearchBox-submit, .ais-SearchBox-reset {
   display: none;
@@ -70,17 +70,18 @@ input[type="checkbox"] {
 .ais-Hits-list {
  display: flex;
  flex-wrap: wrap;
+ margin: -10px;
 }
 
 .ais-Hits-item{
   flex-basis: 33.33%;
-  padding: 16px;
+padding: 10px;
 }
 
 
 
 .ais-PoweredBy-text {
-  @apply text-black text-xxs font-semibold text-right mx-auto;
+  @apply mx-auto font-semibold text-right text-black text-xxs;
 }
 .ais-PoweredBy-logo {
   width:70px;
@@ -118,7 +119,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 7px;
   }
   input[type="search"] {
-    @apply text-sm  appearance-none shadow-orange rounded-lg py-4 px-16 text-center bg-light-gray text-black ;
+    @apply px-16 py-4 text-sm text-center text-black rounded-lg appearance-none shadow-orange bg-light-gray ;
 
   }
 }
@@ -131,23 +132,23 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .ais-RefinementList-showMore {
-  @apply py-1 px-2 mt-2 flex justify-center items-center uppercase bg-lime  text-white transition ease-in duration-200 text-center  text-mxs font-extrabold tracking-wide  rounded-sm;
+  @apply flex items-center justify-center px-2 py-1 mt-2 font-extrabold tracking-wide text-center text-white uppercase transition duration-200 ease-in rounded-sm bg-lime text-mxs;
 }
 
 .ais-ClearRefinements-button {
-  @apply py-1 px-4 mt-4 flex justify-center tracking-wide	 items-center uppercase bg-light-gray border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1  text-light-gray text-center text-mxs font-extrabold   rounded-sm;
+  @apply flex items-center justify-center px-4 py-1 mt-4 font-bold tracking-wide text-center uppercase bg-gray-700 rounded-lg text-light-gray text-mxs;
 
 }
 .ais-RefinementList-count {
-  @apply px-1  text-sm rounded text-light-gray  bg-gray-800 font-medium;
+  @apply px-1 text-sm font-medium bg-gray-800 rounded text-light-gray;
 }
 
 .highlight-border {
-  @apply border-gradient-br-pink-red-yellow-accent-gray border-transparent border-solid border-1;
+  @apply border-transparent border-solid border-gradient-br-pink-red-yellow-accent-gray border-1;
 }
 
 .highlight-text {
-  @apply  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500;
+  @apply  text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500;
 }
 
 .ais-RefinementList.categoryList > span > .ais-RefinementList-labelText {

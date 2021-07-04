@@ -1,7 +1,6 @@
 import { graphql, Link , useStaticQuery} from "gatsby"
 import React from "react"
 import kebabCase from "lodash/kebabCase"
-const _ = require("lodash")
 
 const Category = () => {
   const data = useStaticQuery(graphql`
@@ -42,7 +41,7 @@ const Category = () => {
     <div class="grid grid-cols-1 gap-3 ">
       {sortable.map((tag, i) => [
         <Link to={`/categories/${kebabCase(tag[0])}/`}>
-          <div class=" rounded-xl">
+          <div class=" rounded-xl" key={i}>
             <div class="flex flex-row items-center justify-center col-span-1 px-2 py-4 bg-accent-gray hover:bg-purple-600 rounded-xl">
               <div class="w-8 h-8 pt-1 text-center text-white bg-blue-500 rounded-full">
                 {emojis[Math.floor(Math.random() * emojis.length)]}

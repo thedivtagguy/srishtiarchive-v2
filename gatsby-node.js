@@ -58,6 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
             name
             major
             category
+            author
             course
           }
         }
@@ -96,6 +97,8 @@ exports.createPages = ({ graphql, actions }) => {
       const yearTemplate = path.resolve(`src/templates/yearTemplate.js`);
       const majorTemplate = path.resolve(`src/templates/majorTemplate.js`);
       const categoryTemplate = path.resolve(`src/templates/categoryTemplate.js`);
+      const authorTemplate = path.resolve(`src/templates/authorTemplate.js`);
+
 
       let tags = [];
       let tools = [];
@@ -105,22 +108,28 @@ exports.createPages = ({ graphql, actions }) => {
       let category = []
       let years =[];
       let majors =[];
+      let authors =[];
+      let author = [];
       // Iterate through each post, putting all found tags into `tags`
       toolNodes.map(toolNode => tags.push(...toolNode.tools));  
       toolNodes.map(toolNode => years.push(toolNode.year));  
       toolNodes.map(toolNode => majors.push(toolNode.major));  
       toolNodes.map(toolNode => categories.push(toolNode.category));  
+      toolNodes.map(toolNode => authors.push(toolNode.author));  
 
       tags = tags.concat(tools);
       years = years.concat(year);
       majors = majors.concat(major);
       categories = categories.concat(category);
+      authors = authors.concat(author);
+
 
        // Eliminate duplicate tags
       tags = _.uniq(tags);
       years = _.uniq(years);
       majors = _.uniq(majors);
       categories= _.uniq(categories);
+      authors= _.uniq(authors);
 
 
        // Make tools pages
@@ -172,7 +181,18 @@ exports.createPages = ({ graphql, actions }) => {
       });
       console.log("Created Pages For " + categories)
 
-    
+     // Make major pages
+     authors.forEach(a => {
+      createPage({
+        path: `/authors/${_.kebabCase(a)}/`,
+        component: authorTemplate,
+        context: {
+          a
+        },
+      });
+    });
+    console.log("Created Pages For " + authors)
+
       resolve()
     })
   })
