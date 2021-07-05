@@ -24,8 +24,6 @@ export default props => {
     })
   
     let emojis = ["📓", "📔", "📒", "📕", "📗", "📘", "📙", "📚", "📖", "🔖" ,"🧷" ,"🔗", "📎"]
-    
-
   return (
     <Layout>
     <SiteMetadata title="Majors" description="List of Majors" />

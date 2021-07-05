@@ -13,9 +13,7 @@ module.exports = {
     menu: [
       { name: "🎉 Home", to: "/" },
       { name: "📦 All Projects", to: "/all" },
-      { name: "💬 Why?", to: "/why" },
       { name: "❓ FAQ", to: "/faq" },
-      {name: "✔️ Guidelines", to:"/guidelines"},
       { name: "✨Submit Your Own ✨", to:"https://submit.srishtiarchive.com"},
 
     ],
