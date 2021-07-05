@@ -14,13 +14,13 @@ const IndexPage = ({ data }) => {
       <Hero />
 
       <section class="lg:px-6 w-full mx-auto max-w-7xl">
-        <div class="flex lg:flex-row md:flex-row flex-col justify-start items-start">
+        <div class="flex lg:flex-row md:flex-row flex-col lg:justify-between justify-start lg:items-center">
           <h2 className="px-6 pb-2 text-xl font-extrabold leading-tight tracking-tight text-transparent lg:pb-4 bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-4xl">
             Featured Projects <span class="text-white">🎉</span> 
           </h2>
           <div class="lg:block md:block hidden">
             <Link
-              className="py-2 mx-6 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:text-purple-500 "
+              className="py-2 m-2 mx-6 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray hover:text-purple-500 "
               to="/all">
               See All Projects ➡️
             </Link>
@@ -41,10 +41,10 @@ const IndexPage = ({ data }) => {
 
         <div class="grid lg:grid-cols-2 py-8  px-4 gap-8">
           
-          <div class="flex flex-col pl-4">
-            <div class="lg:pb-4 pb-2 flex  lg:flex-row flex-col justify-between items-center">
+          <div class="flex flex-col lg:pl-4">
+            <div class="lg:pb-4 pb-2 flex  lg:flex-row flex-col lg:justify-between justify-start lg:items-center">
               <h2 className="pb-2 text-lg font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-2xl">
-                Top Tools <span class="text-white ">🧰</span>
+                Top Tools <span class="text-white ">📌</span>
               </h2>
               <div class="lg:block md:block hidden">
                 <Link
@@ -57,8 +57,8 @@ const IndexPage = ({ data }) => {
             <Top/>
           </div>
 
-          <div class="flex flex-col pr-4">
-            <div class="lg:pb-4 pb-2 flex lg:flex-row flex-col justify-between items-center">
+          <div class="flex flex-col lg:pr-4">
+            <div class="lg:pb-4 pb-2 flex lg:flex-row flex-col lg:justify-between justify-start lg:items-center">
               <h2 className="pb-2 text-lg font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 sm:text-2xl">
               Top Categories <span class="text-white ">📋</span>
               </h2>

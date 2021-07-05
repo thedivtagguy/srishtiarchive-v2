@@ -11,7 +11,18 @@ export default props => {
     let major = []
     majorNodes.map(majorNode => majors.push(majorNode.major))
     majors = majors.concat(major)
-    majors = _.uniq(majors)
+    const x = majors.reduce(
+      (acc, curr) => ((acc[curr] = (acc[curr] || 0) + 1), acc),
+      {}
+    )
+    let sortable = []
+    for (let tool in x) {
+      sortable.push([tool, x[tool]])
+    }
+    sortable = sortable.sort(function(a, b) {
+      return b[1] - a[1]
+    })
+  
     let emojis = ["📓", "📔", "📒", "📕", "📗", "📘", "📙", "📚", "📖", "🔖" ,"🧷" ,"🔗", "📎"]
     
 
@@ -20,22 +31,32 @@ export default props => {
     <SiteMetadata title="Majors" description="List of Majors" />
     <body class="lg:px-40">
     <div class="flex justify-center flex-col items-center">
-        <h1 className="text-4xl leading-tight font-extrabold tracking-tight  bg-clip-text text-transparent bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500  sm:text-6xl mb-1">
+        <h1 className="mb-1 text-4xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 sm:text-6xl">
           Majors
         </h1>
-        <div class="flex justify-center py-20 mx-auto max-w-6xl items-center">
-            <div class="flex lg:flex-wrap flex-col justify-center items-center lg:flex-row ">
-                      {majors.map((tag, i) => [
-                                            <div class="mb-12">
-
-                        <Link to={`/majors/${kebabCase(tag)}/`}>
-                                     <span className="font-bold mb-20 mx-8 w-full md:w-6/12 lg:w-3/12 text-center lg:text-4xl border-2  tracking-wide  text-sm  text-light-gray rounded-md py-2 px-4 highlight-border">{emojis[Math.floor(Math.random()*emojis.length)]}{tag}</span>
-                        </Link>
-                        </div>
-
-                      ])}
+        <div class="grid grid-cols-2 px-6 py-4 lg:grid-cols-3 gap-3 ">
+      {sortable.map((tag, i) => [
+        <Link to={`/tools/${kebabCase(tag[0])}/`}>
+          <div class=" rounded-xl">
+            <div class="flex flex-col items-center justify-center col-span-1 px-12 py-8 space-y-4 hover:bg-purple-600 bg-accent-gray rounded-xl">
+              <div class="w-8 h-8 pt-1 text-center text-white bg-blue-500 rounded-full">
+                {emojis[Math.floor(Math.random() * emojis.length)]}
+              </div>
+              <h4 class="font-bold text-center lg:text-2xl   tracking-wide  text-xl  text-light-gray rounded-md  px-4">
+                {tag[0]}
+              </h4>
+              <h5 class="font-semibold text-center lg:text-base   tracking-wide  text-xl  text-gray-500 rounded-md">
+                      {tag[1] > 1 ? (
+                        <span>{tag[1]} Projects</span>
+                      ) : (
+                        <span>{tag[1]} Project</span>
+                      )}
+                    </h5>
             </div>
-        </div>
+          </div>
+        </Link>
+      ])}
+    </div>
       </div>
     
     </body>

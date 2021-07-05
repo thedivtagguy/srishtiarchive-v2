@@ -47,7 +47,7 @@ const SearchGrid = () => {
                       <RefinementList attribute="featured" className="pb-2 featurelist" transformItems={items =>
                         items.map(item => ({
                           ...item,
-                          label: item.label.replace("true", "Featured Projects Only"),
+                          label: item.label.replace("true", "⭐ Featured Projects Only"),
                         }))
                       } />
                       </div>

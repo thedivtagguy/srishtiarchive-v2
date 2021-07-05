@@ -28,15 +28,13 @@ const Tags = ({ pageContext, data }) => {
   let toptools = sortable.slice(0,3);
     return (
     <Layout>
-      <div className="mx-auto overflow-hidden bg-gray-900 pattern">
-        <div class="flex flex-col justify-start items-start w-full px-6 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-6 max-w-7xl">
-          <h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">
-            Projects by {a}
-          </h1>
-          <p class="text-lg py-2 font-medium text-gray-500 sm:text-2xl">
-            {totalCount} Projects
-          </p>
-          <p class="text-sm font-medium text-gray-500 sm:text-lg">
+     
+    <div className="mx-auto overflow-hidden bg-gray-900 max-w-7xl pattern">
+    <div class="flex flex-col justify-center items-start w-full px-6 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
+
+<h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">{a} </h1>
+<p class="text-lg font-medium text-gray-500 sm:text-2xl">{totalCount} Projects</p>
+<p class="text-sm font-medium text-gray-500 sm:text-lg">
             Top Tools: {toptools.map((tag, i) => [
         <Link to={`/tools/${kebabCase(tag[0])}/`}>
         
@@ -46,15 +44,16 @@ const Tags = ({ pageContext, data }) => {
         </Link>
       ])}
           </p>
-        </div>
-        <div class="lg:px-24">
-          {data.portfolio && data.portfolio.nodes.length > 0 ? (
-            <Cards items={data.portfolio.nodes} />
-          ) : (
-            <div className="container">No projects found.</div>
-          )}
-        </div>
-      </div>
+</div>
+<div class="lg:px-24">
+ 
+      {data.portfolio && data.portfolio.nodes.length > 0 ? (
+        <Cards items={data.portfolio.nodes} />
+      ) : (
+        <div className="container">No projects found.</div>
+      )}
+    </div>
+    </div>
     </Layout>
   )
 }
@@ -76,3 +75,4 @@ export const query = graphql`
     }
   }
 `
+
