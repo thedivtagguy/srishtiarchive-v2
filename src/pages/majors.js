@@ -36,7 +36,7 @@ export default props => {
         </h1>
         <div class="grid grid-cols-2 px-6 py-4 lg:grid-cols-3 gap-3 ">
       {sortable.map((tag, i) => [
-        <Link to={`/tools/${kebabCase(tag[0])}/`}>
+        <Link to={`/majors/${kebabCase(tag[0])}/`}>
           <div class=" rounded-xl">
             <div class="flex flex-col items-center justify-center col-span-1 px-12 py-8 space-y-4 hover:bg-purple-600 bg-accent-gray rounded-xl">
               <div class="w-8 h-8 pt-1 text-center text-white bg-blue-500 rounded-full">
