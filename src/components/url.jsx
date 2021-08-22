@@ -5,7 +5,7 @@ const Url = ({ link, number }) => {
 number = number + 1;
 
 return (
-    <a href={link}  target="_blank"  rel="noreferrer" class="font-semibold text-sm  inline-flex hover:text-blue-purple text-high-yellow dark:text-white">
+    <a href={link}  target="_blank"  rel="noreferrer" class="font-semibold text-sm  inline-flex hover:text-blue-purple text-light-gray dark:text-white">
                        Project link {number} {" "}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

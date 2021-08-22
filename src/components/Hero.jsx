@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="container bg-transparent lg:py-12">
       <div class="flex justify-center flex-col items-center">
         <h1 className="mb-1 text-4xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 sm:text-6xl">
-          Srishti Archive
+          Reechik Archive
         </h1>
         <h1 className="mb-1 text-xs font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-tl from-pink-500 via-red-500 to-yellow-500 sm:text-sm">
           _______________

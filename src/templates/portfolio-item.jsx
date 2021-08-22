@@ -77,10 +77,10 @@ export default props => {
             {files.map(file => {
               return (
                 <a href={file.localFile.url} target="_blank" rel="noreferrer">
-                  <li class="flex flex-row justify-start items-center hover:text-blue-purple text-high-yellow ">
+                  <li class="flex flex-row justify-start items-center hover:text-blue-purple text-purple-800 ">
                     <div class="select-none cursor-pointer flex flex-grow-1 items-center py-2">
                       <div class="inline-flex">
-                        <div class="font-semibold text-sm  inline-flex hover:text-blue-purple text-high-yellow dark:text-white">
+                        <div class="font-semibold text-sm  inline-flex hover:text-blue-purple text-light-gray dark:text-white">
                           {file.title}{" "}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

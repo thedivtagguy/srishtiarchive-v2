@@ -59,6 +59,7 @@ exports.createPages = ({ graphql, actions }) => {
             major
             category
             author
+            groupmembers
             course
           }
         }
@@ -110,27 +111,29 @@ exports.createPages = ({ graphql, actions }) => {
       let majors =[];
       let authors =[];
       let author = [];
+
+
       // Iterate through each post, putting all found tags into `tags`
       toolNodes.map(toolNode => tags.push(...toolNode.tools));  
       toolNodes.map(toolNode => years.push(toolNode.year));  
       toolNodes.map(toolNode => majors.push(toolNode.major));  
       toolNodes.map(toolNode => categories.push(toolNode.category));  
       toolNodes.map(toolNode => authors.push(toolNode.author));  
+      // check if groupmembers if not empty
 
+    
       tags = tags.concat(tools);
       years = years.concat(year);
       majors = majors.concat(major);
       categories = categories.concat(category);
       authors = authors.concat(author);
-
-
-       // Eliminate duplicate tags
+      // Eliminate duplicate tags
       tags = _.uniq(tags);
       years = _.uniq(years);
       majors = _.uniq(majors);
       categories= _.uniq(categories);
       authors= _.uniq(authors);
-
+     
 
        // Make tools pages
        tags.forEach(tag => {
@@ -169,7 +172,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
       console.log("Created Pages For " + majors)
 
-      // Make major pages
+      // Make category pages
       categories.forEach(c => {
         createPage({
           path: `/categories/${_.kebabCase(c)}/`,
@@ -180,8 +183,10 @@ exports.createPages = ({ graphql, actions }) => {
         });
       });
       console.log("Created Pages For " + categories)
+      
+     
 
-     // Make major pages
+     // Make author pages
      authors.forEach(a => {
       createPage({
         path: `/authors/${_.kebabCase(a)}/`,
