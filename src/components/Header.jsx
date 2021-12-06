@@ -23,7 +23,7 @@ const Header = () => {
     <div className="w-full px-8 mx-auto bg-transparent lg:px-16 max-w-7xl pattern">
       <div className="flex items-center justify-between py-8 lg:px-6 ">
         <Link to="/">
-          <img alt="Logo" className="w-16 md:w-16" width="64px" src="/white-logo.png" />
+          <img alt="Logo" className="w-16 md:w-16" width="64px" src="/black-logo.png" />
         </Link>
 
         <button
@@ -38,7 +38,7 @@ const Header = () => {
           {site.data.menu.map((link, key) => (
             <Link
               key={`menu_desktop_link${key}`}
-              className="px-4 py-2 m-2 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out rounded-md text-light-gray bg-accent-gray hover:bg-yellow-700"
+              className="px-4 py-2 m-2 text-sm font-semibold tracking-wide text-center text-black transition duration-150 ease-in-out bg-white border-black border-3 hover:bg-yellow-700 shadow-shadow-yellow"
               activeClassName="border-b-1 border-yellow-600"
               to={link.to}
             >
