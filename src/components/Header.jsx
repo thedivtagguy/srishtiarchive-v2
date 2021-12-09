@@ -23,7 +23,12 @@ const Header = () => {
     <div className="w-full px-8 mx-auto bg-transparent lg:px-16 max-w-7xl pattern">
       <div className="flex items-center justify-between py-8 lg:px-6 ">
         <Link to="/">
-          <img alt="Logo" className="w-16 md:w-16" width="64px" src="/black-logo.png" />
+          <div className="flex items-center space-x-4">
+          <img alt="Logo" className="w-20 md:w-20" width="64px" src="/black-logo.png" />
+          <h1 className="w-1/2 text-2xl font-bold leading-none text-black font-ibm-serif md:text-2xl">
+            Srishti Archive
+          </h1>
+          </div>
         </Link>
 
         <button
@@ -31,18 +36,24 @@ const Header = () => {
           onClick={() => setIsMenuOpen(true)}
           aria-label="Open Menu"
         >
-          <FaBars className="w-auto h-6 -mt-1 fill-current text-lime" />
+          <FaBars className="w-auto h-6 -mt-1 text-black fill-current" />
         </button>
 
         <div className="hidden lg:block">
           {site.data.menu.map((link, key) => (
             <Link
               key={`menu_desktop_link${key}`}
-              className="px-4 py-2 m-2 text-sm font-semibold tracking-wide text-center text-black transition duration-150 ease-in-out bg-white border-black border-3 hover:bg-yellow-700 shadow-shadow-yellow"
-              activeClassName="border-b-1 border-yellow-600"
               to={link.to}
+              // For every link other than the last one, add these styles
+              // Otherwise, add the last link styles
+              className={`${
+                key === site.data.menu.length - 1
+                  ? "px-2 py-1 bg-black text-white hover:bg-white border-2 border-black hover:text-black rounded-md font-ibm-mono"
+                  : "font-ibm-mono font-medium px-4 hover:underline"
+              }`}
             >
              {link.name}
+    
             </Link>
           ))}
         </div>

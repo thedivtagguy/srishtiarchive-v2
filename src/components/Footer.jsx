@@ -8,13 +8,13 @@ const width = 70
   return (
     <div>
 
-    <footer class="bg-dark-gray text-gray-600 px-6 lg:px-12 py-12 sm:px-0">
+    <footer class=" text-gray-600 px-6 lg:px-12 py-12 sm:px-0">
       <div class="mx-auto ">
       <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4">
 
         <nav class="flex flex-wrap mx-auto justify-center space-x-6"> 
           <div class="max-w-screen-xl mx-auto lg:mb-12 ">
-          <StaticImage src="../images/white-logo.png" alt="Hero Header" width={width} quality="100" layout="fixed" placeholder="blurred"/>
+          <StaticImage src="../images/black-logo.png" alt="Hero Header" width={width} quality="100" layout="fixed" placeholder="blurred"/>
           </div>
          
         </nav>

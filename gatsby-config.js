@@ -12,15 +12,24 @@ module.exports = {
   siteMetadata: {
     menu: [
       { name: "🎉 Home", to: "/" },
-      { name: "📦 All Projects", to: "/all" },
+      { name: "📦 All", to: "/all" },
       { name: "❓ FAQ", to: "/faq" },
-      { name: "✨Submit Your Own ✨", to:"https://submit.srishtiarchive.com"},
+      { name: "✨Submit✨", to:"https://submit.srishtiarchive.com"},
 
     ],
-
+    title: `Srishti Archive`,
+    description: `Srishti Archive is a permanent gallery of projects by students at Srishti.`,
+    heroButtons: [
+      { text: "HCD", link: "/majors/hcd" },
+      { text: "BSSD", link: "/majors/bssd" },
+      { text: "VCSB", link: "/majors/vcsb" },
+      { text: "IADP", link: "/majors/iadp" },
+      { text: "CAC", link: "/majors/cac" },
+      { text: "CAP", link: "/majors/cap" },
+      { text: "DMA", link: "/majors/dma" },
+      { text: "FSP", link: "/majors/fsp" },
+    ],
     locale: "en",
-    title: `Srishti Archives`,
-    description: `Crowdsourced library of Srishti projects`,
     author: `@thedivtagguy`,
   },
   plugins: [

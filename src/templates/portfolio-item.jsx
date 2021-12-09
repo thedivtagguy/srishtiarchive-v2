@@ -24,80 +24,70 @@ export default props => {
   return (
     <Layout>
       <SiteMetadata title={name} description={description} />
-     
-        <div class="max-w-3xl flex flex-row justify-between items-center mx-auto lg:px-0 px-5 w-full">
-        {featured ? ( <span class="lg:text-base text-sm text-yellow-500 font-bold">⭐ Featured Project</span> ) : <span>{" "}</span>}
-          <span class="lg:text-base text-sm text-yellow-500 font-bold">{createdAt}</span>
-        </div>
-     
 
-      <section class="flex items-center justify-center py-4 ">
+      <div class="max-w-3xl flex flex-row justify-items-center items-center mx-auto lg:px-0 px-5 w-full">
+        {featured ? (
+          <h5 class="lg:text-lg text-sm text-center capitalize mx-auto text-srishti-red font-ibm-mono font-extrabold">
+            ⭐ FEATURED PROJECT
+          </h5>
+        ) : (
+          <span> </span>
+        )}
+      </div>
+
+      <section class="flex flex-col items-center justify-center py-4 ">
         <div class="relative max-w-3xl px-6 text-white auto lg:px-0">
-          <div class="flex flex-col w-full md:flex-col">
+          <div class="flex flex-col space-y-8 w-full md:flex-col">
             <div class="flex justify-between">
-              <h1 class="relative leading-tight flex flex-col text-3xl lg:text-6xl font-extrabold text-left text-lime">
+              <h2 class="relative leading-tight flex flex-col pb-6 text-3xl lg:text-6xl font-bold text-center">
                 {name}
-              </h1>
+              </h2>
             </div>
-            <Link to={`/authors/${kebabCase(author)}/`}>
-              <h2 className="py-3 pb-4 mb-4 text-xl font-extrabold leading-tight tracking-tight border-gray-500 hover:text-purple-500 lg:text-2xl border-b-1 text-light-gray sm:text-3xl">
-              <span class="text-sm">🔗</span> {author}{" "}
-              <span class="px-2 lg:inline md:inline block lg:pl-1 md:pl-1 pl-6 text-base lg:text-lg text-gray-600">
-                {year}, {major}
-              </span>
-            </h2>
-            </Link> 
-          </div>
-          <p class="text-left text-sm text-gray-400  xl:text-lg">
-            {description.description}
-          </p>
-
-          <div>
-            {groupmembers && (
-              <div class="text-sm pt-4 text-lime whitespace-normal">
-                Authors:
-                {groupmembers.map((tag, i) => [
-                  <p class="text-sm text-gray-400 whitespace-normal" key={i}>
-                    <span class="text-gray-400 font-normal">{tag}</span>
-                    {i < groupmembers.length - 1 ? ", " : ""}
-                  </p>,
-                ])}
+            <div className="flex items-center justify-between my-4">
+              <div>
+                <Link to={`/authors/${kebabCase(author)}/`}>
+                  <h3 className="cta lg:text-md font-ibm-mono sm:text-md">
+                    {author}
+                  </h3>
+                </Link>
               </div>
+              <div>
+                <h3 className="font-bold font-ibm-mono lg:text-md">
+                  {createdAt}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="flex items-center w-full max-w-3xl lg:px-0 my-8  px-6 mx-auto justify-center">
+          <div>
+            {thumbnailUrl && (
+              <img
+                src={thumbnailUrl}
+                class="mx-auto  object-cover w-full"
+                style={{ width: "800px" }}
+              />
             )}
           </div>
-          <p class="text-sm pt-4 font-normal text-gray-400">
-            <span class="font-normal text-lime block">Course/Unit:</span> {course}
-          </p>
-        </div>
-      </section>
-      <section class="grid lg:grid-cols-2 grid-cols-1 lg:px-0 px-6 w-full py-4 gap-2 lg:gap-10 max-w-3xl mx-auto">
+        </section>
+
+        <div class="grid lg:grid-cols-5 grid-cols-1 lg:px-0 px-6 w-full gap-2 lg:gap-10 max-w-3xl mx-auto">
+          <div class="col-span-3">
+            <p class="text-left text-sm text-black xl:text-lg">
+              {description.description}
+            </p>
+          </div>
+          <div class="col-span-2">
+          <section>
         <div class="">
-          <h4 class="font-bold text-lg text-lime">Project Files and Output</h4>
+          <h4 class="font-bold text-lg">Project Files</h4>
           <ul class="flex flex-col lg:py-4 ">
             {files.map(file => {
               return (
                 <a href={file.localFile.url} target="_blank" rel="noreferrer">
-                  <li class="flex flex-row justify-start items-center hover:text-blue-purple text-purple-800 ">
-                    <div class="select-none cursor-pointer flex flex-grow-1 items-center py-2">
-                      <div class="inline-flex">
-                        <div class="font-semibold text-sm  inline-flex hover:text-blue-purple text-light-gray dark:text-white">
-                          {file.title}{" "}
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 ml-2"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="3"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
+                  <li class="px-2 py-2 text-sm font-medium hover:bg-black hover:text-white bg-srishti-dark-purple rounded-md border-2 border-black text-white">
+                  {file.title}{" "}
                   </li>
                 </a>
               )
@@ -108,42 +98,61 @@ export default props => {
         {urls && (
           <div>
             <div>
-              <h4 class="font-bold text-lg text-lime">Project Links</h4>
+              <h4 class="font-bold text-lg ">Project Links</h4>
             </div>
             <div class="lg:pt-4">
               {urls.map((url, i) => {
                 return (
-                  <div class="">
-                    <Url link={url} number={i} />
-                  </div>
+                  <a href={url} target="_blank" rel="noreferrer">
+                  <li class="px-2 py-2 list-none text-sm font-medium hover:bg-black hover:text-white bg-srishti-red rounded-md border-2 border-black text-white">
+                  Link {i+1}{" "}
+                  </li>
+                  </a>
                 )
               })}
             </div>
           </div>
         )}
       </section>
-
-      <section class="flex items-center w-full max-w-3xl lg:px-0 px-6 mx-auto justify-center">
-        <div>
-          {thumbnailUrl && (
-            <img
-              src={thumbnailUrl}
-              class="rounded-lg mx-auto  object-cover w-full"
-              style={{ width: "800px" }}
-            />
-          )}
+      <div class="flex justify-between items-center lg:px-0  py-8 px-10 max-w-3xl w-full mx-auto">
+          <div >
+            <a
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >
+              <img
+                alt="Creative Commons License"
+                src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+              />
+            </a>
+          </div>
+          <div class="w-2/3">
+            <p class="text-mxs text-center pt-2 text-gray-600 pb-2 font-light">
+              This work is licensed under a{" "}
+              <a
+                rel="license"
+                href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                class="font-bold"
+              >
+                Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+                International License
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+            </div>
         </div>
       </section>
+    
 
       <section>
-        <div class="grid lg:grid-cols-6 grid-cols-1 lg:px-0 px-6 max-w-3xl mx-auto">
+        <div class="grid lg:grid-cols-6 grid-cols-1 lg:px-0 px-6 py-8 max-w-3xl mx-auto">
           <div class="lg:col-span-6 ">
-            <div class="mt-8 px-4 bg-accent-gray border-2 border-gray-800 border-dashed rounded-lg sm:px-8 md:px-8 py-5 sm:shadow ">
-              <p class="text-base text-purple-500 font-bold">
-                METADATA{" "}
-                <span class="text-xs text-purple-700">
-                  (Click to Explore More)
-                </span>
+            <div>
+              <p class="font-ibm-mono  font-bold">
+                Explore more by:{" "}
+               
               </p>
               <div class="grid grid-cols-1 md:grid-cols-7 ">
                 <div class="flex flex-col py-2  lg:py-4 items-start justify-start col-span-1 md:col-span-2 lg:col-span-1">
@@ -183,34 +192,6 @@ export default props => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 py-4 justify-between items-center lg:px-0  px-10 max-w-3xl w-full mx-auto">
-          <div>
-            <a
-              rel="license"
-              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-            >
-              <img
-                alt="Creative Commons License"
-                src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
-              />
-            </a>
-          </div>
-          <div class="">
-            <p class="text-mxs text-center pt-2 text-gray-600 pb-2 font-light">
-              This work is licensed under a{" "}
-              <a
-                rel="license"
-                href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-                class="highlight-text font-bold"
-              >
-                Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-                International License
-              </a>
-              .
-            </p>
           </div>
         </div>
       </section>

@@ -30,11 +30,17 @@ module.exports = {
         '2': '2px',
         '4': '4px',
       },
+      borderRadius: {
+        '20': '20px',
+        '4': '4px',
+        '8': '8px',
+      }
     },
     extend: {
       borderWidth: {
         '1': '1px',
       },
+      
       spacing: {
         '54': ' 13rem',
         '9':'2.3rem',
@@ -53,20 +59,27 @@ module.exports = {
       'offset-black': '2px 2px black',
       'shadow-yellow': '3px 3px #FFDE00',
       'orange':'3px 3px #F9A03F',
+      'large-shadow': '7px 8px 0px #2E2E2E',
+      'small-shadow': '2px 2px 0px #000000',
      },
      colors: {
-       'mint-cream': '#F1FFFA',
-       'charcoal': '#264653',
-       'turquoise': '#55DDE0',
-       'lime': '#25b859',
-       'blaze-orange': '#FE5F00',
-       'saffron': '#F9A03F',
-       'sienna': '#230903',
-       'blue-purple': '#BDADEA',
-       'high-yellow': '#FFDE00',
-        'dark-gray': '#111827',
-        'accent-gray':'#1F2937',
-        'light-gray':'#D1D5DB',
+      'mint-cream': '#F1FFFA',
+      'charcoal': '#264653',
+      'turquoise': '#55DDE0',
+      'lime': '#25b859',
+      'blaze-orange': '#FE5F00',
+      'saffron': '#F9A03F',
+      'sienna': '#230903',
+      'blue-purple': '#BDADEA',
+      'high-yellow': '#FFDE00',
+       'dark-gray': '#111827',
+       'accent-gray':'#1F2937',
+       'light-gray':'#D1D5DB',
+        'srishti-blue': '#5551FF',
+        'srishti-dark-purple': '#A259FF',
+        'srishti-light-purple': '#C7B9FF',
+        'srishti-yellow': '#FFC700',
+        'srishti-red': '#F24E1E'
      }
     },
 
@@ -75,7 +88,9 @@ module.exports = {
       padding: "1.25rem",
     },
     fontFamily: {
-      sans: ["Inter var", "system-ui", "sans-serif"],
+      'sans': ["Inter var", "system-ui", "sans-serif"],
+      'ibm-mono': ['"IBM Plex Mono"'],
+      'ibm-serif': ['"IBM Plex Serif"'],
     },
   },
   variants: {

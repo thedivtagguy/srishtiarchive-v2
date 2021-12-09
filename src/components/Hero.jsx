@@ -1,21 +1,45 @@
 import React from "react"
-
+import { Link, graphql, useStaticQuery } from "gatsby"
 const Hero = () => {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        data: siteMetadata {
+          heroButtons {
+            text
+            link
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div className="container bg-transparent lg:py-12">
       <div class="flex justify-center flex-col items-center">
-        <h1 className="mb-1 text-4xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 sm:text-6xl">
-          Srishti Archive
-        </h1>
-        <h1 className="mb-1 text-xs font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-tl from-pink-500 via-red-500 to-yellow-500 sm:text-sm">
-          _______________
-        </h1>
-        <p class="text-light-gray px-4 text-center py-4  lg:text-base text-sm">
-          A structured and searchable <br class="hidden lg:block md:block"></br> open-source library of projects by students at Srishti
+        <p class="text-black font-ibm-mono font-bold px-4 text-center py-4  lg:text-lg text-sm">
+          A permanent gallery of projects{" "}
+          <br class="hidden lg:block md:block"></br> by students at Srishti
         </p>
+        <div className="flex items-center justify-center mt-12 space-x-4">
+          {/* Create a list of heroButtons */}
+          {site.data.heroButtons.map((link, key) => (
+            <Link
+              key={`hero_button_${key}`}
+              to={link.link}
+              className="px-8 font-bold border-2 border-black rounded-md shadow-small-shadow font-ibm-mono hover:bg-black hover:text-white"
+            >
+              {link.text}
+            </Link>
+          ))}
+        </div>
+        <div className="flex justify-center mt-4">
+          <p className = "px-4 py-4 text-sm font-medium text-center text-black font-ibm-mono lg:text-md">
+            or browse more 👇
+            </p>
+          </div>
 
       </div>
-      
     </div>
   )
 }
