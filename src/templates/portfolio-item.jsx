@@ -82,7 +82,7 @@ export default props => {
           <section>
         <div class="">
           <h4 class="font-bold text-lg">Project Files</h4>
-          <ul class="flex flex-col lg:py-4 ">
+          <ul class="flex flex-col space-y-2 lg:py-4 ">
             {files.map(file => {
               return (
                 <a href={file.localFile.url} target="_blank" rel="noreferrer">

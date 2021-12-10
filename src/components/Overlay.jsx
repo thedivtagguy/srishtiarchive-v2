@@ -66,7 +66,7 @@ function Overlay({ children, isOpen, setIsOpen }) {
   return (
     <motion.div
       animate={isOpen ? "open" : "closed"}
-      className="fixed z-50 block bg-gray-900 text-white"
+      className="fixed z-50 block  text-white"
       initial="closed"
       variants={backgroundVariants}
     >

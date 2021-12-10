@@ -28,9 +28,9 @@ const Tags = ({ pageContext, data }) => {
   let toptools = sortable.slice(0, 3)
   return (
     <Layout>
-      <div className="mx-auto overflow-hidden bg-gray-900 max-w-7xl pattern">
+      <div className="mx-auto overflow-hidden max-w-7xl pattern">
         <div class="flex flex-col justify-center items-start w-full px-6 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
-          <h1 class="text-4xl font-extrabold leading-snug text-lime lg:text-3xl xl:text-5xl">
+          <h1 class="text-4xl font-extrabold leading-snug  lg:text-3xl xl:text-5xl">
             {a}{" "}
           </h1>
           <p class="text-lg font-medium text-gray-500 sm:text-2xl">

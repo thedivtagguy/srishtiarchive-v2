@@ -8,7 +8,7 @@ const Contact = ({ data }) => (
 
 <section class="px-2 lg:py-20 h-full md:px-0">
     <div class="flex justify-center items-center flex-col max-w-6xl px-5 mx-auto space-y-6 text-center">
-    <h2 class="m-0 text-4xl font-extrabold w-4/5 leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-5xl md:text-2xl">
+    <h2 class="m-0 text-4xl font-extrabold w-4/5 leading-tight border-0  mx-auto border-gray-300 lg:text-5xl md:text-2xl">
                Contact
             </h2>
         <p class="w-full mx-auto text-base text-left leading-8 text-light-gray sm:text-sm lg:text-xl md:max-w-3xl md:text-left">

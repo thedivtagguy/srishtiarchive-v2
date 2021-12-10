@@ -71,8 +71,8 @@ const width = 70
         </nav>
       </div>
       <div>
-        <p class="text-xs lg:text-base">&copy; 2021 A <span class="font-semibold highlight-text"><a href="https://theyellipages.in">The Yelli Pages</a></span> Project</p>
-        <p class="pt-4 text-mxs lg:text-mxs text-center">Designed and Developed by <a href="https://instagram.com/thedivtagguy"  rel="noreferrer" target="_blank"><span class="highlight-text font-semibold">Aman Bhargava</span></a></p>
+        <p class="text-xs lg:text-base">&copy; 2021 A <span class="font-semibold "><a href="https://theyellipages.in">The Yelli Pages</a></span> Project</p>
+        <p class="pt-4 text-mxs lg:text-mxs text-center">Designed and Developed by <a href="https://instagram.com/thedivtagguy"  rel="noreferrer" target="_blank"><span class=" font-semibold">Aman Bhargava</span></a></p>
 
         <a href="https://github.com/thedivtagguy/srishtiarchive-v2/">
         <button class="lg:text-mxs bg-accent-gray tracking-wider text-xxs text-white mt-4 lg:ml-2 sm:ml-2 font-semibold py-2 lg:px-4 px-2 rounded-lg  mx-auto hover:bg-purple-700 ">
@@ -81,7 +81,7 @@ const width = 70
       </div>
     </div>
     <p class="pt-4 mx-auto text-mxs lg:text-mxs text-center">With 99.99% better uptime than any other Srishti website <span role="img" aria-label="Peace Sign">✌️</span></p>
-    <p class="pt-4 mx-auto text-mxs lg:text-xs text-center"> By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice"  rel="noreferrer" target="_blank" class="highlight-text font-bold">Srishti Manipal's Policy on Ethical Conduct and Practice</a></p>
+    <p class="pt-4 mx-auto text-mxs lg:text-xs text-center"> By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice"  rel="noreferrer" target="_blank" class=" font-bold">Srishti Manipal's Policy on Ethical Conduct and Practice</a></p>
 
 </div>
   </footer>

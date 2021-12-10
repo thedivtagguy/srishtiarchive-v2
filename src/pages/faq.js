@@ -10,7 +10,7 @@ const AboutPage = () => (
 <section class="relative min-w-screen animation-fade animation-delay">
     <div class="container flex flex-col justify-center items-center px-8 mx-auto sm:px-12 xl:px-5">
        
-        <h3 class="mt-1 text-2xl font-extrabold text-left highlight-text sm:mx-6 sm:text-3xl md:text-4xl lg:text-5xl sm:text-center">
+        <h3 class="mt-1 text-2xl font-extrabold text-left  sm:mx-6 sm:text-3xl md:text-4xl lg:text-5xl sm:text-center">
         Okay but...
         </h3>
         <Link to="/guidelines" className="px-4 py-2 m-auto mt-4 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out border-yellow-600 rounded-md lg:text-lg text-light-gray bg-accent-gray hover:bg-yellow-700 border-b-1">✔️ You might be looking for <br class="block lg:hidden md:hidden"/> Submission Guidelines</Link>
@@ -47,13 +47,13 @@ const AboutPage = () => (
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
         <a href="#terms"> <h3 id="terms" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl hover:underline">What are the terms of the CC-BY-NC-SA license?</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
-                By putting your work under this license, you allow people to create a derivative work (work that builds on your own work), provided that they give you credit and do not use it for any commercial purposes. You can read about this license at <a class="highlight-text font-extrabold" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Website</a>.
+                By putting your work under this license, you allow people to create a derivative work (work that builds on your own work), provided that they give you credit and do not use it for any commercial purposes. You can read about this license at <a class=" font-extrabold" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Website</a>.
             </p>
         </div>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
         <a href="#plagiarism"> <h3 id="plagiarism" class="text-lg font-bold text-yellow-500 sm:text-xl md:text-2xl hover:underline">What about plagiarism?</h3></a>
             <p class="mt-2 text-base text-gray-600 sm:text-lg md:text-normal">
-                Plagiarism is a valid concern. By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice" target="_blank" class="highlight-text font-extrabold">Srishti Manipal's Policy on Ethical Conduct and Practice</a>. The same penalties for violation apply.
+                Plagiarism is a valid concern. By using the Archive, students agree to adhere to <a href="http://srishtimanipalinstitute.in/policies/srishti-policy-on-ethical-conduct-and-practice" target="_blank" class=" font-extrabold">Srishti Manipal's Policy on Ethical Conduct and Practice</a>. The same penalties for violation apply.
             </p>
         </div>
         <div class="w-full px-6 py-6 mx-auto mt-10 bg-accent-gray  highlight-border rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">

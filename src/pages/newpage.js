@@ -27,7 +27,7 @@ export default props => {
         <div class="relative max-w-3xl px-10 text-white auto lg:px-0">
           <div class="flex flex-col w-full md:flex-col">
             <div class="flex justify-between">
-              <h1 class="relative leading-tight flex flex-col text-3xl lg:text-6xl font-extrabold text-left text-lime">
+              <h1 class="relative leading-tight flex flex-col text-3xl lg:text-6xl font-extrabold text-left ">
                 {name}
               </h1>
             </div>
@@ -44,11 +44,11 @@ export default props => {
           
           <div>
                 {groupmembers && (
-                  <div class="text-sm pt-4 text-lime whitespace-normal">
+                  <div class="text-sm pt-4  whitespace-normal">
                     Authors:
                     {groupmembers.map((tag, i) => [
-                      <p class="text-sm text-lime whitespace-normal" key={i}>
-                        <span class="text-lime font-semibold">{tag}</span>
+                      <p class="text-sm  whitespace-normal" key={i}>
+                        <span class=" font-semibold">{tag}</span>
                         {i < groupmembers.length - 1 ? ", " : ""}
                       </p>,
                     ])}
@@ -62,7 +62,7 @@ export default props => {
       </section>
       <section class="grid lg:grid-cols-2 grid-cols-1 lg:px-0 px-10 w-full py-8 gap-2 lg:gap-10 max-w-3xl mx-auto">
             <div class="">
-              <h4 class="font-bold text-lg text-lime">Project Files and Output</h4>
+              <h4 class="font-bold text-lg ">Project Files and Output</h4>
               <ul class="flex flex-col lg:py-4 ">
                     {files.map(file => {
                       return (
@@ -86,7 +86,7 @@ export default props => {
             </div>
   
             {urls && <div><div>
-              <h4 class="font-bold text-lg text-lime">Project Links</h4>
+              <h4 class="font-bold text-lg ">Project Links</h4>
             </div>
             <div class="lg:pt-4">
             {urls.map((url, i) => {
@@ -182,7 +182,7 @@ export default props => {
                         <a
                           rel="license"
                           href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-                          class="highlight-text font-bold"
+                          class=" font-bold"
                         >
                           Creative Commons Attribution-NonCommercial-ShareAlike
                           4.0 International License

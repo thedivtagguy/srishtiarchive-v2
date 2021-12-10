@@ -31,13 +31,13 @@ const SearchGrid = () => {
           <InstantSearch searchClient={searchClient} indexName="archives">
             {/* <Mobilebar/> */}
             <div class="flex sticky top-0">
-              <div class="bg-accent-gray h-screen  rounded-tr-xl rounded-br-xl sticky top-0 pl-4 w-3/12 pb-6 hidden md:block">
+              <div class=" h-screen  rounded-tr-xl rounded-br-xl sticky top-0 pl-4 w-3/12 pb-6 hidden md:block">
                 <div class="sticky top-0 pt-2">
                   <div class="py-2 mt-4 w-2/3 flex justify-start items-center mx-4">
                     <ClearRefinements />
                   </div>
                   <div class="px-4 pt-2">
-                    <h1 class="font-bold bg-clip-text text-transparent text-lime tracking-wide text-sm leading-tight mb-1 truncate">
+                    <h1 class="font-bold bg-clip-text text-transparent  tracking-wide text-sm leading-tight mb-1 truncate">
                       Featured Projects
                     </h1>
                   </div>
@@ -56,7 +56,7 @@ const SearchGrid = () => {
                   <div class="text-mint-cream mb-2 mt-3 px-4 flex justify-between">
                     
                     <div class="flex flex-col">
-                      <h1 class="font-bold pb-2  tracking-wide text-lime text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-bold pb-2  tracking-wide  text-sm leading-tight mb-1 truncate">
                         Major
                       </h1>
                       <div class="mb-2  w-2/3 text-black text-sm font-semibold">
@@ -66,7 +66,7 @@ const SearchGrid = () => {
                   </div>
                   <div class="mb-2">
                     <div class="px-4 pt-2">
-                      <h1 class="font-bold tracking-wide  text-lime text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-bold tracking-wide   text-sm leading-tight mb-1 truncate">
                         Category
                       </h1>
                     </div>
@@ -79,7 +79,7 @@ const SearchGrid = () => {
                   </div>
                   <div class="mb-2">
                     <div class="px-4 pt-2">
-                      <h1 class="font-bold  tracking-wide text-lime text-sm leading-tight mb-1 truncate">
+                      <h1 class="font-bold  tracking-wide  text-sm leading-tight mb-1 truncate">
                         Year
                       </h1>
                     </div>
@@ -88,7 +88,7 @@ const SearchGrid = () => {
                     </div>
                   </div>
                   <div class="px-4 pt-2">
-                    <h1 class="font-bold bg-clip-text text-transparent text-lime tracking-wide text-sm leading-tight mb-1 truncate">
+                    <h1 class="font-bold bg-clip-text text-transparent  tracking-wide text-sm leading-tight mb-1 truncate">
                       Tools
                     </h1>
                   </div>
@@ -115,25 +115,25 @@ const SearchGrid = () => {
                         <TextLoop
                           springConfig={{ stiffness: 180, damping: 15 }}
                         >
-                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 ">
                             HCD
                           </span>
-                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 ">
                             VCSB
                           </span>
-                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 ">
                             Photoshop
                           </span>
-                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 ">
                             Illustrations
                           </span>
-                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 ">
                             Figma
                           </span>
-                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 ">
                             Student Name
                           </span>
-                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wider text-center text-base text-light-gray rounded-md py-1 px-2 ">
                             2nd year
                           </span>
                         </TextLoop>
@@ -149,19 +149,19 @@ const SearchGrid = () => {
                         <TextLoop
                           springConfig={{ stiffness: 180, damping: 15 }}
                         >
-                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 ">
                             HCD
                           </span>
-                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 ">
                             VCSB
                           </span>
-                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 ">
                             Photoshop
                           </span>
-                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 ">
                             Illustrations
                           </span>
-                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 bg-accent-gray">
+                          <span class="font-semibold w-full tracking-wide text-center text-xs  text-light-gray rounded-md px-2 ">
                             2nd year
                           </span>
                         </TextLoop>
@@ -218,7 +218,7 @@ function Hit(props) {
   return (
     <div class="px-0">
       <Link to={`/${props.hit.slug}`}>
-        <div className="h-full overflow-hidden transition duration-300 ease-in-out rounded-lg bg-accent-gray group">
+        <div className="h-full overflow-hidden transition duration-300 ease-in-out border-black rounded-lg border-3 group">
           <div className="h-56 transition duration-150 ease-in-out group-hover:opacity-75">
             {props.hit.thumbnailUrl ? (
               <img
@@ -324,7 +324,7 @@ function Hit(props) {
               ])}
             </div>
           </div>
-          <div class="px-4 pt-3 pb-4 border-t border-gray-900 bg-accent-gray">
+          <div class="px-4 pt-3 pb-4 border-t border-gray-900 ">
             <div class="flex items-center">
               <div>
                 <p class="font-bold px-2 text-md  text-light-gray">
@@ -352,7 +352,7 @@ const Results = connectStateResults(
       children
     ) : (
       <div class="mx-auto flex justify-center items-center flex-col">
-        <h1 class="text-4xl py-24 font-bold uppercase w-1/2 text-lime text-center">
+        <h1 class="text-4xl py-24 font-bold uppercase w-1/2  text-center">
           Okay, no idea about what {searchState.query} could be, we probably
           don't have that yet. <br></br>{" "}
           <span class="text-xs">Maybe try something else? (⊙_☉) </span>

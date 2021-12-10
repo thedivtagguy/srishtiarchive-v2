@@ -9,7 +9,7 @@ const AboutPage = ({ data }) => (
     <section class=" lg:py-20 h-full max-w-6xl px-6 mx-auto">
       <div class="flex flex-col lg:flex-row gap-5 justify-center items-center">
         <div class="flex justify-center items-start flex-col text-left">
-          <h2 class="text-4xl font-extrabold w-4/5 pb-4 leading-tight border-0 highlight-text  border-gray-300 lg:text-5xl md:text-2xl">
+          <h2 class="text-4xl font-extrabold w-4/5 pb-4 leading-tight border-0   border-gray-300 lg:text-5xl md:text-2xl">
             I don't know about you, but I know 3 things:
           </h2>
           <p class="w-4/5 text-base text-left text-light-gray sm:text-sm lg:text-xl  md:max-w-3xl md:text-left">

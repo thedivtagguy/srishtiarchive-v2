@@ -8,7 +8,7 @@ const trial = ({ data }) => (
     <SiteMetadata title="About" description="Sample description" />
 <div class="font-sans antialiased h-screen flex">
    
-    <div class="bg-gray-900 text-purple-lighter flex-none w-64 pb-6 hidden md:block">
+    <div class=" text-purple-lighter flex-none w-64 pb-6 hidden md:block">
         <div class="text-white mb-2 mt-3 px-4 flex justify-between">
             <div class="flex-auto">
                 <h1 class="font-semibold text-xl leading-tight mb-1 truncate">Filters</h1>

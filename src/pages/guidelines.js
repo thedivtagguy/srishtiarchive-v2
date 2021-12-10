@@ -12,7 +12,7 @@ const AboutPage = ({ data }) => (
 
 <section class="px-2 lg:pt-20 lg:pb-12 h-full md:px-0">
     <div class="flex justify-center items-center flex-col max-w-6xl px-5 mx-auto space-y-6 text-center">
-    <h2 class="m-0 text-4xl font-extrabold w-4/5 leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-6xl md:text-2xl">
+    <h2 class="m-0 text-4xl font-extrabold w-4/5 leading-tight border-0  mx-auto border-gray-300 lg:text-6xl md:text-2xl">
                 Submission Checklist
             </h2>
     </div>
@@ -26,13 +26,13 @@ const AboutPage = ({ data }) => (
         </div>
 
         <div class="box-border order-first w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none">
-            <h2 class="m-0 text-4xl font-extrabold leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-5xl md:text-2xl">
+            <h2 class="m-0 text-4xl font-extrabold leading-tight border-0  mx-auto border-gray-300 lg:text-5xl md:text-2xl">
                 Collect your files
             </h2>
             <p class="pt-4 pb-8 m-0 leading-8 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
               Files  are anything that make up  your output . They can be  reflections, PDFs, videos, soundclips, code, images ; stuff that shows us what you made and adds context. Stuff you've already submitted also works, no need to create new files . These are limited to only  4 per entry 
             </p>
-             <h2 class="m-0 text-xl font-extrabold  leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-xl md:text-xl">
+             <h2 class="m-0 text-xl font-extrabold  leading-tight border-0  mx-auto border-gray-300 lg:text-xl md:text-xl">
                 File Requirements
             </h2>
             <ul>
@@ -46,7 +46,7 @@ const AboutPage = ({ data }) => (
     <div class="box-border flex flex-col items-center content-center px-8 lg:py-16 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
 
         <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-6 xl:pl-32">
-        <h2 class="m-0 text-4xl font-extrabold leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-5xl md:text-2xl">
+        <h2 class="m-0 text-4xl font-extrabold leading-tight border-0  mx-auto border-gray-300 lg:text-5xl md:text-2xl">
                 Write a Description
             </h2>
             <p class="pt-4 pb-8 m-0 leading-8 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-20 lg:text-lg">
@@ -65,7 +65,7 @@ const AboutPage = ({ data }) => (
         </div>
 
         <div class="box-border order-first w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none">
-            <h2 class="m-0 text-4xl font-extrabold leading-tight border-0 highlight-text mx-auto border-gray-300 lg:text-5xl md:text-2xl">
+            <h2 class="m-0 text-4xl font-extrabold leading-tight border-0  mx-auto border-gray-300 lg:text-5xl md:text-2xl">
                 Thatsssssss it
             </h2>
             <p class="pt-4 pb-8 m-0 leading-8 text-light-gray border-0 border-gray-300 sm:pr-12 xl:pr-40 lg:text-lg">
