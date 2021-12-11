@@ -21,7 +21,7 @@ const Hero = () => {
           A permanent gallery of projects{" "}
           <br class="hidden lg:block md:block"></br> by students at Srishti
         </p>
-        <div className="flex items-center justify-center mt-12 space-x-4">
+        <div id="cow" className="flex items-center justify-center mt-12 space-x-4">
           {/* Create a list of heroButtons */}
           {site.data.heroButtons.map((link, key) => (
             <Link

@@ -74,7 +74,7 @@ export default props => {
 
         <div class="grid lg:grid-cols-5 grid-cols-1 lg:px-0 px-6 w-full gap-2 lg:gap-10 max-w-3xl mx-auto">
           <div class="col-span-3">
-            <p class="text-left text-sm text-black xl:text-lg">
+            <p class="text-left text-sm text-black">
               {description.description}
             </p>
           </div>

@@ -160,3 +160,13 @@ input[type="search"]::-webkit-search-cancel-button {
 .ais-RefinementList.categoryList > span > .ais-RefinementList-labelText {
   font-size: 5px;
 }
+
+/* Add background image to cow id */
+#cow {
+  background-image: url('/cow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}

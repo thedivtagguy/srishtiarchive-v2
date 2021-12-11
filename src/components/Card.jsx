@@ -47,26 +47,27 @@ const Card = props => {
               <p class="uppercase">
                 {" "}
                 {featured && (
-                  <span class="text-sm px-4 text-srishti-red font-bold">
+                  <span class="text-xs px-4 text-srishti-red font-bold">
                     Featured
                   </span>
                 )}
               </p>
             </div>
             <div class="h-16">
-
-            <h1 className="px-2 text-lg font-extrabold ">{name}</h1>
+            <h1 className="px-2 text-xl font-extrabold ">{name}</h1>
             </div>
           </div>
           <div class="">
-            <p className="px-6 py-4 text-sm font-semibold tracking-wider">
+          <p className="px-6 text-sm font-semibold tracking-wider">
               <span class="text-gray-800 rounded-md px-1 py-1">
                 {author} {groupmembers && <span class="text-xs">et al.</span>}
               </span>
             </p>
+            <p class="text-xs font-bold pl-6 mx-1 py-2  text-gray-700">{category}</p>
+           
           </div>
 
-          <div class="flex-1 pr-4 pb-4 inline-flex items-center">
+          <div class="flex-1 pr-4 pb-4 mx-1 inline-flex items-center">
             {items.map((tag, i) => [
               <p
                 class="text-xs whitespace-normal ml-6 px-2 rounded-md border-2 border-black"
