@@ -12,7 +12,6 @@ module.exports = {
   siteMetadata: {
     menu: [
       { name: "🎉 Home", to: "/" },
-      { name: "📦 All", to: "/all" },
       { name: "❓ FAQ", to: "/faq" },
       { name: "✨Submit✨", to:"https://submit.srishtiarchive.com"},
 
