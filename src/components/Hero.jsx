@@ -34,7 +34,7 @@ const Hero = () => {
           ))}
         </div>
         <div className="flex justify-center mt-4">
-          <p className = "px-4 py-4 text-sm font-medium text-center text-black font-ibm-mono lg:text-md">
+          <p className = "px-4 py-4 text-sm underline decoration-wavy font-medium text-center text-black font-ibm-mono lg:text-md">
             or browse more 👇
             </p>
           </div>

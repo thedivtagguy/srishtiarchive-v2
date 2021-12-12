@@ -17,6 +17,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       urls: [String]
       category: String
       groupmembers: [String]
+      
       thumbnailUrl: String
       featured: Boolean
     }
