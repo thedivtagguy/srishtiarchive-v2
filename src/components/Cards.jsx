@@ -5,7 +5,11 @@ import Card from "./Card"
 
 const Cards = ({ items, no, hideLastItemOnMobile = false }) => {
   items = items.slice(0,no)
-  const grid = /majors|authors|categories|tools|years/.test(window.location.href);
+  let grid = "FALSE"
+  if (typeof window !== `undefined`){ 
+    grid = /majors|authors|categories|tools|years/.test(window.location.href);
+
+}
   return (
     <div>
       
