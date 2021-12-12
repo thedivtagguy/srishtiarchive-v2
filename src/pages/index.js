@@ -4,7 +4,7 @@ import Hero from "../components/Hero"
 import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
 import Cards from "../components/Cards"
-
+import SearchGrid2 from "../components/search/searchV2"
 const IndexPage = ({ data }) => {
   console.log(data);
   return (
@@ -13,11 +13,8 @@ const IndexPage = ({ data }) => {
       <Hero />
 
       <section class="lg:px-6 w-full mx-auto max-w-7xl">     
-        {data.portfolio && data.portfolio.nodes.length > 0 ? (
-          <Cards no="8" items={data.portfolio.nodes} />
-        ) : (
-          <div className="container">No projects found.</div> 
-        )}
+      <SearchGrid2></SearchGrid2>
+
 
       </section>
 
