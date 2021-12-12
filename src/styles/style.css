@@ -36,9 +36,10 @@ body {
 
 
 input[type="search"] {
-  @apply  text-left px-4 rounded-lg appearance-none border-3 shadow-small-shadow border-black ;
+  @apply  text-left px-4 py-[17px] rounded-lg appearance-none border-3 shadow-small-shadow border-black ;
   width: 100%!important;
-  height: 40px!important;
+  font-size: 0.9rem;
+  height: 35px!important;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }

@@ -17,8 +17,11 @@ const ToggleRefinement = ({
       className={ currentRefinement ? "font-ibm-mono uppercase text-srishti-red -mt-1 font-bold text-sm cursor-pointer" : "font-ibm-mono uppercase text-srishti-red -mt-1 font-medium text-sm cursor-pointer" }
       onClick={event => {
         event.preventDefault()
+       // Toggle the enabled state
+        setEnabled(!enabled)
         refine(!currentRefinement)
-      }}
+      }
+    }
       
     >
       {label} {" "}
