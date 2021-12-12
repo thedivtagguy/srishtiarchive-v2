@@ -36,8 +36,9 @@ body {
 
 
 input[type="search"] {
-  @apply px-16 py-4 text-xl text-left rounded-tl-lg rounded-bl-lg appearance-none shadow-orange bg-light-gray text-accent-gray ;
+  @apply  text-left px-4 rounded-lg appearance-none border-3 shadow-small-shadow border-black ;
   width: 100%!important;
+  height: 40px!important;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -73,7 +74,7 @@ input[type="checkbox"] {
 }
 
 .ais-Hits-item{
-  flex-basis: 33.33%;
+  flex-basis: 25%;
 padding: 10px;
 }
 

@@ -1,4 +1,6 @@
 import React from "react"
+
+
 import { Link, graphql, useStaticQuery } from "gatsby"
 const Hero = () => {
   const { site } = useStaticQuery(graphql`
@@ -13,6 +15,11 @@ const Hero = () => {
       }
     }
   `)
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 
   return (
     <div className="container bg-transparent lg:py-12">
@@ -40,6 +47,7 @@ const Hero = () => {
           </div>
 
       </div>
+     
     </div>
   )
 }

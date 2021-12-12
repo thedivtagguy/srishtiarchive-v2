@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Wojciech Kocjan <wojciech@kocjan.net>",
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
     "@styled-icons/fa-solid": "^10.34.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
