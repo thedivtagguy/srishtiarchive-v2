@@ -4,6 +4,20 @@ import SiteMetadata from "../components/SiteMetadata"
 import Layout from "../layouts/Layout"
 import kebabCase from "lodash/kebabCase"
 import Url from "../components/url"
+import algoliasearch from "algoliasearch/lite"
+import {
+  InstantSearch,
+  Hits,
+  connectStateResults,
+  Index,
+  Configure,
+  PoweredBy,
+} from "react-instantsearch-dom"
+import { ExperimentalConfigureRelatedItems } from 'react-instantsearch-dom';
+
+
+
+
 export default props => {
   const {
     description,
@@ -21,6 +35,17 @@ export default props => {
     groupmembers,
     createdAt,
   } = props.data.item
+
+  const searchClient = algoliasearch(
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  )
+  const hit = {
+    name: name  ,
+    major: major,
+    category: category,
+  };
+  
   return (
     <Layout>
       <SiteMetadata title={name} description={description} />
@@ -195,6 +220,22 @@ export default props => {
           </div>
         </div>
       </section>
+      {/* <InstantSearch searchClient={searchClient} indexName="archives">
+
+      <Index indexName="archives">
+  <ExperimentalConfigureRelatedItems
+    hit={hit}
+    matchingPatterns={{
+      category: { score: 1 },
+      major: { score: 2 }
+    }}
+  />
+
+  <Configure hitsPerPage={2} />
+  <Hits />
+
+</Index>
+</InstantSearch> */}
     </Layout>
   )
 }
