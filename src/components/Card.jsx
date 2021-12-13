@@ -20,7 +20,7 @@ const Card = props => {
   return (
     <div class=" max-w-sm">
       <Link to={`/${slug}`}>
-        <div className="h-full overflow-hidden transition duration-300 ease-in-out border-black rounded-xl border-3 group">
+        <div className="h-full overflow-hidden transition duration-300 ease-in-out bg-[#fafafa] border-gray-500 border-opacity-25 rounded-xl border-3 group">
           <div className="h-56 transition duration-150 ease-in-out group-hover:opacity-75">
             {thumbnailUrl ? (
               <img
@@ -70,7 +70,7 @@ const Card = props => {
           <div class="flex-1 pr-4 pb-4 mx-1 inline-flex items-center">
             {items.map((tag, i) => [
               <p
-                class="text-xs whitespace-normal ml-6 px-2 py-1 rounded-md border-1 border-opacity-40 border-dashed border-black"
+                class="text-xs whitespace-normal ml-6 px-2 py-1 rounded-md border-1  border-opacity-40 border-dashed border-black"
                 key={i}
               >
                 <span class="text-black tracking-wider font-semibold">

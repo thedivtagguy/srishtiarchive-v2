@@ -9,9 +9,10 @@ function classNames(...classes) {
 }
 
 
-const RefinementList = ({ label, items, refine }) => {
+const RefinementList = ({ label, items, hide, refine }) => {
   const [isChecked, setIsChecked] = useState(true);
-
+  // If hide is true, dont render the component
+  if (hide) return null;
   return (
     <div>
       <Menu as="div" className="relative inline-block text-left">

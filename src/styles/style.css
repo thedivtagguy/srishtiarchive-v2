@@ -4,10 +4,6 @@ body {
   background-color: #FFFFFF;
 }
 
-.highlight {
-  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #ffde00 65%);
-  display: inline;
-}
 @tailwind components;
 
 @tailwind utilities;
@@ -39,8 +35,7 @@ button  {
 }
 
 input[type="search"] {
-  @apply  text-left font-ibm-mono px-4 py-[17px] rounded-lg appearance-none border-3 shadow-small-shadow border-black ;
-  width: 100%;
+  @apply  text-left w-full font-ibm-mono px-4 py-[17px] rounded-lg appearance-none border-3 shadow-small-shadow border-black ;
   font-size: 0.9rem;
   height: 35px;
   outline: 2px solid transparent;

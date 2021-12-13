@@ -71,13 +71,12 @@ const SearchGrid2 = () => {
                     </div>
                     <div class="flex w-full">
                       <Results>
-                        <div class="py-2 w-full">
+                        <div class="py-2 px-4 w-full">
                           <Hits hitComponent={Hit} />
                           <div
                             id="mobile-alg"
                             class="lg:hidden md:hidden mx-auto flex justify-center items-center"
                           >
-                            <PoweredBy />
                           </div>
                         </div>
                       </Results>
@@ -97,7 +96,7 @@ function Hit(props) {
   return (
     <div class=" max-w-sm">
       <Link to={`/${props.hit.slug}`}>
-        <div className="h-full overflow-hidden transition duration-300 ease-in-out border-gray-500 border-opacity-25 rounded-xl border-3 group">
+        <div className="h-full overflow-hidden transition duration-300 ease-in-out  bg-[#fafafa] border-gray-500 border-opacity-25 rounded-xl border-3 group">
           <div className="h-56 transition duration-150 ease-in-out group-hover:opacity-75">
             {props.hit.thumbnailUrl ? (
               <img
