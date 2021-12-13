@@ -70,7 +70,7 @@ const Card = props => {
           <div class="flex-1 pr-4 pb-4 mx-1 inline-flex items-center">
             {items.map((tag, i) => [
               <p
-                class="text-xs whitespace-normal ml-6 px-2 rounded-md border-2 border-black"
+                class="text-xs whitespace-normal ml-6 px-2 py-1 rounded-md border-1 border-opacity-40 border-dashed border-black"
                 key={i}
               >
                 <span class="text-black tracking-wider font-semibold">

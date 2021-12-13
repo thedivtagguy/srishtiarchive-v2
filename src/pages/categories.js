@@ -31,25 +31,25 @@ export default props => {
     <SiteMetadata title="Categories" description="List of Categories" />
     <body class="lg:px-40">
     <div class="flex justify-center flex-col items-center">
-        <h1 className="mb-1 text-4xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 sm:text-6xl">
+        <h1 className="mb-1 text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">
           Categories
         </h1>
         <div class="grid grid-cols-2 px-6 py-4 lg:grid-cols-3 gap-3 ">
       {sortable.map((tag, i) => [
         <Link to={`/categories/${kebabCase(tag[0])}/`}>
           <div class=" rounded-xl">
-            <div class="flex flex-col items-center justify-center col-span-1 px-12 py-6 space-y-2 hover:bg-purple-600 bg-accent-gray rounded-xl">
+            <div class="flex flex-col items-center justify-center col-span-1 px-12 py-6 space-y-2 border-3 border-black border-dashed border-opacity-30 hover:bg-black group rounded-xl">
               <div class="w-8 h-8 pt-1 text-center text-white bg-blue-500 rounded-full">
                 {emojis[Math.floor(Math.random() * emojis.length)]}
               </div>
-              <h4 class="font-bold text-center lg:text-2xl h-12 lg:h-20 tracking-wide  text-xs  text-light-gray rounded-md  px-4">
+              <h4 class="font-bold text-center lg:text-2xl h-12 lg:h-20 tracking-wide  text-xs group-hover:text-white    rounded-md  px-4">
                 {tag[0]}
               </h4>
-              <h5 class="font-semibold text-center lg:text-base   tracking-wide  text-mxs  text-gray-500 rounded-md">
+              <h5 class="font-semibold text-center lg:text-base   tracking-wide  text-mxs group-hover:text-white  rounded-md">
                       {tag[1] > 1 ? (
-                        <span>{tag[1]} Projects</span>
+                        <span class="group-hover:text-white ">{tag[1]} Projects</span>
                       ) : (
-                        <span>{tag[1]} Project</span>
+                        <span class="group-hover:text-white ">{tag[1]} Project</span>
                       )}
                     </h5>
             </div>

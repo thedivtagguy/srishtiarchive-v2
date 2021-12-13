@@ -9,7 +9,7 @@ const AboutPage = ({ data }) => (
     <section class=" lg:py-20 h-full max-w-6xl px-6 mx-auto">
       <div class="flex flex-col lg:flex-row gap-5 justify-center items-center">
         <div class="flex justify-center items-start flex-col text-left">
-          <h2 class="text-4xl font-extrabold w-4/5 pb-4 leading-tight border-0   border-gray-300 lg:text-5xl md:text-2xl">
+          <h2 class="text-4xl font-extrabold w-4/5   border-0 pb-6  border-gray-300 lg:text-5xl md:text-2xl">
             I don't know about you, but I know 3 things:
           </h2>
           <p class="w-4/5 text-base text-left  sm:text-sm lg:text-xl  md:max-w-3xl md:text-left">
@@ -32,12 +32,12 @@ const AboutPage = ({ data }) => (
           </p>
         </div>
         <div>
-          <div class="flex flex-col items-center col-span-12 w-full overflow-hidden border-1 border-accent-gray shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
+          <div class="flex flex-col items-center col-span-10 w-full overflow-hidden border-1 border-accent-gray shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
             <a href="https://submit.srishtiarchive.com" class="block">
               <img class="mx-auto shadow-sm h-56" src="/social.png" />
             </a>
             <a href="https://submit.srishtiarchive.com">
-              <div class="relative flex flex-col items-start px-6  py-4 bg-accent-gray hover:bg-yellow-700 transition duration-150 ease-in-out py-7">
+              <div class="relative flex flex-col items-start px-6  py-4  transition duration-150 ease-in-out ">
                 <h2 class="font-bold tracking-wide text-left lg:text-2xl text-sm  ">
                   <a href="https://submit.srishtiarchive.com">
                     Submit your Project

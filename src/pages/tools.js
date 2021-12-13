@@ -28,22 +28,22 @@ export default props => {
       <SiteMetadata title="Tools" description="List of Tools" />
       <body class="lg:px-40">
         <div class="flex justify-center flex-col items-center">
-          <h1 className="mb-1 text-4xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 sm:text-6xl">
+          <h1 className="mb-1 text-4xl font-extrabold leading-tight tracking-tight  sm:text-6xl">
             Tools
           </h1>
           <div class="grid grid-cols-2 px-6 py-4 lg:grid-cols-3 gap-3 ">
             {sortable.map((tag, i) => [
               <Link to={`/tools/${kebabCase(tag[0])}/`}>
                 <div class=" rounded-xl">
-                  <div class="flex flex-col items-center justify-center col-span-1 px-8 py-8 space-y-4 hover:bg-purple-600 bg-accent-gray rounded-xl">
-                    <h4 class="font-bold text-center lg:text-2xl   tracking-wide  text-xl  text-light-gray rounded-md px-4">
+                  <div class="flex flex-col items-center justify-center col-span-1 px-8 py-8 group space-y-4 border-dashed hover:bg-black border-3 border-opacity-30 border-black rounded-xl">
+                    <h4 class="font-bold text-center lg:text-2xl   tracking-wide  text-xl group-hover:text-white   rounded-md px-4">
                       {tag[0]}
                     </h4>
-                    <h5 class="font-semibold text-center lg:text-base   tracking-wide  text-xl  text-gray-500 rounded-md">
+                    <h5 class="font-semibold text-center lg:text-base   tracking-wide  text-xl  group-hover:text-white rounded-md">
                       {tag[1] > 1 ? (
-                        <span>{tag[1]} Projects</span>
+                        <span class="group-hover:text-white">{tag[1]} Projects</span>
                       ) : (
-                        <span>{tag[1]} Project</span>
+                        <span class="group-hover:text-white">{tag[1]} Project</span>
                       )}
                     </h5>
                   </div>
