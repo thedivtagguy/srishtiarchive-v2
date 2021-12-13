@@ -12,7 +12,7 @@ const AboutPage = () => (
                 Okay but...
             </h3>
             <Link to="/guidelines" className="px-4 py-2 m-auto mt-4 text-sm font-semibold tracking-wide text-center transition duration-150 ease-in-out border-yellow-600 rounded-md lg:text-lg text-light-gray bg-accent-gray hover:bg-yellow-700 border-b-1">✔️ You might be looking for <br class="block lg:hidden md:hidden"/> Submission Guidelines</Link>
-            <div class="w-full px-6 py-6 mx-auto mt-10 border-b-3 border-black border-dashed rounded-lg sm:px-8 md:px-12 sm:py-8  lg:w-5/6 xl:w-2/3">
+            <div class="w-full px-6 py-6 mx-auto mt-10  rounded-lg sm:px-8 md:px-12 sm:py-8  lg:w-5/6 xl:w-2/3">
             <a href="#what-to-upload"> <h3 id="what-to-upload" class="text-lg font-bold text-gray-800 sm:text-xl md:text-2xl hover:underline">Can I upload XYZ...?</h3></a>
                 <p class="mt-2 text-base text-black sm:text-lg md:text-normal">
                     You can upload  any work done in your time at Srishti. This includes  studios, workshops, PoUs, charettes; anything! Just input the relevant unit name in the form. If it is a PoU or a charette project, enter 'Performance of Understanding' or 'Charette'.

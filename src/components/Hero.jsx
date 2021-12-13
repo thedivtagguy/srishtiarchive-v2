@@ -22,14 +22,17 @@ function classNames(...classes) {
 
 
   return (
-    <div className="container bg-transparent lg:py-12">
+    <div  id="hero" className="container relative bg-transparent lg:py-12">
+      <div id="bg">      </div>
+
       <div class="flex justify-center flex-col items-center">
         <p class="text-black font-ibm-mono font-bold px-4 text-center py-4  lg:text-lg text-sm">
           A permanent gallery of projects{" "}
           <br class="hidden lg:block md:block"></br> by students at Srishti
         </p>
-        <div id="cow" className="flex items-center justify-center mt-12 space-x-4">
+        <div className="flex items-center justify-center mt-12 space-x-4">
           {/* Create a list of heroButtons */}
+          <div id="cow"></div>
           {site.data.heroButtons.map((link, key) => (
             <Link
               key={`hero_button_${key}`}
@@ -40,14 +43,13 @@ function classNames(...classes) {
             </Link>
           ))}
         </div>
-        <div className="flex justify-center mt-4">
+        <div id="holes" className="flex justify-center mt-4">
           <p className = "px-4 py-4 text-sm underline decoration-wavy font-medium text-center text-black font-ibm-mono lg:text-md">
             or browse more 👇
             </p>
           </div>
 
       </div>
-     
     </div>
   )
 }

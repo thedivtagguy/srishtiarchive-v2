@@ -1,5 +1,5 @@
 import {  connectRefinementList } from "react-instantsearch-dom"
-import React from "react"
+import React, {useState} from "react"
 import { Fragment } from "react"
 import { Menu, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
@@ -8,7 +8,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
+
 const RefinementList = ({ label, items, refine }) => {
+  const [isChecked, setIsChecked] = useState(true);
+
   return (
     <div>
       <Menu as="div" className="relative inline-block text-left">
@@ -37,16 +40,22 @@ const RefinementList = ({ label, items, refine }) => {
                   {({ active }) => (
                    
                        <label class="inline-flex items-center">
-        <input type="checkbox" class="form-checkbox"
+        <input type="checkbox" 
         // On click, check or uncheck the checkbox
         style={{ fontWeight: item.isRefined ? "bold" : "" }}
                       onClick={event => {
                         event.preventDefault()
                         refine(item.value)
                       }}
+                     // On change, check only that checkbox
+                      onChange={event => {
+                        event.preventDefault()
+                        refine(item.value)
+                      }}
+                      checked={item.isRefined}
                       className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
+                        active ? "bg-gray-100 focus:ring-indigo-500 h-4 w-4  border-gray-300 rounded text-gray-900" : "text-gray-700",
+                        "block px-4 py-2 focus:ring-indigo-500 h-4 w-4  border-gray-300 rounded text-sm"
                       )}
         />
         <span class="ml-2">{item.label} ({item.count})</span>

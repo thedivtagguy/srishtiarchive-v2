@@ -12,16 +12,16 @@ const AboutPage = ({ data }) => (
           <h2 class="text-4xl font-extrabold w-4/5 pb-4 leading-tight border-0   border-gray-300 lg:text-5xl md:text-2xl">
             I don't know about you, but I know 3 things:
           </h2>
-          <p class="w-4/5 text-base text-left text-light-gray sm:text-sm lg:text-xl  md:max-w-3xl md:text-left">
-            1. I do a lot of work for each course.
+          <p class="w-4/5 text-base text-left  sm:text-sm lg:text-xl  md:max-w-3xl md:text-left">
+            1. We do a lot of work for each course.
           </p>
-          <p class="w-full  text-base text-left text-light-gray sm:text-sm lg:text-xl md:max-w-3xl md:text-left">
-            2. The work lives for 5 weeks, after which it sits on my computer.
+          <p class="w-full  text-base text-left  sm:text-sm lg:text-xl md:max-w-3xl md:text-left">
+            2. The work lives for 5 weeks, after which it sits on our computers.
           </p>
-          <p class="w-full  text-base text-left text-light-gray sm:text-sm lg:text-xl md:max-w-3xl md:text-left">
+          <p class="w-full  text-base text-left  sm:text-sm lg:text-xl md:max-w-3xl md:text-left">
             3. I love seeing what other people have done.
           </p>
-          <p class="w-full  text-base text-left pt-4 text-light-gray sm:text-sm lg:text-xl md:max-w-xl md:text-left">
+          <p class="w-full  text-base text-left pt-4  sm:text-sm lg:text-xl md:max-w-xl md:text-left">
             An institution have a longer memory than just a few weeks. Your work
             is valuable and people should have a chance to see it. If you feel
             the same, the Archive is for you.<br></br> <br></br>A permanant
@@ -38,7 +38,7 @@ const AboutPage = ({ data }) => (
             </a>
             <a href="https://submit.srishtiarchive.com">
               <div class="relative flex flex-col items-start px-6  py-4 bg-accent-gray hover:bg-yellow-700 transition duration-150 ease-in-out py-7">
-                <h2 class="font-bold tracking-wide text-left lg:text-2xl text-sm  text-light-gray">
+                <h2 class="font-bold tracking-wide text-left lg:text-2xl text-sm  ">
                   <a href="https://submit.srishtiarchive.com">
                     Submit your Project
                   </a>

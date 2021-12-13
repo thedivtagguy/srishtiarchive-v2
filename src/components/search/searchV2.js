@@ -6,20 +6,18 @@ import {
   SearchBox,
   PoweredBy,
 } from "react-instantsearch-dom"
-import React  from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 // import Mobilebar from "./mobilefilter"
-import { Fragment } from "react"
-import { Menu, Transition, Switch } from "@headlessui/react"
-import { ChevronDownIcon } from "@heroicons/react/solid"
 import CustomToggleRefinement from "./toggle"
 import Dropdown from "./dropdownrefine"
+import Clear from "./clear"
+
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
-
 //Search Grid
 const SearchGrid2 = () => {
   return (
@@ -47,21 +45,17 @@ const SearchGrid2 = () => {
                         />
                       </div>
                       <div className="flex justify-items-center space-x-4 items-center">
-                      <div>
-                        <Dropdown
-  attribute="major" label="Major"/>
+                        <div>
+                          <Dropdown attribute="major" label="Major" />
                         </div>
                         <div>
-                        <Dropdown
-  attribute="tools" label="Tools"/>
+                          <Dropdown attribute="tools" label="Tools" />
                         </div>
                         <div>
-                        <Dropdown
-  attribute="category" label="Category"/>
+                          <Dropdown attribute="category" label="Category" />
                         </div>
                         <div>
-                        <Dropdown
-  attribute="year" label="Year"/>
+                          <Dropdown attribute="year" label="Year" />
                         </div>
                         <div>
                           <CustomToggleRefinement
@@ -70,12 +64,14 @@ const SearchGrid2 = () => {
                             value={true}
                           />
                         </div>
-                       
+                        <div>
+                        <Clear />
+                        </div>
                       </div>
                     </div>
                     <div class="flex w-full">
                       <Results>
-                        <div class="py-2">
+                        <div class="py-2 w-full">
                           <Hits hitComponent={Hit} />
                           <div
                             id="mobile-alg"
@@ -151,7 +147,7 @@ function Hit(props) {
           <div class="flex-1 pr-4 pb-4 mx-1 inline-flex items-center">
             {items.map((tag, i) => [
               <p
-                class="text-xs whitespace-normal ml-6 px-2 rounded-md border-2 border-black"
+                class="text-xs whitespace-normal ml-6 px-2 py-1 rounded-md border-1 border-opacity-40 border-dashed border-black"
                 key={i}
               >
                 <span class="text-black tracking-wider font-semibold">
