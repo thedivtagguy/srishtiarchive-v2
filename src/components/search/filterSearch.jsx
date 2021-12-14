@@ -13,6 +13,7 @@ import { Link } from "gatsby"
 import CustomToggleRefinement from "./toggle"
 import Dropdown from "./dropdownrefine"
 import Clear from "./clear"
+import CustomHits from "./Hits"
 
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
@@ -88,7 +89,7 @@ console.log(taxonomy, filter)
                     <div class="flex w-full">
                       <Results>
                         <div class="py-2 px-4 w-full">
-                          <Hits hitComponent={Hit} />
+                          <CustomHits/>
                           <div
                             id="mobile-alg"
                             class="lg:hidden md:hidden mx-auto flex justify-center items-center"
@@ -108,79 +109,6 @@ console.log(taxonomy, filter)
     )
 }
 
-function Hit(props) {
-    const items = props.hit.tools.slice(0, 1)
-    return (
-      <div class=" max-w-sm">
-        <Link to={`/${props.hit.slug}`}>
-          <div className="h-full overflow-hidden transition duration-300 ease-in-out  bg-[#fafafa] border-gray-500 border-opacity-25 rounded-xl border-3 group">
-            <div className="h-56 transition duration-150 ease-in-out group-hover:opacity-75">
-              {props.hit.thumbnailUrl ? (
-                <img
-                  style={{ width: "444px" }}
-                  className="object-cover h-56"
-                  src={props.hit.thumbnailUrl}
-                  alt="Project Thumbnail"
-                />
-              ) : (
-                <img
-                  style={{ width: "444px" }}
-                  className="object-cover h-56"
-                  src="/social.png"
-                  alt="Thumbnail for Project"
-                />
-              )}
-            </div>
-            <div className="p-4 sm:p-5">
-              <div class="flex flex-row justify-between">
-                <p class="uppercase tracking-wide mx-2 mb-1 font-medium text-sm text-gray-800">
-                  {props.hit.major}
-                </p>
-                <p class="uppercase">
-                  {" "}
-                  {props.hit.featured && (
-                    <span class="text-xs px-4 text-srishti-red font-bold">
-                      Featured
-                    </span>
-                  )}
-                </p>
-              </div>
-              <div class="h-[6rem]">
-                <h1 className="px-2 text-xl font-extrabold ">{props.hit.name}</h1>
-              </div>
-            </div>
-            <div class="">
-              <p className="px-6 text-sm font-semibold tracking-wider">
-                <span class="text-gray-800 rounded-md px-1 py-1">
-                  {props.hit.author}{" "}
-                  {props.hit.groupmembers && <span class="text-xs">et al.</span>}
-                </span>
-              </p>
-              <p class="text-xs font-bold pl-6 mx-1 py-2  text-gray-700">
-                {props.hit.category}
-              </p>
-            </div>
-            <div class="flex-1 pr-4 pb-4 mx-1 inline-flex items-center">
-              {items.map((tag, i) => [
-                <p
-                  class="text-xs whitespace-normal ml-6 px-2 py-1 rounded-md border-1 border-opacity-40 border-dashed border-black"
-                  key={i}
-                >
-                  <span class="text-black tracking-wider font-semibold">
-                    {tag}
-                  </span>
-                  {i < items.length - 1 ? ", " : ""}
-                </p>,
-              ])}
-            </div>
-          </div>
-        </Link>
-      </div>
-    )
-  }
-  Hit.propTypes = {
-    hit: PropTypes.object.isRequired,
-  }
   //Error Handling Piece
   const Results = connectStateResults(
     ({ searchState, searchResults, children }) =>

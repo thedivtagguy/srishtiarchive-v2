@@ -63,10 +63,12 @@ const Tags = ({ pageContext, data }) => {
 
 export default Tags
 
-export const query = graphql`
+export const query = graphql`  
+
   query Author($a: String!) {
     portfolio: allContentfulPortfolio(
-      filter: { author: { in: [$a] } }
+      filter: { 
+        author: { in: [$a] }      }
       sort: { fields: [featured, createdAt], order: [ASC, DESC] }
     ) {
       nodes {
@@ -76,4 +78,6 @@ export const query = graphql`
       totalCount
     }
   }
+
+
 `

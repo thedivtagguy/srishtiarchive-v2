@@ -107,6 +107,7 @@ exports.createPages = ({ graphql, actions }) => {
       let year = [];
       let major = [];
       let categories = [];
+      let groupmembers = [];
       let category = []
       let years =[];
       let majors =[];
@@ -120,8 +121,24 @@ exports.createPages = ({ graphql, actions }) => {
       toolNodes.map(toolNode => majors.push(toolNode.major));  
       toolNodes.map(toolNode => categories.push(toolNode.category));  
       toolNodes.map(toolNode => authors.push(toolNode.author));  
+      toolNodes.map(toolNode => groupmembers.push(toolNode.groupmembers));
       // check if groupmembers if not empty
+      // Separate group members array into individual group members seperated by comma
+      groupmembers.map(groupmember => {
+        if (groupmember !== null) {
+          groupmember.map(member => {
+            if (member !== null) {
+              author.push(member);
+            }
+          })
+        }
+      })
 
+      console.log(authors);
+  
+      /// Delete empty '' from authors array
+      authors = _.uniq(authors.filter(function(n){ return n !== '' }));
+      
     
       tags = tags.concat(tools);
       years = years.concat(year);
@@ -134,7 +151,8 @@ exports.createPages = ({ graphql, actions }) => {
       majors = _.uniq(majors);
       categories= _.uniq(categories);
       authors= _.uniq(authors);
-     
+      // Append the items in groupmembers to the authors array
+      
 
        // Make tools pages
        tags.forEach(tag => {
@@ -189,6 +207,7 @@ exports.createPages = ({ graphql, actions }) => {
 
      // Make author pages
      authors.forEach(a => {
+       console.log("Creating for", a);
       createPage({
         path: `/authors/${_.kebabCase(a)}/`,
         component: authorTemplate,
@@ -197,6 +216,9 @@ exports.createPages = ({ graphql, actions }) => {
         },
       });
     });
+
+
+    
     console.log("Created Pages For " + authors)
 
       resolve()

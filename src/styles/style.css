@@ -119,10 +119,7 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-basis: 100%;
     padding: 7px;
   }
-  input[type="search"] {
-    @apply px-16 py-4 text-sm text-center text-black rounded-lg appearance-none shadow-orange bg-light-gray ;
-
-  }
+  
 }
 
 
