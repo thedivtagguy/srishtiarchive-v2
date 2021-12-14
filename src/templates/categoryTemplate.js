@@ -2,26 +2,26 @@ import React from 'react';
 import Layout from "../layouts/Layout"
 import Cards from "../components/Cards"
 import { graphql } from "gatsby"
-
+import FilterSearch from '../components/search/filterSearch';
 const Tags = ({ pageContext, data }) => {
     const {c } = pageContext;
     const { totalCount } = data.portfolio;
+   
   return (
     <Layout>
-    <div className="mx-auto overflow-hidden  max-w-7xl pattern">
-    <div class="flex flex-col justify-center items-start w-full px-6 py-4 lg:mx-20 sm:py-4 md:py-8 md:px-10 max-w-7xl">
-
-<h1 class="text-4xl font-extrabold leading-snug  lg:text-3xl xl:text-5xl">{c} </h1>
-<p class="text-lg font-medium text-gray-500 sm:text-2xl">{totalCount} Projects</p>
-</div>
-<div class="lg:px-24">
- 
-      {data.portfolio && data.portfolio.nodes.length > 0 ? (
-        <Cards items={data.portfolio.nodes} />
-      ) : (
-        <div className="container">No projects found.</div>
-      )}
-    </div>
+      <div className="mx-auto overflow-hidden  max-w-6xl ">
+    <div class="flex flex-col justify-center items-center w-full  py-4 space-y-4 sm:py-4 md:py-8  max-w-6xl">
+          <h1 class="text-4xl font-extrabold leading-snug  lg:text-3xl xl:text-5xl">
+           {c} Projects
+          </h1>
+         
+          <p class="text-lg font-medium text-gray-500 sm:text-2xl">
+            {totalCount} Projects
+          </p>
+        </div>
+<div className="max-w-6xl mx-auto">
+        <FilterSearch filter={c} taxonomy="category"/>
+        </div>
     </div>
   </Layout>
   );

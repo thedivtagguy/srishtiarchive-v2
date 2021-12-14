@@ -6,8 +6,7 @@ import FilterSearch from "../components/search/filterSearch"
 const Tags = ({ pageContext, data }) => {
   const { m } = pageContext
   const { totalCount } = data.portfolio
-  const { major } = data.portfolio.nodes
-  console.log(data.portfolio)
+
   return (
     <Layout>
       <div className="mx-auto overflow-hidden  max-w-6xl ">
@@ -21,7 +20,7 @@ const Tags = ({ pageContext, data }) => {
           </p>
         </div>
         <div className="max-w-6xl mx-auto">
-        <FilterSearch filter={m} />
+        <FilterSearch filter={m} taxonomy="major"/>
         </div>
         
       </div>

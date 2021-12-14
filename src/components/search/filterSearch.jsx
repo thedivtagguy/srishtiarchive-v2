@@ -20,17 +20,24 @@ const searchClient = algoliasearch(
 )
 
 // Take in filter as props and then filter the index based on the filter and create a search box
-const FilterSearch = ({ filter,  ...props }) => {
+const FilterSearch = ({ filter, taxonomy,  ...props }) => {
 
-
-let taxonomy = 'major'
+// If taxonomy is 'major', then add hide attribute to the dropdown where attribute is 'major'
+  const isHide = taxonomy === "major" ? "hide" : ""
+// If taxonomy is 'category', then add hide attribute to the dropdown where attribute is 'category'
+  const isHide2 = taxonomy === "category" ? "hide" : ""
+// If taxonomy is 'tools', then add hide attribute to the dropdown where attribute is 'tools'
+  const isHide3 = taxonomy === "tools" ? "hide" : ""
+  const isHide4 = taxonomy === "year" ? "hide" : ""
+console.log(taxonomy, filter)
     return(
         <div>
              <InstantSearch searchClient={searchClient} indexName="archives">
 
             <Configure 
-            // Filters = "taxonomy:filter"
-                filters= {`major:${filter}`}/>
+            // Filter format: taxonomy:filter
+            filters={`${taxonomy}:"${filter}"`}
+            />
             {/* 
             <Mobilebar/>
             */}
@@ -48,15 +55,23 @@ let taxonomy = 'major'
                         />
                       </div>
                       <div className="flex justify-items-center space-x-4 items-center">
-                       
-                        <div>
-                          <Dropdown attribute="tools" label="Tools" />
+                      <div>
+                          <Dropdown 
+                          // Add hide attribute to the dropdown where attribute is 'major'
+                          hide={isHide}
+
+                          attribute="major" label="Major" />
                         </div>
                         <div>
-                          <Dropdown attribute="category" label="Category" />
+                          <Dropdown 
+                          hide={isHide3}
+                          attribute="tools" label="Tools" />
                         </div>
                         <div>
-                          <Dropdown attribute="year" label="Year" />
+                          <Dropdown hide={isHide2} attribute="category" label="Category" />
+                        </div>
+                        <div>
+                          <Dropdown hide={isHide4} attribute="year" label="Year" />
                         </div>
                         <div>
                           <CustomToggleRefinement
@@ -130,7 +145,7 @@ function Hit(props) {
                   )}
                 </p>
               </div>
-              <div class="h-20">
+              <div class="h-[6rem]">
                 <h1 className="px-2 text-xl font-extrabold ">{props.hit.name}</h1>
               </div>
             </div>
