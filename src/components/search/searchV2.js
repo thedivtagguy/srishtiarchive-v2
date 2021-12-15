@@ -1,14 +1,11 @@
 import algoliasearch from "algoliasearch/lite"
 import {
   InstantSearch,
-  Hits,
   connectStateResults,
   SearchBox,
-  PoweredBy,
 } from "react-instantsearch-dom"
 import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+
 // import Mobilebar from "./mobilefilter"
 import CustomToggleRefinement from "./toggle"
 import Dropdown from "./dropdownrefine"
