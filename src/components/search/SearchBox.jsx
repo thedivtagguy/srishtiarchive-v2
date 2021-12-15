@@ -1,23 +1,22 @@
 import React from "react"
 import SearchGrid2 from "./searchV2"
 import MobileSearch from "./searchV2Mobile"
+import { BrowserView, MobileView } from 'react-device-detect';
 
 const Search = () => {
     // Check if the user is on a mobile device
-    
-    let isMobile = false;
-    if (typeof window !== "undefined") {
-         isMobile = window.innerWidth < 768
-    }
-    
+    // Define empty isMobile variable
+
     return (
-        <div>
-            {isMobile ? (
-                <MobileSearch />
-            ) : (
-                <SearchGrid2 />
-            )}
-        </div>
+      <>
+        <BrowserView>
+            <SearchGrid2 />
+        </BrowserView>
+        <MobileView>
+            <MobileSearch />
+        </MobileView>
+        </>
+        
     )
 }
 
