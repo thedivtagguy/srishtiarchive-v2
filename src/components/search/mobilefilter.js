@@ -1,16 +1,13 @@
 import DropdownRefinementList from "./dropdown"
 import "./dropdownstyles.css"
 import React from "react"
-import {
-  HideScroll,
-} from "react-hide-on-scroll";
+
 import Dropdown from "./dropdownrefine"
 
 
 
 const Mobilebar = () => {
   return (
-    <HideScroll variant="down">
 
     <div class="lg:hidden md:hidden  block w-full">
 
@@ -41,7 +38,6 @@ const Mobilebar = () => {
         </section>
       </section>
     </div>
-    </HideScroll>
 
   )
 }
