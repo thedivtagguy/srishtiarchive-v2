@@ -1,8 +1,9 @@
 import {  connectRefinementList } from "react-instantsearch-dom"
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { Fragment } from "react"
 import { Menu, Transition } from "@headlessui/react"
-import { ChevronDownIcon } from "@heroicons/react/solid"
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid"
+import { isMobile } from "react-device-detect";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -13,16 +14,30 @@ const RefinementList = ({ label, items, hide, refine }) => {
   const [isChecked, setIsChecked] = useState(true);
   // If hide is true, dont render the component
   if (hide) return null;
+// Ensure that the Menu.Items does not go off screen
+// If it is, reposition it to the left
+
+
+
+
   return (
     <div>
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+          <Menu.Button className={isMobile ? ("inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-xs font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500") :
+        "inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"}>
           {label}
+          {isMobile ? (
+            <ChevronUpIcon
+            className="-mr-1 ml-2 h-3 w-3 mt-[0.20rem]"
+            aria-hidden="true"
+          />) : (
             <ChevronDownIcon
-              className="-mr-1 ml-2 h-5 w-5"
-              aria-hidden="true"
-            />
+            className="-mr-1 ml-2 h-5 w-5"
+            aria-hidden="true"
+          />)
+          }
+            
           </Menu.Button>
         </div>
         <Transition
@@ -34,7 +49,10 @@ const RefinementList = ({ label, items, hide, refine }) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className={
+            // If the user is on mobile, show the menu
+            isMobile ?  "absolute origin-top bottom-[100%] top-[auto] overflow-auto max-h-48  mt-2 mb-4 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" : "absolute origin-top-right right-0 overflow-auto max-h-48  mt-2 mb-4 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          } >
             <div className="p-4 flex flex-col">
               {items.map(item => (
                 <Menu.Item key={item.label}>
@@ -59,7 +77,7 @@ const RefinementList = ({ label, items, hide, refine }) => {
                         "block px-4 py-2 focus:ring-indigo-500 h-4 w-4  border-gray-300 rounded text-sm"
                       )}
         />
-        <span class="ml-2">{item.label} ({item.count})</span>
+        <span class="ml-2 text-xs">{item.label} ({item.count})</span>
       </label>
                   )}
                 </Menu.Item>

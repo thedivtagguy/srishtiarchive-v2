@@ -30,7 +30,7 @@ function classNames(...classes) {
           A permanent gallery of projects{" "}
           <br class="hidden lg:block md:block"></br> by students at Srishti
         </p>
-        <div className="flex items-center justify-center mt-12 space-x-4">
+        <div className="flex items-center  space-y-2  flex-wrap justify-center lg:mt-12 space-x-4">
           {/* Create a list of heroButtons */}
           <div id="cow"></div>
           {site.data.heroButtons.map((link, key) => (

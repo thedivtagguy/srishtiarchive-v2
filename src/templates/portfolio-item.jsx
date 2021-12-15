@@ -68,7 +68,7 @@ export default props => {
                 {name}
               </h2>
             </div>
-            <div className="flex items-center justify-between my-4">
+            <div className="flex items-center space-x-8 justify-between my-4">
               <div>
                 <Link to={`/authors/${kebabCase(author)}/`}>
                   <h3 className="cta lg:text-md font-ibm-mono sm:text-md">
@@ -77,7 +77,7 @@ export default props => {
                 </Link>
               </div>
               <div>
-                <h3 className="font-bold font-ibm-mono lg:text-md">
+                <h3 className="font-bold sm:text-xs text-xs font-ibm-mono lg:text-md">
                   {createdAt}
                 </h3>
               </div>
@@ -106,7 +106,7 @@ export default props => {
           <div class="col-span-2">
           <section>
         <div class="">
-          <h4 class="font-bold text-lg">Project Files</h4>
+          <h4 class="font-bold text-lg py-4">Project Files</h4>
           <ul class="flex flex-col space-y-2 lg:py-4 ">
             {files.map(file => {
               return (
@@ -123,7 +123,7 @@ export default props => {
         {urls && (
           <div>
             <div>
-              <h4 class="font-bold text-lg ">Project Links</h4>
+              <h4 class="font-bold text-lg py-4 ">Project Links</h4>
             </div>
             <div class="lg:pt-4">
               {urls.map((url, i) => {
@@ -139,7 +139,7 @@ export default props => {
           </div>
         )}
       </section>
-      <div class="flex justify-between items-center lg:px-0  py-8 px-10 max-w-3xl w-full mx-auto">
+      <div class="flex justify-between items-center lg:px-0  py-8  max-w-3xl w-full mx-auto">
           <div >
             <a
               rel="license"

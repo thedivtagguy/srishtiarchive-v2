@@ -8,9 +8,9 @@ const Tags = ({ data, pageContext }) => {
   const { totalCount } = data.portfolio;
   return (
     <Layout>
-      <div className="mx-auto overflow-hidden  max-w-6xl ">
+      <div className="mx-auto overflow-hidden px-6 max-w-6xl ">
     <div class="flex flex-col justify-center items-center w-full  py-4 space-y-4 sm:py-4 md:py-8  max-w-6xl">
-          <h1 class="text-4xl font-extrabold leading-snug  lg:text-3xl xl:text-5xl">
+          <h1 class="text-xl text-center font-extrabold leading-snug  lg:text-3xl xl:text-5xl">
             Projects made with {tag}
           </h1>
          

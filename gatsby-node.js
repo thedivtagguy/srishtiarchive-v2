@@ -123,22 +123,10 @@ exports.createPages = ({ graphql, actions }) => {
       toolNodes.map(toolNode => authors.push(toolNode.author));  
       toolNodes.map(toolNode => groupmembers.push(toolNode.groupmembers));
       // check if groupmembers if not empty
-      // Separate group members array into individual group members seperated by comma
-      groupmembers.map(groupmember => {
-        if (groupmember !== null) {
-          groupmember.map(member => {
-            if (member !== null) {
-              author.push(member);
-            }
-          })
-        }
-      })
 
-      console.log(authors);
+
   
-      /// Delete empty '' from authors array
-      authors = _.uniq(authors.filter(function(n){ return n !== '' }));
-      
+ 
     
       tags = tags.concat(tools);
       years = years.concat(year);

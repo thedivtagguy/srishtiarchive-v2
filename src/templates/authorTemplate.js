@@ -40,7 +40,7 @@ const Tags = ({ pageContext, data }) => {
             Top Tools:{" "}
             {toptools.map((tag, i) => [
               <Link to={`/tools/${kebabCase(tag[0])}/`}>
-                <span class="text-xs whitespace-normal ml-6 px-2 py-1 rounded-md border-1 border-opacity-40 border-dashed border-black">
+                <span class="text-xs whitespace-normal  px-2 py-1 rounded-md border-1 border-opacity-40 border-dashed border-black">
                   {" "}
                   {tag[0]}
                 </span>

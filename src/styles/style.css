@@ -60,6 +60,13 @@ input[type="checkbox"] {
   @apply px-2 py-1 text-white bg-black border-2 border-black rounded-md font-ibm-mono;
 }
 
+@media only screen and (max-width: 600px) {
+  .cta { 
+  @apply px-2 py-1 text-white text-xs bg-black border-2 border-black rounded-md font-ibm-mono;
+  }
+
+}
+
 .cta:hover {
   @apply text-black bg-white;
 }
@@ -137,6 +144,7 @@ height: 100%;
 
 }
 
+
 #bg {
   position: absolute;
   background-image: url('/clouds.png');
@@ -156,4 +164,20 @@ height: 100%;
   background-position: 1% 1%;
   width: 100%;
   height: 10rem;
+}
+
+/* Set smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+  #cow {
+display: none;
+  }
+
+  #holes {
+    height: 5rem;
+  }
+  
 }

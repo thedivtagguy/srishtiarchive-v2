@@ -24,8 +24,8 @@ const Header = () => {
       <div className="flex items-center justify-between py-8 lg:px-6 ">
         <Link to="/">
           <div className="flex items-center space-x-4">
-          <img alt="Logo" className="w-20 md:w-20" width="64px" src="/black-logo.png" />
-          <h1 className="w-1/2 text-2xl font-bold leading-none text-black font-ibm-serif md:text-2xl">
+          <img alt="Logo" className="w-12 md:w-20"  src="/black-logo.png" />
+          <h1 className="w-1/2 font-bold leading-none text-black font-ibm-serif text-lg md:text-2xl">
             Srishti Archive
           </h1>
           </div>

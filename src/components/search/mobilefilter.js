@@ -4,10 +4,11 @@ import React from "react"
 import {
   HideScroll,
 } from "react-hide-on-scroll";
+import Dropdown from "./dropdownrefine"
+
+
 
 const Mobilebar = () => {
-
-
   return (
     <HideScroll variant="down">
 
@@ -15,25 +16,25 @@ const Mobilebar = () => {
 
       <section 
         id="bar">
-        <section class="block fixed w-full inset-x-0 bottom-0 bg-white border-t-3 border-black border-opacity-20 shadow-lg z-10 hit shadow">
+        <section class="block fixed w-full inset-x-0 bottom-0 bg-white border-t-3 py-2 border-black border-opacity-20 shadow-lg z-10">
           <div id="tabs" class="flex justify-between">
-            <span class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
-              <span class="tab tab-kategori block text-xs text-light-gray">
-                <DropdownRefinementList attribute={"major"} icon={"📓"}  
-                setActive={() => this.setActive(1)} />
+            <span class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center ">
+              <span class="block text-light-gray">
+              <Dropdown attribute="major" label="Major" />
+
               </span>
             </span>
 
-            <span class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+            <span class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center ">
               <span class="tab tab-kategori block text-xs text-light-gray">
-                <DropdownRefinementList attribute={"year"} icon={"📅"}  
-                setActive={() => this.setActive(2)} />
+              <Dropdown attribute="category" label="Category" />
+
               </span>
             </span>
 
-            <span id="tools" class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+            <span id="tools" class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center ">
               <span class="tab tab-kategori block text-xs text-light-gray">
-                <DropdownRefinementList attribute={"category"} icon={"✒️"} />
+              <Dropdown attribute="tools" label="Tools" />
               </span>
             </span>
           </div>
