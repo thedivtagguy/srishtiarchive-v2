@@ -6,10 +6,13 @@ import {
 } from "react-instantsearch-dom"
 import React from "react"
 import CustomHits from "./Hits"
+import Dropdown from "./dropdownrefine"
 
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, FilterIcon } from '@heroicons/react/outline'
+
+import MobileDropdownSelect from "./MobileDropdown"
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
@@ -27,6 +30,13 @@ const navigation = [
   { name: 'Reports', href: '#', current: false },
 ]
 
+const filters = [
+  { attribute: 'major', label: 'Major' },
+  { attribute: 'tools', label: 'Tools' },
+  { attribute: 'category', label: 'Category' },
+  { attribute: 'year', label: 'Year' },
+]
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -38,14 +48,14 @@ function classNames(...classes) {
       <div class="search-box-contents">
         <div>
           <InstantSearch searchClient={searchClient} indexName="archives">
-          <div className="min-h-full block lg:hidden sticky top-0 z-10">
-        <Disclosure as="nav" className="bg-white">
+          <div className="min-h-full w-full block lg:hidden sticky top-0 z-10">
+        <Disclosure as="nav" className="bg-white w-full">
           {({ open }) => (
             <>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
                  
-                  <div className="-mr-2 flex h-16 space-x-6 justify-between items-center md:hidden">
+                  <div className="-mr-2 flex h-16 w-full space-x-6 justify-between items-center md:hidden">
                   <div class="w-full flex-1" >
                         <SearchBox
                           className="w-full"
@@ -65,21 +75,13 @@ function classNames(...classes) {
                   </div>
               </div>
 
-              <Disclosure.Panel className="md:hidden">
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                  {navigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      className={("block px-3 py-2 rounded-md text-base font-medium")}
-                      aria-current={item.current ? 'page' : undefined}
-                    >
-                      {item.name}
-                    </Disclosure.Button>
+              <Disclosure.Panel className="md:hidden bg-gray-200">
+                <div className="px-2 pt-2 pb-3  gap-4  sm:px-3">
+                  {filters.map((item) => (
+                   <MobileDropdownSelect attribute={item.attribute} label={item.label}/>
                   ))}
                 </div>
-        
+                    
               </Disclosure.Panel>
             </>
           )}

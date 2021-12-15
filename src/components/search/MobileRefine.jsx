@@ -5,7 +5,6 @@ import {
 } from "react-instantsearch-dom"
 import React from "react"
 
-import Mobilebar from "./mobilefilter"
 
 import CustomHits from "./Hits"
 
@@ -25,7 +24,6 @@ const MobileSearch = () => {
                           }}
                         />
             <CustomHits />
-            <Mobilebar />
             </InstantSearch>
         </section>)
 }

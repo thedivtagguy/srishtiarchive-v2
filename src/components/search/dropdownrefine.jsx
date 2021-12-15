@@ -16,7 +16,7 @@ const RefinementList = ({ label, items, hide, refine }) => {
   if (hide) return null;
 // Ensure that the Menu.Items does not go off screen
 // If it is, reposition it to the left
-
+;;;
 
 
 
@@ -51,7 +51,7 @@ const RefinementList = ({ label, items, hide, refine }) => {
         >
           <Menu.Items className={
             // If the user is on mobile, show the menu
-            isMobile ?  "absolute origin-top bottom-[100%] top-[auto] overflow-auto max-h-48  mt-2 mb-4 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" : "absolute origin-top-right right-0 overflow-auto max-h-48  mt-2 mb-4 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            isMobile ?  "absolute origin-top right-0 overflow-auto max-h-48  mt-2 mb-4 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" : "absolute origin-top-right right-0 overflow-auto max-h-48  mt-2 mb-4 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           } >
             <div className="p-4 flex flex-col">
               {items.map(item => (
