@@ -9,17 +9,6 @@ function classNames(...classes) {
 
 const MobileDropdownS = ({ label, items, currentRefinement, refine, hide }) => {
 
-  // If not selected, the label should be 'Hello'
-  // If selected, the label should be 'Hello, John'
-  // Push new item into items array
-  // attribute = 'All', value = ''
-
-  let All = {
-    label: "All",
-    value: "",
-  }
-
-  items.push(All)
 
   const [selected, setSelected] = useState(items[0])
 
@@ -29,7 +18,6 @@ const MobileDropdownS = ({ label, items, currentRefinement, refine, hide }) => {
  // filter updates as the user selects an item
   return (
     <div class="flex flex-col px-4">
-
         <div>
         <Listbox value={selected} onChange={setSelected}>
       {({ open }) => (
@@ -40,7 +28,6 @@ const MobileDropdownS = ({ label, items, currentRefinement, refine, hide }) => {
               <span className="flex items-center">
                 <span className="ml-3 text-xs block truncate">{
                   currentRefinement ? currentRefinement : "Select"}
-
                 </span>
               </span>
               <span className="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">

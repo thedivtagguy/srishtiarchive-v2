@@ -110,5 +110,7 @@ module.exports = {
     // ...
     require("@tailwindcss/line-clamp"),
     require("tailwindcss-border-gradient-radius"),
+    require('daisyui'),
+
   ],
 }

@@ -11,6 +11,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SiteMetadata title="Home" description="Srishti Archives" />
       <Hero />
+    
       <section class="lg:px-6 w-full mx-auto max-w-7xl">
         <Search></Search>
       </section>

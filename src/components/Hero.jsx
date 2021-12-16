@@ -37,7 +37,7 @@ function classNames(...classes) {
             <Link
               key={`hero_button_${key}`}
               to={link.link}
-              className="px-8 font-bold border-2 border-black rounded-md shadow-small-shadow font-ibm-mono hover:bg-black hover:text-white"
+              className="px-8 font-bold border-2 text-black border-black rounded-md shadow-small-shadow font-ibm-mono hover:bg-black hover:text-white"
             >
               {link.text}
             </Link>

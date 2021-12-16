@@ -3,14 +3,12 @@ import {
   InstantSearch,
   connectStateResults,
   SearchBox,
+  Configure
 } from "react-instantsearch-dom"
-import React from "react"
+import React, {useState} from "react"
 import CustomHits from "./Hits"
-import Dropdown from "./dropdownrefine"
-
-import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, XIcon, FilterIcon } from '@heroicons/react/outline'
+import { BellIcon, XIcon, FilterIcon,  } from '@heroicons/react/outline'
 
 import MobileDropdownSelect from "./MobileDropdown"
 const searchClient = algoliasearch(
@@ -18,11 +16,7 @@ const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
 //Search Grid
-const MobileSearch = () => {
-
-
-
-
+const MobileSearch = (filter, taxonomy) => {
 
 const filters = [
   { attribute: 'major', label: 'Major' },
@@ -34,6 +28,19 @@ const filters = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
+
+const isHide = taxonomy === "major" ? "hide" : ""
+const isHide2 = taxonomy === "category" ? "hide" : ""
+const isHide3 = taxonomy === "tools" ? "hide" : ""
+const isHide4 = taxonomy === "year" ? "hide" : ""
+
+
+// Hide and show the div when clicked
+const [show, setShow] = useState(false)
+
+
+
   return (
     <div
       id="search-box"
@@ -43,8 +50,8 @@ function classNames(...classes) {
         <div>
           <InstantSearch searchClient={searchClient} indexName="archives">
           <div className="min-h-full w-full block lg:hidden sticky top-0 z-10">
-        <Disclosure as="nav" className="bg-white w-full">
-          {({ open }) => (
+        <div className="bg-white w-full">
+          
             <>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -58,28 +65,36 @@ function classNames(...classes) {
                           }}
                         />
                     </div>
-                    <Disclosure.Button className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    <button 
+                    onClick={() => setShow(!show)}
+
+                    className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">Open main menu</span>
-                      {open ? (
+                      {show  ? (
                         <XIcon className="block h-6 w-6" aria-hidden="true" />
                       ) : (
                         <FilterIcon className="block h-6 w-6" aria-hidden="true" />
                       )}
-                    </Disclosure.Button>
+                    </button>
                   </div>
               </div>
 
-              <Disclosure.Panel className="md:hidden bg-gray-200">
+              <div 
+              // Show and hide the div when clicked
+              className={classNames(
+                "max-w-7xl mx-auto px-4 md:hidden bg-gray-200 sm:px-6 lg:px-8",
+                show ? "block" : "hidden"
+              )}>
                 <div className="px-2 pt-2 pb-3  gap-4  sm:px-3">
                   {filters.map((item) => (
-                   <MobileDropdownSelect attribute={item.attribute} currentRefinement={item.label} label={item.label}/>
+                   <MobileDropdownSelect 
+                    attribute={item.attribute} label={item.label}/>
                   ))}
                 </div>
                     
-              </Disclosure.Panel>
+              </div>
             </>
-          )}
-        </Disclosure>
+        </div>
 
        
       </div>
