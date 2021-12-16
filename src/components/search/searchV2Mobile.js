@@ -10,7 +10,7 @@ import Dropdown from "./dropdownrefine"
 
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, FilterIcon } from '@heroicons/react/outline'
+import { BellIcon, XIcon, FilterIcon } from '@heroicons/react/outline'
 
 import MobileDropdownSelect from "./MobileDropdown"
 const searchClient = algoliasearch(
@@ -22,13 +22,7 @@ const MobileSearch = () => {
 
 
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
-]
+
 
 const filters = [
   { attribute: 'major', label: 'Major' },
@@ -67,7 +61,7 @@ function classNames(...classes) {
                     <Disclosure.Button className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
-                        <FilterIcon className="block h-6 w-6" aria-hidden="true" />
+                        <XIcon className="block h-6 w-6" aria-hidden="true" />
                       ) : (
                         <FilterIcon className="block h-6 w-6" aria-hidden="true" />
                       )}
@@ -78,7 +72,7 @@ function classNames(...classes) {
               <Disclosure.Panel className="md:hidden bg-gray-200">
                 <div className="px-2 pt-2 pb-3  gap-4  sm:px-3">
                   {filters.map((item) => (
-                   <MobileDropdownSelect attribute={item.attribute} label={item.label}/>
+                   <MobileDropdownSelect attribute={item.attribute} currentRefinement={item.label} label={item.label}/>
                   ))}
                 </div>
                     

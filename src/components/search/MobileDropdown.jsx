@@ -8,18 +8,25 @@ function classNames(...classes) {
 }
 
 const MobileDropdownS = ({ label, items, currentRefinement, refine, hide }) => {
-  const [selected, setSelected] = useState(true)
-  // Take in the current refinement and refine the search
-    // If hide is true, dont render the component
-  
+
+  // If not selected, the label should be 'Hello'
+  // If selected, the label should be 'Hello, John'
+  // Push new item into items array
+  // attribute = 'All', value = ''
+
+  let All = {
+    label: "All",
+    value: "",
+  }
+
+  items.push(All)
+
+  const [selected, setSelected] = useState(items[0])
+
+
 
   if (hide) return null
-  let currentLabel = label
-  // Make currentLabel update when the user changes the refinement
-    if (currentRefinement) {
-        currentLabel = currentRefinement
-    }
-
+ // filter updates as the user selects an item
   return (
     <div class="flex flex-col px-4">
 
@@ -31,7 +38,10 @@ const MobileDropdownS = ({ label, items, currentRefinement, refine, hide }) => {
           <div className="mt-1 relative">
             <Listbox.Button className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
               <span className="flex items-center">
-                <span className="ml-3 block truncate">{label}</span>
+                <span className="ml-3 text-xs block truncate">{
+                  currentRefinement ? currentRefinement : "Select"}
+
+                </span>
               </span>
               <span className="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                 <SelectorIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -64,6 +74,9 @@ const MobileDropdownS = ({ label, items, currentRefinement, refine, hide }) => {
                       selected ? 'font-medium text-white' : 'font-normal'
                     } block truncate`}
                     onClick={() => refine(item.value)}
+                    // Change currentLabel to the selected item
+
+
 
                   >
                     {item.label}
