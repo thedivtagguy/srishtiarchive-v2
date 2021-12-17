@@ -18,7 +18,6 @@ const Search = (shouldHide, filter, taxonomy) => {
            {shouldHide.shouldHide ? <MobileSearch shouldHide={shouldHide}  /> : <MobileSearch />}
         </MobileView>
         </>
-        
     )
 }
 

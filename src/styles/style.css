@@ -2,6 +2,7 @@
 
 body {
   background-color: #FFFFFF;
+  overflow-x: hidden;
 }
 
 @tailwind components;
@@ -86,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   @apply text-black font-ibm-serif;
 }
 
-p,  span {
+p,  span, a {
   @apply text-black font-ibm-mono;
 }
 
@@ -132,39 +133,19 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* To hero, add background-image' */
 
-#cow {
-position: absolute;
-background-image: url('/cow.png');
-background-size: 5rem ;
-background-repeat: no-repeat;
-background-position: 48% 42%;
-width: 100%;
-height: 100%;
-  z-index: -2;
-
-}
 
 
-#bg {
-  position: absolute;
-  background-image: url('/clouds.png');
-  background-size: 50rem;
-  background-repeat: no-repeat;
-  background-position: 80% 1%;
-  margin-top: -78px;
+#hero {
+  background-image: url('/animals.png');
   width: 100%;
-  height: 100%;
-  z-index: -2;
+  height: 28rem;
+  background-size: 63%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#holes {
-  background-image: url('/holes.png');
-  background-size: 40rem;
-  background-repeat: no-repeat;
-  background-position: 1% 1%;
-  width: 100%;
-  height: 10rem;
-}
+/* Blur the background image  on scroll */
+
 
 /* Set smooth scrolling */
 html {
@@ -172,15 +153,9 @@ html {
 }
 
 @media screen and (max-width: 600px) {
-  #cow {
-display: none;
-  }
+ #hero {
+   height: 20rem;
+   background-size: 100%;
 
-  #holes {
-    height: 5rem;
-  }
-  
-  #bg {
-    width: 90%;
-  }
+ }
 }

@@ -22,17 +22,15 @@ function classNames(...classes) {
 
 
   return (
-    <div  id="hero" className="container relative bg-transparent lg:py-12">
-      <div id="bg">      </div>
+    <div  id="hero" className="lg:py-12 mb-4 mx-auto">
 
-      <div class="flex justify-center flex-col items-center">
-        <p class="text-black font-ibm-mono font-bold px-4 text-center py-4  lg:text-lg text-sm">
+      <div class="flex justify-center flex-col pt-12 items-center">
+        <p class="text-black  bg-white font-ibm-mono font-bold px-4 text-center py-2  lg:text-lg text-sm">
           A permanent gallery of projects{" "}
           <br class="hidden lg:block md:block"></br> by students at Srishti
         </p>
-        <div className="flex items-center  space-y-2  flex-wrap justify-center lg:mt-12 space-x-4">
+        <div className="flex items-center bg-white lg:space-y-0 space-y-2  py-4 px-8 flex-wrap justify-center lg:mt-12 space-x-4">
           {/* Create a list of heroButtons */}
-          <div id="cow"></div>
           {site.data.heroButtons.map((link, key) => (
             <Link
               key={`hero_button_${key}`}
@@ -43,8 +41,8 @@ function classNames(...classes) {
             </Link>
           ))}
         </div>
-        <div id="holes" className="flex justify-center mt-4">
-          <p className = "px-4 py-4 text-sm underline decoration-wavy font-medium text-center text-black font-ibm-mono lg:text-md">
+        <div  className="flex bg-white justify-center mt-4">
+          <p className = "px-4 py-2 text-sm underline decoration-wavy font-medium text-center text-black font-ibm-mono lg:text-md">
             or browse more 👇
             </p>
           </div>

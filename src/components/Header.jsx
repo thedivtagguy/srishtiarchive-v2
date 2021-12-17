@@ -20,8 +20,8 @@ const Header = () => {
   `)
 
   return (
-    <div className="w-full px-8 mx-auto bg-transparent lg:px-16 max-w-7xl pattern">
-      <div className="flex items-center justify-between py-8 lg:px-6 ">
+    <div className="w-full px-8 mx-auto bg-transparent lg:px-16 max-w-7xl ">
+      <div className="flex items-center justify-between py-4 lg:px-6 ">
         <Link to="/">
           <div className="flex items-center space-x-4">
           <img alt="Logo" className="w-12 md:w-20"  src="/black-logo.png" />
