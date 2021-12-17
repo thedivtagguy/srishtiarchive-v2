@@ -33,7 +33,7 @@ const SearchGrid2 = ({filter, taxonomy, shouldHide}) => {
 console.log(shouldHide)
 
   // If shouldHide is true
-const configure = shouldHide.shouldHide ? {
+const configure = shouldHide ? {
   filters: `${shouldHide.taxonomy}:"${shouldHide.filter}"`
 } : {
   filters: ""
