@@ -8,7 +8,8 @@ import {
 import React, {useState} from "react"
 import CustomHits from "./Hits"
 import {  XIcon, FilterIcon,  } from '@heroicons/react/outline'
-
+import Clear from "./clear"
+import CustomToggleRefinement from "./toggle"
 import MobileDropdownSelect from "./MobileDropdown"
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
@@ -57,10 +58,10 @@ const [show, setShow] = useState(false)
         <div className="bg-white w-full">
           
             <>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto lg:px-8">
         
                  
-                  <div className="-mr-2 flex h-16 w-full space-x-6 justify-between items-center md:hidden">
+                  <div className="-mr-2 flex h-16 w-full space-x-4 justify-between items-center md:hidden">
                   <div class="w-full flex-1" >
                         <SearchBox
                           className="w-full"
@@ -86,10 +87,10 @@ const [show, setShow] = useState(false)
               <div 
               // Show and hide the div when clicked
               className={classNames(
-                "max-w-7xl mx-auto px-4 md:hidden bg-gray-200 sm:px-6 lg:px-8",
+                "max-w-7xl mx-auto  md:hidden bg-gray-200  lg:px-8",
                 show ? "block" : "hidden"
               )}>
-                <div className="px-2 pt-2 pb-3  gap-4  sm:px-3">
+                <div className="px-2 pt-2 gap-4  sm:px-3">
                   {filters.map((item) => (
                    <div>
                      {shouldHide.shouldHide ? (
@@ -107,7 +108,20 @@ const [show, setShow] = useState(false)
                       )}
                     </div>
                   ))}
+                  <div class="flex justify-between items-center px-4 py-4 gap-4">
+                   <div>
+                          <CustomToggleRefinement
+                            attribute="featured"
+                            label="Featured"
+                            value={true}
+                          />
+                        </div>
+                        <div>
+                          <Clear />
+                        </div>
+                  </div>
                 </div>
+               
                     
               </div>
             </>
@@ -121,7 +135,7 @@ const [show, setShow] = useState(false)
                   <div className="w-full">
                     <div class="flex w-full">
                       <Results>
-                        <div class="py-2 px-4 w-full">
+                        <div class="py-2  w-full">
                           <CustomHits/>
                           <div
                             id="mobile-alg"
