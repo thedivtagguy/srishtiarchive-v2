@@ -1,8 +1,7 @@
 import React from 'react';
 import Layout from "../layouts/Layout"
-import FilterSearch from '../components/search/filterSearch';
 import { graphql } from "gatsby"
-
+import Search from '../components/search/SearchBox';
 const Tags = ({ data, pageContext }) => {
   const {tag } = pageContext;
   const { totalCount } = data.portfolio;
@@ -19,7 +18,8 @@ const Tags = ({ data, pageContext }) => {
           </p>
         </div>
 <div className="max-w-6xl mx-auto">
-        <FilterSearch filter={tag} taxonomy="tools"/>
+<Search shouldHide={true} filter={tag} taxonomy="tools"/>
+
         </div>
     </div>
   </Layout>

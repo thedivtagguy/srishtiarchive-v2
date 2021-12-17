@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout"
 import Cards from "../components/Cards"
 import { graphql } from "gatsby"
 import FilterSearch from '../components/search/filterSearch';
+import Search from '../components/search/SearchBox';
 const Tags = ({ pageContext, data }) => {
     const {c } = pageContext;
     const { totalCount } = data.portfolio;
@@ -20,7 +21,8 @@ const Tags = ({ pageContext, data }) => {
           </p>
         </div>
 <div className="max-w-6xl mx-auto">
-        <FilterSearch filter={c} taxonomy="category"/>
+<Search shouldHide={true} filter={c} taxonomy="category"/>
+
         </div>
     </div>
   </Layout>

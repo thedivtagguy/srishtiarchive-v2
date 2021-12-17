@@ -1,9 +1,7 @@
-import { graphql, Link } from "gatsby"
 import React from "react"
 import Hero from "../components/Hero"
 import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
-import Cards from "../components/Cards"
 import Search from "../components/search/SearchBox"
 const IndexPage = ({ data }) => {
   console.log(data);
@@ -13,7 +11,7 @@ const IndexPage = ({ data }) => {
       <Hero />
     
       <section class="lg:px-6 w-full mx-auto max-w-7xl">
-        <Search></Search>
+        <Search shouldHide={false}></Search>
       </section>
     </Layout>
   )
@@ -21,12 +19,3 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage
 
-export const query = graphql`
-  query Home {
-    portfolio: allContentfulPortfolio(filter: {featured: {eq: true}}, sort: {order: DESC, fields: createdAt}) {
-      nodes {
-        ...PortfolioCard
-      }
-    }
-  }
-`

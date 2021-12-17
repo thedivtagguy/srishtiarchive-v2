@@ -7,8 +7,7 @@ import {
 } from "react-instantsearch-dom"
 import React, {useState} from "react"
 import CustomHits from "./Hits"
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, XIcon, FilterIcon,  } from '@heroicons/react/outline'
+import {  XIcon, FilterIcon,  } from '@heroicons/react/outline'
 
 import MobileDropdownSelect from "./MobileDropdown"
 const searchClient = algoliasearch(
@@ -16,7 +15,7 @@ const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
 //Search Grid
-const MobileSearch = (filter, taxonomy) => {
+const MobileSearch = (shouldHide, filter, taxonomy) => {
 
 const filters = [
   { attribute: 'major', label: 'Major' },
@@ -30,15 +29,17 @@ function classNames(...classes) {
 }
 
 
-const isHide = taxonomy === "major" ? "hide" : ""
-const isHide2 = taxonomy === "category" ? "hide" : ""
-const isHide3 = taxonomy === "tools" ? "hide" : ""
-const isHide4 = taxonomy === "year" ? "hide" : ""
+// If shouldHide is true
+const configure = shouldHide.shouldHide ? {
+  filters: `${shouldHide.shouldHide.taxonomy}:"${shouldHide.shouldHide.filter}"`
+} : {
+  filters: ""
+
+}
 
 
 // Hide and show the div when clicked
 const [show, setShow] = useState(false)
-
 
 
   return (
@@ -47,8 +48,11 @@ const [show, setShow] = useState(false)
       className="mx-auto bg-transparent pattern max-w-[1300px] "
     >
       <div class="search-box-contents">
+      <InstantSearch searchClient={searchClient} indexName="archives">
         <div>
-          <InstantSearch searchClient={searchClient} indexName="archives">
+          <Configure {...configure} />
+        </div>
+
           <div className="min-h-full w-full block lg:hidden sticky top-0 z-10">
         <div className="bg-white w-full">
           
@@ -87,8 +91,21 @@ const [show, setShow] = useState(false)
               )}>
                 <div className="px-2 pt-2 pb-3  gap-4  sm:px-3">
                   {filters.map((item) => (
-                   <MobileDropdownSelect 
-                    attribute={item.attribute} label={item.label}/>
+                   <div>
+                     {shouldHide.shouldHide ? (
+                       <div className={
+                          classNames(
+                            item.attribute === shouldHide.shouldHide.taxonomy ? "hidden" : ""
+                          )
+                       }>
+                         <MobileDropdownSelect  attribute={item.attribute} label={item.label} />
+                       </div>
+                      ) : (
+                        // If
+                        <MobileDropdownSelect attribute={item.attribute} label={item.label}/>
+
+                      )}
+                    </div>
                   ))}
                 </div>
                     
@@ -121,7 +138,6 @@ const [show, setShow] = useState(false)
           </InstantSearch>
         </div>
       </div>
-    </div>
   )
 }
 
