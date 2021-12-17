@@ -12,7 +12,7 @@ const Search = (shouldHide, filter, taxonomy) => {
     return (
       <>
         <BrowserView>
-            <SearchGrid2 />
+            <SearchGrid2 shouldHide={shouldHide}/>
         </BrowserView>
         <MobileView>
            {shouldHide.shouldHide ? <MobileSearch shouldHide={shouldHide}  /> : <MobileSearch />}

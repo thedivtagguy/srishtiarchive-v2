@@ -3,6 +3,7 @@ import {
   InstantSearch,
   connectStateResults,
   SearchBox,
+  Configure
 } from "react-instantsearch-dom"
 import React from "react"
 
@@ -16,7 +17,29 @@ const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
 //Search Grid
-const SearchGrid2 = () => {
+const SearchGrid2 = ({filter, taxonomy, shouldHide}) => {
+
+
+  const filters = [
+    { attribute: 'major', label: 'Major' },
+    { attribute: 'tools', label: 'Tools' },
+    { attribute: 'category', label: 'Category' },
+    { attribute: 'year', label: 'Year' },
+  ]
+  
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+console.log(shouldHide)
+
+  // If shouldHide is true
+const configure = shouldHide.shouldHide ? {
+  filters: `${shouldHide.taxonomy}:"${shouldHide.filter}"`
+} : {
+  filters: ""
+
+}
+
   return (
     <div
       id="search-box"
@@ -25,9 +48,10 @@ const SearchGrid2 = () => {
       <div class="search-box-contents">
         <div class="sticky top-0 ">
           <InstantSearch searchClient={searchClient} indexName="archives">
-            {/* 
-            <Mobilebar/>
-            */}
+          <div>
+          <Configure {...configure} />
+        </div>
+
             <div class="flex sticky top-0">
               <div class="w-full">
                 <div class="h-full">
@@ -42,18 +66,23 @@ const SearchGrid2 = () => {
                         />
                       </div>
                       <div className="flex justify-items-center space-x-4 items-center">
-                        <div>
-                          <Dropdown attribute="major" label="Major" />
-                        </div>
-                        <div>
-                          <Dropdown attribute="tools" label="Tools" />
-                        </div>
-                        <div>
-                          <Dropdown attribute="category" label="Category" />
-                        </div>
-                        <div>
-                          <Dropdown attribute="year" label="Year" />
-                        </div>
+                       {filters.map((item) => (
+                   <div>
+                     {shouldHide ? (
+                       <div className={
+                          classNames(
+                            item.attribute === shouldHide.taxonomy ? "hidden" : ""
+                          )
+                       }>
+                         <Dropdown  attribute={item.attribute} label={item.label} />
+                       </div>
+                      ) : (
+                        // If
+                        <Dropdown attribute={item.attribute} label={item.label}/>
+
+                      )}
+                    </div>
+                  ))}
                         <div>
                           <CustomToggleRefinement
                             attribute="featured"
