@@ -51,11 +51,11 @@ const configure = shouldHide ? {
           <Configure {...configure} />
         </div>
 
-            <div class="flex sticky top-0">
+            <div class="flex">
               <div class="w-full">
                 <div class="h-full">
                   <div className="w-full">
-                    <div class="flex items-center justify-items-center space-x-6 z-10 py-2 border-b-3 border-dashed border-gray-300 bg-white h-16 sticky top-0">
+                    <div class="flex items-center justify-items-center space-x-6 z-10 py-2 border-b-3 border-dashed border-gray-300 bg-white h-16 ">
                       <div class="flex-1 ">
                         <SearchBox
                           className="search"

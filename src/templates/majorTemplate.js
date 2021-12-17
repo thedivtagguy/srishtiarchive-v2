@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../layouts/Layout"
 import { graphql } from "gatsby"
-import FilterSearch from "../components/search/filterSearch"
 import Search from "../components/search/SearchBox"
 const Tags = ({ pageContext, data }) => {
   const { m } = pageContext

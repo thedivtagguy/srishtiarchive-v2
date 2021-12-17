@@ -41,11 +41,7 @@ function classNames(...classes) {
             </Link>
           ))}
         </div>
-        <div  className="flex rounded-md bg-white justify-center mt-4">
-          <p className = "px-4 py-2 text-sm underline decoration-wavy font-medium text-center text-black font-ibm-mono lg:text-md">
-            or browse more 👇
-            </p>
-          </div>
+       
 
       </div>
     </div>
