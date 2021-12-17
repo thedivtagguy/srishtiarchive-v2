@@ -46,7 +46,7 @@ const [show, setShow] = useState(false)
   return (
     <div
       id="search-box"
-      className="mx-auto bg-transparent pattern max-w-[1300px] "
+      className="mx-auto px-4 bg-transparent pattern max-w-[1300px] "
     >
       <div class="search-box-contents">
       <InstantSearch searchClient={searchClient} indexName="archives">

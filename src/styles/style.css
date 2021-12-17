@@ -163,3 +163,11 @@ html {
 
  }
 }
+
+#searchbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  position:-webkit-sticky;
+  
+}
