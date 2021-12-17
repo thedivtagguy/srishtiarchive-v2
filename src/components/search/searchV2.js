@@ -33,10 +33,10 @@ const SearchGrid2 = ({filter, taxonomy, shouldHide}) => {
   }
 
   // If shouldHide is true
-const configure = shouldHide ? {
-  filters: ""
-} : {
+const configure = shouldHide.shouldHide ? {
   filters: `${shouldHide.taxonomy}:"${shouldHide.filter}"`
+} : {
+  distinct: true,
 }
 
   return (

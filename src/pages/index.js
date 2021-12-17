@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
 import Search from "../components/search/SearchBox"
 const IndexPage = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <SiteMetadata title="Home" description="Srishti Archives" />
