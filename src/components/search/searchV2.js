@@ -19,6 +19,7 @@ const searchClient = algoliasearch(
 //Search Grid
 const SearchGrid2 = ({filter, taxonomy, shouldHide}) => {
 
+  console.log(shouldHide)
 
   const filters = [
     { attribute: 'major', label: 'Major' },
@@ -30,14 +31,12 @@ const SearchGrid2 = ({filter, taxonomy, shouldHide}) => {
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
-console.log(shouldHide)
 
   // If shouldHide is true
 const configure = shouldHide ? {
-  filters: `${shouldHide.taxonomy}:"${shouldHide.filter}"`
-} : {
   filters: ""
-
+} : {
+  filters: `${shouldHide.taxonomy}:"${shouldHide.filter}"`
 }
 
   return (
