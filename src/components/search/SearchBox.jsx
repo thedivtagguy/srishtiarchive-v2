@@ -3,7 +3,7 @@ import SearchGrid2 from "./searchV2"
 import MobileSearch from "./searchV2Mobile"
 import { BrowserView, MobileView } from 'react-device-detect';
 
-const Search = (shouldHide) => {
+const Search = (shouldHide, filter, taxonomy) => {
     // Check if the user is on a mobile device
     // Define empty isMobile variable
 
@@ -12,7 +12,7 @@ const Search = (shouldHide) => {
     return (
       <>
         <BrowserView>
-            <SearchGrid2 shouldHide={shouldHide}/>
+            {shouldHide.shouldHide ? <SearchGrid2 shouldHide={shouldHide}/> : <SearchGrid2 />}
         </BrowserView>
         <MobileView>
            {shouldHide.shouldHide ? <MobileSearch shouldHide={shouldHide}  /> : <MobileSearch />}
