@@ -55,7 +55,7 @@ const configure = shouldHide ? {
               <div class="w-full">
                 <div class="h-full">
                   <div className="w-full">
-                    <div class="flex items-center justify-items-center space-x-6 sticky top-0 z-10 py-2 border-b-3 border-dashed border-gray-300 bg-white h-16 ">
+                    <div class="flex items-center justify-items-center space-x-6  z-10 py-2 border-b-3 border-dashed border-gray-300 bg-white h-16 ">
                       <div class="flex-1 ">
                         <SearchBox
                           className="search"
