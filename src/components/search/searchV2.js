@@ -45,7 +45,7 @@ const configure = shouldHide ? {
       className="mx-auto bg-transparent pattern max-w-[1300px] "
     >
       <div class="search-box-contents">
-        <div class="sticky top-0 ">
+        <div >
           <InstantSearch searchClient={searchClient} indexName="archives">
           <div>
           <Configure {...configure} />
@@ -55,45 +55,49 @@ const configure = shouldHide ? {
               <div class="w-full">
                 <div class="h-full">
                   <div className="w-full">
-                    <div class="flex items-center justify-items-center space-x-6  z-10 py-2 border-b-3 border-dashed border-gray-300 bg-white h-16 ">
-                      <div class="flex-1 ">
-                        <SearchBox
-                          className="search"
-                          translations={{
-                            placeholder: "Type keywords to search...",
-                          }}
-                        />
-                      </div>
-                      <div className="flex justify-items-center space-x-4 items-center">
-                       {filters.map((item) => (
-                   <div>
-                     {shouldHide ? (
-                       <div className={
-                          classNames(
-                            item.attribute === shouldHide.taxonomy ? "hidden" : ""
-                          )
-                       }>
-                         <Dropdown  attribute={item.attribute} label={item.label} />
-                       </div>
-                      ) : (
-                        // If
-                        <Dropdown attribute={item.attribute} label={item.label}/>
-
-                      )}
-                    </div>
-                  ))}
-                        <div>
-                          <CustomToggleRefinement
-                            attribute="featured"
-                            label="Featured"
-                            value={true}
+                    <nav style={
+                      {position: "-webkit-sticky",
+                    position: "sticky",}
+                    } class="top-0 z-10">
+                      <div class="flex items-center justify-items-center space-x-6 py-2 border-b-3 border-dashed border-gray-300 bg-white h-16 ">
+                        <div class="flex-1 ">
+                          <SearchBox
+                            className="search"
+                            translations={{
+                              placeholder: "Type keywords to search...",
+                            }}
                           />
                         </div>
-                        <div>
-                        <Clear />
+                        <div className="flex justify-items-center space-x-4 items-center">
+                         {filters.map((item) => (
+                                         <div>
+                       {shouldHide ? (
+                         <div className={
+                            classNames(
+                              item.attribute === shouldHide.taxonomy ? "hidden" : ""
+                            )
+                         }>
+                           <Dropdown  attribute={item.attribute} label={item.label} />
+                         </div>
+                        ) : (
+                          // If
+                          <Dropdown attribute={item.attribute} label={item.label}/>
+                        )}
+                      </div>
+                                        ))}
+                          <div>
+                            <CustomToggleRefinement
+                              attribute="featured"
+                              label="Featured"
+                              value={true}
+                            />
+                          </div>
+                          <div>
+                          <Clear />
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </nav>
                     <div class="flex w-full">
                       <Results>
                         <div class="py-2 px-4 w-full">
