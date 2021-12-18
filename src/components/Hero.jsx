@@ -24,7 +24,7 @@ function classNames(...classes) {
   return (
     <div  id="hero" className="lg:py-12 lg:mb-4 mb-1 mx-auto">
 
-      <div class="flex justify-center flex-col lg:rounded-lg bg-whitept-12 items-center">
+      <div class="flex justify-center  flex-col lg:rounded-lg  pt-12 items-center">
         <p class="text-black rounded-sm py-1 lg:rounded-lg bg-white   font-ibm-mono font-bold lg:px-4 text-center lg:py-2 w-2/3 lg:text-lg text-sm">
           A permanent gallery of projects{" "}
           <br class="hidden lg:block md:block"></br> by students at Srishti
