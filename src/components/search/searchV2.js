@@ -68,7 +68,7 @@ const configure = shouldHide ? {
                             }}
                           />
                         </div>
-                        <div className="flex justify-items-center space-x-4 items-center">
+                        <div className="flex items-center space-x-4 justify-items-center">
                          {filters.map((item) => (
                                          <div>
                        {shouldHide ? (

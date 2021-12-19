@@ -9,7 +9,7 @@ body {
 @tailwind utilities;
 
 .container {
-  @apply max-w-screen-xl mx-auto px-4;
+  @apply max-w-screen-xl px-4 mx-auto;
 }
 
 @screen md {
@@ -62,7 +62,7 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 600px) {
   .cta { 
-  @apply px-2 py-1 text-white text-xs bg-black border-2 border-black rounded-md font-ibm-mono;
+  @apply px-2 py-1 text-xs text-white bg-black border-2 border-black rounded-md font-ibm-mono;
   }
 
 }
@@ -91,7 +91,7 @@ p,  span, a {
 }
 
 li {
-  @apply text-black  font-sans;
+  @apply font-sans text-black;
 }
 
 

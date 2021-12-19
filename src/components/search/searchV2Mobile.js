@@ -46,7 +46,7 @@ const [show, setShow] = useState(false)
   return (
     <div
       id="search-box"
-      className="mx-auto px-4 bg-transparent pattern max-w-[1300px] "
+      className="mx-auto bg-transparent pattern max-w-[1300px] "
     >
       <div class="search-box-contents">
       <InstantSearch searchClient={searchClient} indexName="archives">
@@ -54,14 +54,14 @@ const [show, setShow] = useState(false)
           <Configure {...configure} />
         </div>
 
-          <div className="min-h-full w-full block lg:hidden sticky top-0 z-10">
-        <div className="bg-white w-full">
+          <div className="sticky top-0 z-10 block w-full min-h-full lg:hidden">
+        <div className="w-full bg-white">
           
             <>
-              <div className="max-w-7xl mx-auto lg:px-8">
+              <div className="mx-auto max-w-7xl lg:px-8">
         
                  
-                  <div className="-mr-2 flex h-16 w-full space-x-4 justify-between items-center md:hidden">
+                  <div className="flex items-center justify-between w-full h-16 -mr-2 space-x-4 md:hidden">
                   <div class="w-full flex-1" >
                         <SearchBox
                           className="w-full"
@@ -73,12 +73,12 @@ const [show, setShow] = useState(false)
                     <button 
                     onClick={() => setShow(!show)}
 
-                    className="bg-gray-200 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-200 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       {show  ? (
-                        <XIcon className="block h-6 w-6" aria-hidden="true" />
+                        <XIcon className="block w-6 h-6" aria-hidden="true" />
                       ) : (
-                        <FilterIcon className="block h-6 w-6" aria-hidden="true" />
+                        <FilterIcon className="block w-6 h-6" aria-hidden="true" />
                       )}
                     </button>
                   </div>
@@ -90,7 +90,7 @@ const [show, setShow] = useState(false)
                 "max-w-7xl mx-auto  md:hidden bg-gray-200  lg:px-8",
                 show ? "block" : "hidden"
               )}>
-                <div className="px-2 pt-2 gap-4  sm:px-3">
+                <div className="gap-4 px-2 pt-2 sm:px-3">
                   {filters.map((item) => (
                    <div>
                      {shouldHide.shouldHide ? (
