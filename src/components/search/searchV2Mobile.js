@@ -11,6 +11,7 @@ import {  XIcon, FilterIcon,  } from '@heroicons/react/outline'
 import Clear from "./clear"
 import CustomToggleRefinement from "./toggle"
 import MobileDropdownSelect from "./MobileDropdown"
+import AlgoliaLink from "./PoweredBy"
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
@@ -145,6 +146,9 @@ const [show, setShow] = useState(false)
                         </div>
                       </Results>
                     </div>
+                    <div>
+                        <AlgoliaLink />
+                      </div>
                   </div>
                 </div>
               </div>

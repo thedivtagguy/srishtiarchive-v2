@@ -3,17 +3,18 @@ import {
   InstantSearch,
   connectStateResults,
   SearchBox,
+  PoweredBy,
   Configure
 } from "react-instantsearch-dom"
 import React from "react"
-
+import AlgoliaLink from "./PoweredBy"                                                                                           
 // import Mobilebar from "./mobilefilter"
 import CustomToggleRefinement from "./toggle"
 import Dropdown from "./dropdownrefine"
 import Clear from "./clear"
 import CustomHits from "./Hits"
 const searchClient = algoliasearch(
-  process.env.GATSBY_ALGOLIA_APP_ID,
+  process.env.GATSBY_ALGOLIA_APP_ID,                                                                                   
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
 //Search Grid
@@ -109,7 +110,13 @@ const configure = shouldHide ? {
                           </div>
                         </div>
                       </Results>
+                      
                     </div>
+                    <div style={
+                      {width: "10%",}
+                    }>
+                        <AlgoliaLink />
+                      </div>
                   </div>
                 </div>
               </div>
