@@ -64,7 +64,7 @@ export default props => {
         <div class="relative max-w-3xl px-6 text-white auto lg:px-0">
           <div class="flex flex-col space-y-8 w-full md:flex-col">
             <div class="flex justify-between">
-              <h2 class="relative leading-tight flex flex-col pb-6 text-3xl lg:text-6xl font-bold text-center">
+              <h2 class="relative leading-tight flex flex-col  text-3xl lg:text-6xl font-bold text-center">
                 {name}
               </h2>
             </div>
@@ -102,12 +102,33 @@ export default props => {
             <p class="text-left text-sm text-black">
               {description.description}
             </p>
-          </div>
+            {/* If there are groupmembers */}
+            {groupmembers && (
+              <div class="flex flex-col space-y-2 pt-6 w-full md:flex-col">
+                <div class="flex justify-between">
+                  <h2 class="relative leading-tight flex flex-col  text-md font-bold text-left">
+                    Group Members
+                  </h2>
+                </div>
+                <div className="flex items-center space-x-8 justify-between my-4">
+                <ol class="list-dic">
+                  {groupmembers.map(groupmember => (
+                    <li class="list-item">
+                        <h3 className="text-sm font-ibm-mono">
+                          {groupmember}
+                        </h3>
+                    </li>
+                  ))}
+                </ol>
+                </div>
+              </div>
+            )}
+            </div>
           <div class="col-span-2">
           <section>
         <div class="">
           <h4 class="font-bold text-lg py-4">Project Files</h4>
-          <ul class="flex flex-col space-y-2 lg:py-4 ">
+          <ul class="flex flex-col space-y-2 ">
             {files.map(file => {
               return (
                 <a href={file.localFile.url} target="_blank" rel="noreferrer">
@@ -125,7 +146,7 @@ export default props => {
             <div>
               <h4 class="font-bold text-lg py-4 ">Project Links</h4>
             </div>
-            <div class="lg:pt-4">
+            <div>
               {urls.map((url, i) => {
                 return (
                   <a href={url} target="_blank" rel="noreferrer">
@@ -219,6 +240,22 @@ export default props => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="mx-6">
+        <section class="grid lg:grid-cols-6 grid-cols-1 gap-6 max-w-3xl justify-items-center items-center shadow-lg  bg-gray-300 mx-auto  p-8 border-gray-400 rounded-md">
+          <div class="col-span-4">
+            <h4 class="font-ibm-mono text-gray-800 font-bold pb-2 text-xl">Ready to contribute?</h4>
+            <p class="font-ibm-mono text-gray-800 leading-5 text-xs">
+              Srishti Archive is a growing open collective of work by students at Srishti Manipal. If you are a student and have 15 minutes to spare, you can make your work accessible for others to read and learn from too. 
+              </p>  
+          </div>
+          <div class="col-span-2 w-full">
+            <button class="cta text-lg rounded-lg px-4 py-2">
+              <a href="https://submit.srishtiarchive.com" class="text-white hover:text-black" target="_blank">Submit Your Work</a>
+              </button>
+          </div>
+        </section>
       </section>
       {/* <InstantSearch searchClient={searchClient} indexName="archives">
 

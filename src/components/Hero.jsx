@@ -28,7 +28,7 @@ function classNames(...classes) {
         <div class="bg-white lg:w-1/4 w-2/3">
           <p class="text-black rounded-sm py-1 lg:rounded-lg    font-ibm-mono font-bold lg:px-4 text-center lg:py-2 lg:text-lg text-sm">
             A permanent gallery of projects{" "}
-            <br class="hidden lg:block md:block"></br> by students at Srishti
+            <br class="hidden lg:block md:block"></br> by students at Srishti Manipal
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2 px-8 py-4 mx-auto bg-transparent lg:bg-white lg:mt-12">
@@ -42,8 +42,9 @@ function classNames(...classes) {
               {link.text}
             </Link>
           ))}
+          
         </div>
-       
+        {/* <p class="text-mxs bg-white w-full mx-auto text-center pb-2">Don't see your major here? <a href="https://submit.srishtiarchive.com" class="hover:text-purple-600 hover:underline font-bold" target="_blank">Add it by contributing a project!</a></p> */}
 
       </div>
     </div>

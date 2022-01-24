@@ -26,7 +26,7 @@ module.exports = {
       { text: "CAC", link: "/majors/cac" },
       { text: "CAP", link: "/majors/cap" },
       { text: "DMA", link: "/majors/dma" },
-      { text: "FSP", link: "/majors/fsp" },
+      { text: "IAIDP", link: "/majors/iaidp" },
     ],
     locale: "en",
     author: `@thedivtagguy`,
