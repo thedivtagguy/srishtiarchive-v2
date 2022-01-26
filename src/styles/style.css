@@ -35,8 +35,9 @@ button  {
 }
 
 input[type="search"] {
-  @apply  text-left w-full font-ibm-mono px-4 py-[17px] rounded-lg appearance-none border-3 shadow-small-shadow border-black ;
+  @apply  text-left text-black w-full font-ibm-mono px-4 py-[17px] rounded-lg appearance-none border-3 shadow-small-shadow border-black ;
   font-size: 0.9rem;
+  color: black;
   height: 35px;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -45,6 +46,7 @@ input[type="search"] {
 input[type="search"] .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+  color: black;
 }
 
 input[type="checkbox"] {
